@@ -1,5 +1,5 @@
-<!-- Creator     : groff version 1.22.4 -->
-<!-- CreationDate: Fri Feb  7 11:11:00 2020 -->
+<!-- Creator     : groff version 1.22.3 -->
+<!-- CreationDate: Wed Apr 22 11:01:27 2020 -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -267,15 +267,6 @@ text is justified.</p>
 <p style="margin-left:22%;">Disable automatic conversion of
 files from DOS/Mac format.</p>
 
-<p style="margin-left:11%;"><b>&minus;O</b>,
-<b>&minus;&minus;morespace</b></p>
-
-<p style="margin-left:22%;">Obsolete and ignored option,
-since the line below the title bar is included into the
-editing space by default. If you prefer to keep this line
-blank, use <b>&minus;e</b> or
-<b>&minus;&minus;emptyline</b>.</p>
-
 <p style="margin-left:11%;"><b>&minus;P</b>,
 <b>&minus;&minus;positionlog</b></p>
 
@@ -309,12 +300,14 @@ can also be activated by invoking <b>nano</b> with any name
 beginning with &rsquo;r&rsquo; (e.g. &quot;rnano&quot;).</p>
 
 <p style="margin-left:11%;"><b>&minus;S</b>,
-<b>&minus;&minus;smooth</b></p>
+<b>&minus;&minus;softwrap</b></p>
 
-<p style="margin-left:22%;">Obsolete and ignored option,
-since smooth scrolling has become the default. If you prefer
-the chunk-by-chunk scrolling behavior, use <b>&minus;j</b>
-or <b>&minus;&minus;jumpyscrolling</b>.</p>
+<p style="margin-left:22%;">Display over multiple screen
+rows lines that exceed the screen&rsquo;s width. (You can
+make this soft-wrapping occur at whitespace instead of
+rudely at the screen&rsquo;s edge, by using also
+<b>&minus;&minus;atblanks</b>.) (The old short option,
+<b>&minus;$</b>, is deprecated.)</p>
 
 
 <p style="margin-left:11%;"><b>&minus;T&nbsp;</b><i>number</i>,
@@ -351,7 +344,8 @@ word.</p>
 
 <p style="margin-left:22%;">Specify which other characters
 (besides the normal alphanumeric ones) should be considered
-as part of a word. This overrides option <b>&minus;W</b>
+as part of a word. When using this option, you probably want
+to omit <b>&minus;W</b>
 (<b>&minus;&minus;wordbounds</b>).</p>
 
 
@@ -490,8 +484,8 @@ chroot.</p>
 <b>&minus;&minus;preserve</b></p>
 
 <p style="margin-left:22%;">Preserve the XON and XOFF
-sequences (^Q and ^S) so they will be caught by the
-terminal.</p>
+sequences (<b>^Q</b> and <b>^S</b>) so they will be caught
+by the terminal.</p>
 
 
 <p style="margin-left:11%;"><b>&minus;r&nbsp;</b><i>number</i>,
@@ -556,26 +550,14 @@ lines at the bottom of the screen.</p>
 <p style="margin-left:11%;"><b>&minus;y</b>,
 <b>&minus;&minus;afterends</b></p>
 
-<p style="margin-left:22%;">Make Ctrl+Right stop at word
-ends instead of beginnings.</p>
+<p style="margin-left:22%;">Make Ctrl+Right and Ctrl+Delete
+stop at word ends instead of beginnings.</p>
 
 <p style="margin-left:11%;"><b>&minus;z</b>,
-<b>&minus;&minus;suspend</b></p>
+<b>&minus;&minus;suspendable</b></p>
 
-<p style="margin-left:22%;">Enable the suspend ability.</p>
-
-<p style="margin-left:11%;"><b>&minus;$</b>,
-<b>&minus;&minus;softwrap</b></p>
-
-<p style="margin-left:22%;">Enable &rsquo;soft
-wrapping&rsquo;. This will make <b>nano</b> attempt to
-display the entire contents of any line, even if it is
-longer than the screen width, by continuing it over multiple
-screen lines. Since &rsquo;$&rsquo; normally refers to a
-variable in the Unix shell, you should specify this option
-last when using other options (e.g. &rsquo;nano
-&minus;wS$&rsquo;) or pass it separately (e.g. &rsquo;nano
-&minus;wS &minus;$&rsquo;).</p>
+<p style="margin-left:22%;">Allow the user to suspend the
+editor (with <b>^Z</b> by default).</p>
 
 <h2>TOGGLES
 <a name="TOGGLES"></a>

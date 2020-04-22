@@ -164,15 +164,6 @@ void run_macro(void)
  *   than the function keys, because the functions of the former are
  *   not arbitrary and the functions of the latter are.)
  * - F10 on FreeBSD console == PageUp on Mach console; the former is
- *   omitted.  (Same as above.)
- * - F13 on FreeBSD console == End on Mach console; the former is
- *   omitted.  (Same as above.)
- * - F15 on FreeBSD console == Shift-Up on rxvt/Eterm; the former is
- *   omitted.  (The arrow keys, with or without modifiers, are more
- *   important to have working than the function keys, because the
- *   functions of the former are not arbitrary and the functions of the
- *   latter are.)
- * - F16 on FreeBSD console == Shift-Down on rxvt/Eterm; the former is
  *   omitted.  (Same as above.) */
 
 /* Read in a sequence of keystrokes from the given window and save them
@@ -359,13 +350,6 @@ int convert_sequence(const int *seq, size_t length, int *consumed)
 					case 'D': /* Esc O 1 ; 2 D == Shift-Left on Terminal. */
 						shift_held = TRUE;
 						return arrow_from_ABCD(seq[4]);
-#ifdef ENABLE_NANORC
-					case 'P': /* Esc O 1 ; 2 P == F13 on old xterm. */
-					case 'Q': /* Esc O 1 ; 2 Q == F14 on old xterm. */
-					case 'R': /* Esc O 1 ; 2 R == F15 on old xterm. */
-					case 'S': /* Esc O 1 ; 2 S == F16 on old xterm. */
-						return KEY_F(13 + seq[4] - 'P');
-#endif
 				}
 				break;
 			case '5':
@@ -385,17 +369,8 @@ int convert_sequence(const int *seq, size_t length, int *consumed)
 						}
 						break;
 					case '2':
-						if (length > 2) {
+						if (length > 2)
 							*consumed = 3;
-#ifdef ENABLE_NANORC
-							if ('O' < seq[2] && seq[2] < 'T')
-								/* Esc O 2 P == F13 on Konsole. */
-								/* Esc O 2 Q == F14 on Konsole. */
-								/* Esc O 2 R == F15 on Konsole. */
-								/* Esc O 2 S == F16 on Konsole. */
-								return KEY_F(13 + seq[2] - 'P');
-#endif
-						}
 						break;
 #ifndef NANO_TINY
 					case '5':
@@ -525,13 +500,6 @@ int convert_sequence(const int *seq, size_t length, int *consumed)
 					case 'H': /* Esc [ 1 ; 2 H == Shift-Home on xterm. */
 						return SHIFT_HOME;
 #endif
-#ifdef ENABLE_NANORC
-					case 'P': /* Esc [ 1 ; 2 P == F13 on xterm. */
-					case 'Q': /* Esc [ 1 ; 2 Q == F14 on xterm. */
-					case 'R': /* Esc [ 1 ; 2 R == F15 on xterm. */
-					case 'S': /* Esc [ 1 ; 2 S == F16 on xterm. */
-						return KEY_F(13 + seq[4] - 'P');
-#endif
 				}
 				break;
 #ifndef NANO_TINY
@@ -621,25 +589,19 @@ int convert_sequence(const int *seq, size_t length, int *consumed)
 									return KEY_F(11);
 								case '4': /* Esc [ 2 4 ~ == F12 on the same. */
 									return KEY_F(12);
-#ifdef ENABLE_NANORC
-								case '5': /* Esc [ 2 5 ~ == F13 on VT220/VT320/
-										   * Linux console/rxvt/Eterm. */
-									return KEY_F(13);
-								case '6': /* Esc [ 2 6 ~ == F14 on the same. */
-									return KEY_F(14);
-								case '8': /* Esc [ 2 8 ~ == F15 on the same. */
-									return KEY_F(15);
-								case '9': /* Esc [ 2 9 ~ == F16 on the same. */
-									return KEY_F(16);
-#endif
 							}
 						} else if (length > 2 && seq[2] == '~')
 							/* Esc [ 2 ~ == Insert on VT220/VT320/
 							 * Linux console/xterm/Terminal. */
 							return KEY_IC;
-						else if (length > 4 && seq[2] == ';' && seq[4] == '~')
+						else if (length > 4 && seq[2] == ';' && seq[4] == '~') {
 							/* Esc [ 2 ; x ~ == modified Insert on xterm. */
 							*consumed = 5;
+#ifndef NANO_TINY
+							if (seq[3] == '3')
+								return ALT_INSERT;
+#endif
+						}
 						else if (length > 5 && seq[3] == ';' && seq[5] == '~')
 							/* Esc [ 2 n ; 2 ~ == F21...F24 on some terminals. */
 							*consumed = 6;
@@ -713,6 +675,8 @@ int convert_sequence(const int *seq, size_t length, int *consumed)
 #ifndef NANO_TINY
 							if (seq[3] == '2')
 								return shiftaltup;
+							if (seq[3] == '3')
+								return ALT_PAGEUP;
 #endif
 						}
 						break;
@@ -725,6 +689,8 @@ int convert_sequence(const int *seq, size_t length, int *consumed)
 #ifndef NANO_TINY
 							if (seq[3] == '2')
 								return shiftaltdown;
+							if (seq[3] == '3')
+								return ALT_PAGEDOWN;
 #endif
 						}
 						break;
@@ -930,7 +896,7 @@ int parse_kbinput(WINDOW *win)
 		case 1:
 			if (keycode >= 0x80)
 				retval = keycode;
-			else if (keycode == TAB_CODE)
+			else if (keycode == '\t')
 				retval = SHIFT_TAB;
 			else if ((keycode != 'O' && keycode != 'o' && keycode != '[') ||
 						key_buffer_len == 0 || *key_buffer == ESC_CODE) {
@@ -1110,6 +1076,12 @@ int parse_kbinput(WINDOW *win)
 		return ALT_UP;
 	else if (retval == altdown)
 		return ALT_DOWN;
+	else if (retval == altpageup)
+		return ALT_PAGEUP;
+	else if (retval == altpagedown)
+		return ALT_PAGEDOWN;
+	else if (retval == altinsert)
+		return ALT_INSERT;
 	else if (retval == altdelete)
 		return ALT_DELETE;
 	else if (retval == shiftaltleft) {
@@ -1144,7 +1116,7 @@ int parse_kbinput(WINDOW *win)
 		}
 		/* Is Shift being held? */
 		if (modifiers & 0x01) {
-			if (retval == TAB_CODE)
+			if (retval == '\t')
 				return SHIFT_TAB;
 			if (!meta_key)
 				shift_held = TRUE;
@@ -1157,6 +1129,12 @@ int parse_kbinput(WINDOW *win)
 				return ALT_UP;
 			if (retval == KEY_DOWN)
 				return ALT_DOWN;
+			if (retval == KEY_PPAGE)
+				return ALT_PAGEUP;
+			if (retval == KEY_NPAGE)
+				return ALT_PAGEDOWN;
+			if (retval == KEY_IC)
+				return ALT_INSERT;
 		}
 #endif
 		/* Is Ctrl being held? */
@@ -1194,7 +1172,7 @@ int parse_kbinput(WINDOW *win)
 
 #ifndef NANO_TINY
 	/* When <Tab> is pressed while the mark is on, do an indent. */
-	if (retval == TAB_CODE && openfile->mark && currmenu == MMAIN &&
+	if (retval == '\t' && openfile->mark && currmenu == MMAIN &&
 				!bracketed_paste && openfile->mark != openfile->current)
 		return INDENT_KEY;
 #endif
@@ -1502,44 +1480,6 @@ int get_control_kbinput(int kbinput)
 	return kbinput;
 }
 
-/* Read in a stream of characters verbatim, and return the length of the
- * string in kbinput_len.  Assume nodelay(win) is FALSE. */
-int *get_verbatim_kbinput(WINDOW *win, size_t *kbinput_len)
-{
-	int *retval;
-
-	/* Turn off flow control characters if necessary so that we can type
-	 * them in verbatim, and turn the keypad off if necessary so that we
-	 * don't get extended keypad values. */
-	if (ISSET(PRESERVE))
-		disable_flow_control();
-	if (!ISSET(RAW_SEQUENCES))
-		keypad(win, FALSE);
-
-	/* Read in one keycode, or one or two escapes. */
-	retval = parse_verbatim_kbinput(win, kbinput_len);
-
-	/* If the code is invalid in the current mode, discard it. */
-	if (retval != NULL && ((*retval == '\n' && as_an_at) ||
-								(*retval == '\0' && !as_an_at))) {
-		*kbinput_len = 0;
-		beep();
-	}
-
-	/* Turn flow control characters back on if necessary and turn the
-	 * keypad back on if necessary now that we're done. */
-	if (ISSET(PRESERVE))
-		enable_flow_control();
-	/* Use the global window pointers, because a resize may have freed
-	 * the data that the win parameter points to. */
-	if (!ISSET(RAW_SEQUENCES)) {
-		keypad(edit, TRUE);
-		keypad(bottomwin, TRUE);
-	}
-
-	return retval;
-}
-
 /* Read in one control character (or an iTerm/Eterm/rxvt double Escape),
  * or convert a series of six digits into a Unicode codepoint.  Return
  * in count either 1 (for a control character or the first byte of a
@@ -1577,7 +1517,7 @@ int *parse_verbatim_kbinput(WINDOW *win, size_t *count)
 		 * Unicode value, and put back the corresponding byte(s). */
 		else {
 			char *multibyte;
-			int onebyte, i;
+			int onebyte;
 
 			reveal_cursor = FALSE;
 
@@ -1592,7 +1532,7 @@ int *parse_verbatim_kbinput(WINDOW *win, size_t *count)
 			multibyte = make_mbchar(unicode, (int *)count);
 
 			/* Insert the multibyte sequence into the input buffer. */
-			for (i = *count; i > 0 ; i--) {
+			for (size_t i = *count; i > 0 ; i--) {
 				onebyte = (unsigned char)multibyte[i - 1];
 				put_back(onebyte);
 			}
@@ -1612,6 +1552,56 @@ int *parse_verbatim_kbinput(WINDOW *win, size_t *count)
 		*count = 2;
 
 	return get_input(NULL, *count);
+}
+
+/* Read in one control code, one character byte, or the leading escapes of
+ * an escape sequence, and return the resulting number of bytes in count. */
+char *get_verbatim_kbinput(WINDOW *win, size_t *count)
+{
+	char *bytes = charalloc(MAXCHARLEN + 1);
+	int *input;
+
+	/* Turn off flow control characters if necessary so that we can type
+	 * them in verbatim, and turn the keypad off if necessary so that we
+	 * don't get extended keypad values. */
+	if (ISSET(PRESERVE))
+		disable_flow_control();
+	if (!ISSET(RAW_SEQUENCES))
+		keypad(win, FALSE);
+
+	/* Read in a single byte or two escapes. */
+	input = parse_verbatim_kbinput(win, count);
+
+	/* If the byte is invalid in the current mode, discard it;
+	 * if it is an incomplete Unicode sequence, stuff it back. */
+	if (input != NULL) {
+		if ((*input == '\n' && as_an_at) || (*input == '\0' && !as_an_at)) {
+			*count = 0;
+			beep();
+		} else if (*input >= 0x80 && *count == 1) {
+			put_back(*input);
+			*count = 0;
+		}
+	}
+
+	/* Turn flow control characters back on if necessary and turn the
+	 * keypad back on if necessary now that we're done. */
+	if (ISSET(PRESERVE))
+		enable_flow_control();
+	/* Use the global window pointers, because a resize may have freed
+	 * the data that the win parameter points to. */
+	if (!ISSET(RAW_SEQUENCES)) {
+		keypad(edit, TRUE);
+		keypad(bottomwin, TRUE);
+	}
+
+	for (size_t i = 0; i < *count; i++)
+		bytes[i] = (char)input[i];
+	bytes[*count] = '\0';
+
+	free(input);
+
+	return bytes;
 }
 
 #ifdef ENABLE_MOUSE
@@ -1845,7 +1835,7 @@ char *display_string(const char *buf, size_t column, size_t span,
 	 * overwritten by a "<" token, then show placeholders instead. */
 	if (*buf != '\0' && *buf != '\t' && (start_col < column ||
 						(start_col > 0 && isdata && !ISSET(SOFTWRAP)))) {
-		if (is_cntrl_mbchar(buf)) {
+		if (is_cntrl_char(buf)) {
 			if (start_col < column) {
 				converted[index++] = control_mbrep(buf, isdata);
 				column++;
@@ -1919,7 +1909,7 @@ char *display_string(const char *buf, size_t column, size_t span,
 		}
 
 		/* Represent a control character with a leading caret. */
-		if (is_cntrl_mbchar(buf)) {
+		if (is_cntrl_char(buf)) {
 			converted[index++] = '^';
 			converted[index++] = control_mbrep(buf, isdata);
 			buf += char_length(buf);
@@ -2264,16 +2254,37 @@ void warn_and_shortly_pause(const char *msg)
 {
 	blank_bottombars();
 	statusline(ALERT, msg);
+	lastmessage = HUSH;
 	napms(1500);
+}
+
+/* Write a key's representation plus a minute description of its function
+ * to the screen.  For example, the key could be "^C" and its tag "Cancel".
+ * Key plus tag may occupy at most width columns. */
+void post_one_key(const char *keystroke, const char *tag, int width)
+{
+	wattron(bottomwin, interface_color_pair[KEY_COMBO]);
+	waddnstr(bottomwin, keystroke, actual_x(keystroke, width));
+	wattroff(bottomwin, interface_color_pair[KEY_COMBO]);
+
+	/* If the remaining space is too small, skip the description. */
+	width -= breadth(keystroke);
+	if (width < 2)
+		return;
+
+	waddch(bottomwin, ' ');
+	wattron(bottomwin, interface_color_pair[FUNCTION_TAG]);
+	waddnstr(bottomwin, tag, actual_x(tag, width - 1));
+	wattroff(bottomwin, interface_color_pair[FUNCTION_TAG]);
 }
 
 /* Display the shortcut list corresponding to menu on the last two rows
  * of the bottom portion of the window. */
 void bottombars(int menu)
 {
-	size_t number, itemwidth, i;
-	funcstruct *f;
+	size_t index, number, itemwidth;
 	const keystruct *s;
+	funcstruct *f;
 
 	/* Set the global variable to the given menu. */
 	currmenu = menu;
@@ -2295,43 +2306,25 @@ void bottombars(int menu)
 
 	/* Display the first number of shortcuts in the given menu that
 	 * have a key combination assigned to them. */
-	for (f = allfuncs, i = 0; i < number && f != NULL; f = f->next) {
+	for (f = allfuncs, index = 0; f != NULL && index < number; f = f->next) {
 		if ((f->menus & menu) == 0)
 			continue;
 
 		s = first_sc_for(menu, f->func);
+
 		if (s == NULL)
 			continue;
 
-		wmove(bottomwin, 1 + i % 2, (i / 2) * itemwidth);
+		wmove(bottomwin, 1 + index % 2, (index / 2) * itemwidth);
 
-		post_one_key(s->keystr, _(f->desc), itemwidth + (COLS % itemwidth));
-		i++;
+		post_one_key(s->keystr, _(f->desc), itemwidth +
+								((index < number - 2) ? 0 : COLS % itemwidth));
+		index++;
 	}
 
 	/* Defeat a VTE bug by homing the cursor and forcing a screen update. */
 	wmove(bottomwin, 0, 0);
 	wrefresh(bottomwin);
-}
-
-/* Write a key's representation plus a minute description of its function
- * to the screen.  For example, the key could be "^C" and its tag "Cancel".
- * Key plus tag may occupy at most width columns. */
-void post_one_key(const char *keystroke, const char *tag, int width)
-{
-	wattron(bottomwin, interface_color_pair[KEY_COMBO]);
-	waddnstr(bottomwin, keystroke, actual_x(keystroke, width));
-	wattroff(bottomwin, interface_color_pair[KEY_COMBO]);
-
-	/* If the remaning space is too small, skip the description. */
-	width -= breadth(keystroke);
-	if (width < 2)
-		return;
-
-	waddch(bottomwin, ' ');
-	wattron(bottomwin, interface_color_pair[FUNCTION_TAG]);
-	waddnstr(bottomwin, tag, actual_x(tag, width - 1));
-	wattroff(bottomwin, interface_color_pair[FUNCTION_TAG]);
 }
 
 /* Redetermine current_y from the position of current relative to edittop,
@@ -2402,7 +2395,12 @@ void draw_row(int row, const char *converted, linestruct *line, size_t from_col)
 #endif
 			mvwprintw(edit, row, 0, "%*zd", margin - 1, line->lineno);
 		wattroff(edit, interface_color_pair[LINE_NUMBER]);
-		wprintw(edit, " ");
+#ifndef NANO_TINY
+		if (line->has_anchor && from_col == 0)
+			wprintw(edit, "+");
+		else
+#endif
+			wprintw(edit, " ");
 	}
 #endif
 
@@ -2705,7 +2703,7 @@ void draw_row(int row, const char *converted, linestruct *line, size_t from_col)
 						line->lineno <= openfile->current->lineno) ||
 						(line->lineno <= openfile->mark->lineno &&
 						line->lineno >= openfile->current->lineno))) {
-		const linestruct *top, *bot;
+		linestruct *top, *bot;
 			/* The lines where the marked region begins and ends. */
 		size_t top_x, bot_x;
 			/* The x positions where the marked region begins and ends. */
@@ -2716,7 +2714,7 @@ void draw_row(int row, const char *converted, linestruct *line, size_t from_col)
 		int paintlen = -1;
 			/* The number of characters to paint.  Negative means "all". */
 
-		get_region(&top, &top_x, &bot, &bot_x, NULL);
+		get_region(&top, &top_x, &bot, &bot_x);
 
 		if (top->lineno < line->lineno || top_x < from_x)
 			top_x = from_x;
@@ -2810,6 +2808,8 @@ int update_softwrapped_line(linestruct *line)
 		/* The end column of the current chunk. */
 	char *converted;
 		/* The data of the chunk with tabs and control characters expanded. */
+	bool end_of_line = FALSE;
+		/* Becomes TRUE when the last chunk of the line has been reached. */
 
 	if (line == openfile->edittop)
 		from_col = openfile->firstcolumn;
@@ -2831,9 +2831,7 @@ int update_softwrapped_line(linestruct *line)
 
 	starting_row = row;
 
-	while (row < editwinrows) {
-		bool end_of_line = FALSE;
-
+	while (!end_of_line && row < editwinrows) {
 		to_col = get_softwrap_breakpoint(line->data, from_col, &end_of_line);
 
 		sequel_column = (end_of_line) ? 0 : to_col;
@@ -2843,14 +2841,6 @@ int update_softwrapped_line(linestruct *line)
 									TRUE, FALSE);
 		draw_row(row++, converted, line, from_col);
 		free(converted);
-
-		if (end_of_line)
-			break;
-
-		/* If the line is softwrapped early (because of a two-column character),
-		 * show a "[" placeholder, unless we're softwrapping at blanks. */
-		if (!ISSET(AT_BLANKS) && to_col - from_col < editwincols)
-			mvwaddch(edit, row - 1, to_col - from_col, '[');
 
 		from_col = to_col;
 	}
@@ -3048,7 +3038,7 @@ size_t get_softwrap_breakpoint(const char *text, size_t leftedge,
 	/* Now find the place in text where this chunk should end. */
 	while (*text != '\0' && column <= goal_column) {
 		/* When breaking at blanks, do it *before* the target column. */
-		if (ISSET(AT_BLANKS) && is_blank_mbchar(text) && column < goal_column) {
+		if (ISSET(AT_BLANKS) && is_blank_char(text) && column < goal_column) {
 			farthest_blank = text;
 			last_blank_col = column;
 		}
@@ -3374,13 +3364,9 @@ void do_cursorpos(bool force)
 	saved_byte = openfile->current->data[openfile->current_x];
 	openfile->current->data[openfile->current_x] = '\0';
 
-	sum = get_totsize(openfile->filetop, openfile->current);
+	sum = number_of_characters_in(openfile->filetop, openfile->current);
 
 	openfile->current->data[openfile->current_x] = saved_byte;
-
-	/* When not at EOF, subtract 1 for an overcounted newline. */
-	if (openfile->current != openfile->filebot)
-		sum--;
 
 	/* Display the current cursor position on the status bar. */
 	linepct = 100 * openfile->current->lineno / openfile->filebot->lineno;

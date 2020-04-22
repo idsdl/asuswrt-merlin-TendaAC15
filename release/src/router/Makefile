@@ -3503,7 +3503,7 @@ sd-idle-install: sd-idle-2.6
 nfs-utils/stamp-h1:
 	cd nfs-utils && CPPFLAGS="$(EXTRACFLAGS) -Os" knfsd_cv_bsd_signals=no \
 	CC_FOR_BUILD=$(CC) $(CONFIGURE) --enable-nfsv3 --disable-nfsv4 --disable-ipv6 \
-	--disable-uuid --disable-gss --disable-mount --without-tcp-wrappers
+	--disable-uuid --disable-gss --disable-mount --without-tcp-wrappers --disable-tirpc
 	@touch $@
 
 nfs-utils: nfs-utils/stamp-h1

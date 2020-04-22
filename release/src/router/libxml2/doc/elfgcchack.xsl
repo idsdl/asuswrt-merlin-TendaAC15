@@ -2,7 +2,7 @@
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                 xmlns:xhtml="http://www.w3.org/1999/xhtml"
                 version="1.0">
-  <xsl:output method="text" encoding="ISO-8859-1"/>
+  <xsl:output method="text" encoding="UTF-8"/>
 
   <xsl:template match="/">
     <xsl:text>/*
@@ -18,7 +18,7 @@
 #ifdef IN_LIBXML
 #ifdef __GNUC__
 #ifdef PIC
-#ifdef linux
+#ifdef __linux__
 #if (__GNUC__ == 3 &amp;&amp; __GNUC_MINOR__ >= 3) || (__GNUC__ > 3)
 
 #include "libxml/c14n.h"

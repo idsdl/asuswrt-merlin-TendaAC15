@@ -1,8 +1,7 @@
 ## Syntax highlighting for Rust.
+
 ## Copyright 2015 Luke Francl.
 ## Licensed under GPL version 3.
-
-## NOTE: Rules are applied in order: later rules re-colorize matching text.
 
 syntax rust "\.(rlib|rs)$"
 comment "//"
@@ -36,4 +35,4 @@ color blue start="/\*" end="\*/"
 color magenta start="#!\[" end="\]"
 
 # Some common markers
-color brightcyan "(XXX|TODO|FIXME|\?\?\?)"
+color brightcyan "XXX|TODO|FIXME|\?\?\?"

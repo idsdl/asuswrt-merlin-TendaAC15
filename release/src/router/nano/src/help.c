@@ -44,7 +44,7 @@ void wrap_help_text_into_buffer(void)
 {
 	size_t sum = 0;
 	/* Avoid overtight and overwide paragraphs in the introductory text. */
-	size_t wrapping_point = (COLS < 32) ? 32 : (COLS > 74) ? 74 : COLS;
+	size_t wrapping_point = (COLS < 40) ? 40 : (COLS > 74) ? 74 : COLS;
 	const char *ptr = start_of_body;
 
 	make_new_buffer();
@@ -55,17 +55,17 @@ void wrap_help_text_into_buffer(void)
 		char *oneline;
 
 		if (ptr == end_of_intro)
-			wrapping_point = (COLS < 32) ? 32 : COLS;
+			wrapping_point = (COLS < 40) ? 40 : COLS;
 
-		if (ptr > end_of_intro && *(ptr - 1) != '\n') {
-			length = break_line(ptr, (COLS < 32) ? 14 : COLS - 18, TRUE);
-			oneline = nmalloc(length + 5);
-			snprintf(oneline, length + 5, "\t\t  %s", ptr);
-		} else {
+		if (ptr < end_of_intro || *(ptr - 1) == '\n') {
 			length = break_line(ptr, wrapping_point, TRUE);
 			oneline = nmalloc(length + 1);
 			shim = (*(ptr + length - 1) == ' ') ? 0 : 1;
 			snprintf(oneline, length + shim, "%s", ptr);
+		} else {
+			length = break_line(ptr, (COLS < 40) ? 22 : COLS - 18, TRUE);
+			oneline = nmalloc(length + 5);
+			snprintf(oneline, length + 5, "\t\t  %s", ptr);
 		}
 
 		free(openfile->current->data);
@@ -125,8 +125,6 @@ void show_help(void)
 	linestruct *line;
 	int length;
 
-	blank_statusbar();
-
 	/* Save the settings of all flags. */
 	memcpy(stash, flags, sizeof(flags));
 
@@ -134,7 +132,8 @@ void show_help(void)
 	if (ISSET(NO_HELP) && LINES > 4) {
 		UNSET(NO_HELP);
 		window_init();
-	}
+	} else
+		blank_statusbar();
 
 	/* When searching, do it forward, case insensitive, and without regexes. */
 	UNSET(BACKWARDS_SEARCH);
@@ -166,8 +165,7 @@ void show_help(void)
 
 	/* Extract the title from the head of the help text. */
 	length = break_line(help_text, MAX_BUF_SIZE, TRUE);
-	title = measured_copy(help_text, length + 1);
-	title[length] = '\0';
+	title = measured_copy(help_text, length);
 
 	titlebar(title);
 
@@ -273,7 +271,7 @@ void show_help(void)
 		currmenu = oldmenu;
 		window_init();
 	} else {
-		wipe_statusbar();
+		blank_statusbar();
 		bottombars(oldmenu);
 	}
 

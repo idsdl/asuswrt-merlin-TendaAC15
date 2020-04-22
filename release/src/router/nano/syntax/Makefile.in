@@ -228,8 +228,8 @@ am__uninstall_files_from_dir = { \
     || { echo " ( cd '$$dir' && rm -f" $$files ")"; \
          $(am__cd) "$$dir" && rm -f $$files; }; \
   }
-am__installdirs = "$(DESTDIR)$(pkgdatadir)"
-DATA = $(pkgdata_DATA)
+am__installdirs = "$(DESTDIR)$(pkgdatadir)" "$(DESTDIR)$(pkgdatadir)"
+DATA = $(nobase_pkgdata_DATA) $(pkgdata_DATA)
 am__tagged_files = $(HEADERS) $(SOURCES) $(TAGS_FILES) $(LISP)
 am__DIST_COMMON = $(srcdir)/Makefile.in
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
@@ -1188,6 +1188,7 @@ REPLACE_EXPM1F = @REPLACE_EXPM1F@
 REPLACE_EXPM1L = @REPLACE_EXPM1L@
 REPLACE_FABSL = @REPLACE_FABSL@
 REPLACE_FACCESSAT = @REPLACE_FACCESSAT@
+REPLACE_FCHMODAT = @REPLACE_FCHMODAT@
 REPLACE_FCHOWNAT = @REPLACE_FCHOWNAT@
 REPLACE_FCLOSE = @REPLACE_FCLOSE@
 REPLACE_FCNTL = @REPLACE_FCNTL@
@@ -1491,11 +1492,9 @@ pkgdata_DATA = asm.nanorc \
 		cmake.nanorc \
 		c.nanorc \
 		css.nanorc \
-		debian.nanorc \
 		default.nanorc \
 		elisp.nanorc \
-		fortran.nanorc \
-		gentoo.nanorc \
+		email.nanorc \
 		go.nanorc \
 		groff.nanorc \
 		guile.nanorc \
@@ -1506,8 +1505,7 @@ pkgdata_DATA = asm.nanorc \
 		lua.nanorc \
 		makefile.nanorc \
 		man.nanorc \
-		mgp.nanorc \
-		mutt.nanorc \
+		markdown.nanorc \
 		nanohelp.nanorc \
 		nanorc.nanorc \
 		nftables.nanorc \
@@ -1518,18 +1516,24 @@ pkgdata_DATA = asm.nanorc \
 		php.nanorc \
 		po.nanorc \
 		postgresql.nanorc \
-		pov.nanorc \
 		python.nanorc \
 		ruby.nanorc \
 		rust.nanorc \
 		sh.nanorc \
-		spec.nanorc \
 		tcl.nanorc \
 		tex.nanorc \
 		texinfo.nanorc \
 		xml.nanorc
 
-EXTRA_DIST = $(pkgdata_DATA)
+nobase_pkgdata_DATA = \
+		extra/debian.nanorc \
+		extra/fortran.nanorc \
+		extra/gentoo.nanorc \
+		extra/haskell.nanorc \
+		extra/povray.nanorc \
+		extra/spec.nanorc
+
+EXTRA_DIST = $(pkgdata_DATA) $(nobase_pkgdata_DATA)
 all: all-am
 
 .SUFFIXES:
@@ -1562,6 +1566,30 @@ $(top_srcdir)/configure:  $(am__configure_deps)
 $(ACLOCAL_M4):  $(am__aclocal_m4_deps)
 	cd $(top_builddir) && $(MAKE) $(AM_MAKEFLAGS) am--refresh
 $(am__aclocal_m4_deps):
+install-nobase_pkgdataDATA: $(nobase_pkgdata_DATA)
+	@$(NORMAL_INSTALL)
+	@list='$(nobase_pkgdata_DATA)'; test -n "$(pkgdatadir)" || list=; \
+	if test -n "$$list"; then \
+	  echo " $(MKDIR_P) '$(DESTDIR)$(pkgdatadir)'"; \
+	  $(MKDIR_P) "$(DESTDIR)$(pkgdatadir)" || exit 1; \
+	fi; \
+	$(am__nobase_list) | while read dir files; do \
+	  xfiles=; for file in $$files; do \
+	    if test -f "$$file"; then xfiles="$$xfiles $$file"; \
+	    else xfiles="$$xfiles $(srcdir)/$$file"; fi; done; \
+	  test -z "$$xfiles" || { \
+	    test "x$$dir" = x. || { \
+	      echo " $(MKDIR_P) '$(DESTDIR)$(pkgdatadir)/$$dir'"; \
+	      $(MKDIR_P) "$(DESTDIR)$(pkgdatadir)/$$dir"; }; \
+	    echo " $(INSTALL_DATA) $$xfiles '$(DESTDIR)$(pkgdatadir)/$$dir'"; \
+	    $(INSTALL_DATA) $$xfiles "$(DESTDIR)$(pkgdatadir)/$$dir" || exit $$?; }; \
+	done
+
+uninstall-nobase_pkgdataDATA:
+	@$(NORMAL_UNINSTALL)
+	@list='$(nobase_pkgdata_DATA)'; test -n "$(pkgdatadir)" || list=; \
+	$(am__nobase_strip_setup); files=`$(am__nobase_strip)`; \
+	dir='$(DESTDIR)$(pkgdatadir)'; $(am__uninstall_files_from_dir)
 install-pkgdataDATA: $(pkgdata_DATA)
 	@$(NORMAL_INSTALL)
 	@list='$(pkgdata_DATA)'; test -n "$(pkgdatadir)" || list=; \
@@ -1627,7 +1655,7 @@ check-am: all-am
 check: check-am
 all-am: Makefile $(DATA)
 installdirs:
-	for dir in "$(DESTDIR)$(pkgdatadir)"; do \
+	for dir in "$(DESTDIR)$(pkgdatadir)" "$(DESTDIR)$(pkgdatadir)"; do \
 	  test -z "$$dir" || $(MKDIR_P) "$$dir"; \
 	done
 install: install-am
@@ -1680,7 +1708,7 @@ info: info-am
 
 info-am:
 
-install-data-am: install-pkgdataDATA
+install-data-am: install-nobase_pkgdataDATA install-pkgdataDATA
 
 install-dvi: install-dvi-am
 
@@ -1724,7 +1752,7 @@ ps: ps-am
 
 ps-am:
 
-uninstall-am: uninstall-pkgdataDATA
+uninstall-am: uninstall-nobase_pkgdataDATA uninstall-pkgdataDATA
 
 .MAKE: install-am install-strip
 
@@ -1733,11 +1761,12 @@ uninstall-am: uninstall-pkgdataDATA
 	html-am info info-am install install-am install-data \
 	install-data-am install-dvi install-dvi-am install-exec \
 	install-exec-am install-html install-html-am install-info \
-	install-info-am install-man install-pdf install-pdf-am \
-	install-pkgdataDATA install-ps install-ps-am install-strip \
-	installcheck installcheck-am installdirs maintainer-clean \
-	maintainer-clean-generic mostlyclean mostlyclean-generic pdf \
-	pdf-am ps ps-am tags-am uninstall uninstall-am \
+	install-info-am install-man install-nobase_pkgdataDATA \
+	install-pdf install-pdf-am install-pkgdataDATA install-ps \
+	install-ps-am install-strip installcheck installcheck-am \
+	installdirs maintainer-clean maintainer-clean-generic \
+	mostlyclean mostlyclean-generic pdf pdf-am ps ps-am tags-am \
+	uninstall uninstall-am uninstall-nobase_pkgdataDATA \
 	uninstall-pkgdataDATA
 
 .PRECIOUS: Makefile

@@ -81,3 +81,5 @@ curdir=`pwd`
 cd ~/wwwroot/servers/www.lighttpd.net/
 make put
 cd ${curdir}
+
+

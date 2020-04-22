@@ -76,7 +76,8 @@ extern int shiftcontrolup, shiftcontroldown;
 extern int shiftcontrolhome, shiftcontrolend;
 extern int altleft, altright;
 extern int altup, altdown;
-extern int altdelete;
+extern int altpageup, altpagedown;
+extern int altinsert, altdelete;
 extern int shiftaltleft, shiftaltright;
 extern int shiftaltup, shiftaltdown;
 #endif
@@ -203,13 +204,10 @@ char *strip_last_component(const char *path);
 void utf8_init(void);
 bool using_utf8(void);
 #endif
-char *addstrings(char* str1, size_t len1, char* str2, size_t len2);
-bool is_byte(int c);
-bool is_alpha_mbchar(const char *c);
-bool is_blank_mbchar(const char *c);
-bool is_ascii_cntrl_char(int c);
-bool is_cntrl_mbchar(const char *c);
-bool is_word_mbchar(const char *c, bool allow_punct);
+bool is_alpha_char(const char *c);
+bool is_blank_char(const char *c);
+bool is_cntrl_char(const char *c);
+bool is_word_char(const char *c, bool allow_punct);
 char control_mbrep(const char *c, bool isdata);
 #ifdef ENABLE_UTF8
 int mbwidth(const char *c);
@@ -264,28 +262,24 @@ void extract_segment(linestruct *top, size_t top_x,
 void ingraft_buffer(linestruct *somebuffer);
 void copy_from_buffer(linestruct *somebuffer);
 #ifndef NANO_TINY
-void cut_marked(bool *right_side_up);
+void cut_marked_region(void);
 #endif
-void do_snip(bool copying, bool marked, bool until_eof, bool append);
-bool is_cuttable(bool test_cliff);
+void do_snip(bool marked, bool until_eof, bool append);
 void cut_text(void);
 #ifndef NANO_TINY
-void copy_text(void);
 void cut_till_eof(void);
 void zap_text(void);
+void copy_marked_region(void);
+void copy_text(void);
 #endif
 void paste_text(void);
 
 /* Most functions in files.c. */
 void make_new_buffer(void);
 #ifndef NANO_TINY
-int delete_lockfile(const char *lockfilename);
+bool delete_lockfile(const char *lockfilename);
 #endif
 bool open_buffer(const char *filename, bool new_buffer);
-#ifdef ENABLE_SPELLER
-bool replace_buffer(const char *filename, undo_type action, bool marked,
-		const char *operation);
-#endif
 void set_modified(void);
 void prepare_for_display(void);
 #ifdef ENABLE_MULTIBUFFER
@@ -375,15 +369,15 @@ void do_page_down(void);
 #ifdef ENABLE_JUSTIFY
 void do_para_begin(linestruct **line);
 void do_para_end(linestruct **line);
-void do_para_begin_void(void);
-void do_para_end_void(void);
+void to_para_begin(void);
+void to_para_end(void);
 #endif
-void do_prev_block(void);
-void do_next_block(void);
+void to_prev_block(void);
+void to_next_block(void);
 void do_prev_word(bool allow_punct);
 bool do_next_word(bool after_ends, bool allow_punct);
-void do_prev_word_void(void);
-void do_next_word_void(void);
+void to_prev_word(void);
+void to_next_word(void);
 void do_home(void);
 void do_end(void);
 void do_up(void);
@@ -403,9 +397,6 @@ void delete_node(linestruct *fileptr);
 linestruct *copy_buffer(const linestruct *src);
 void free_lines(linestruct *src);
 void renumber_from(linestruct *line);
-void partition_buffer(linestruct *top, size_t top_x,
-						linestruct *bot, size_t bot_x);
-void unpartition_buffer(void);
 void print_view_warning(void);
 bool in_restricted_mode(void);
 #ifndef ENABLE_HELP
@@ -444,23 +435,9 @@ void confirm_margin(void);
 #endif
 void unbound_key(int code);
 bool okay_for_view(const keystruct *shortcut);
-void inject(char *output, size_t output_len, bool filtering);
+void inject(char *burst, size_t count);
 
 /* Most functions in prompt.c. */
-void inject_into_answer(int *the_input, size_t input_len, bool filtering);
-void do_statusbar_home(void);
-void do_statusbar_end(void);
-void do_statusbar_left(void);
-void do_statusbar_right(void);
-void do_statusbar_backspace(void);
-void do_statusbar_delete(void);
-void do_statusbar_cut_text(void);
-void do_statusbar_uncut_text(void);
-#ifndef NANO_TINY
-void do_statusbar_prev_word(void);
-void do_statusbar_next_word(void);
-#endif
-void do_statusbar_verbatim_input(void);
 size_t get_statusbar_page_start(size_t start_col, size_t column);
 void put_cursor_at_end_of_answer(void);
 void add_or_remove_pipe_symbol_from_answer(void);
@@ -499,13 +476,16 @@ void go_looking(void);
 ssize_t do_replace_loop(const char *needle, bool whole_word_only,
 		const linestruct *real_current, size_t *real_current_x);
 void do_replace(void);
-void ask_for_replacement(void);
+void ask_for_and_do_replacements(void);
 void goto_line_posx(ssize_t line, size_t pos_x);
 void do_gotolinecolumn(ssize_t line, ssize_t column, bool use_answer,
 		bool interactive);
 void do_gotolinecolumn_void(void);
 #ifndef NANO_TINY
 void do_find_bracket(void);
+void put_or_lift_anchor(void);
+void to_prev_anchor(void);
+void to_next_anchor(void);
 #endif
 
 /* Most functions in text.c. */
@@ -524,9 +504,7 @@ void do_undo(void);
 void do_redo(void);
 void do_enter(void);
 #ifndef NANO_TINY
-RETSIGTYPE cancel_command(int signal);
-bool execute_command(const char *command);
-void discard_until(const undostruct *thisitem, openfilestruct *thefile, bool keep);
+void discard_until(const undostruct *thisitem);
 void add_undo(undo_type action, const char *message);
 void update_multiline_undo(ssize_t lineno, char *indentation);
 void update_undo(undo_type action);
@@ -570,8 +548,8 @@ int digits(ssize_t n);
 #endif
 bool parse_num(const char *str, ssize_t *val);
 bool parse_line_column(const char *str, ssize_t *line, ssize_t *column);
-void unsunder(char *string, size_t length);
-void sunder(char *string);
+void recode_NUL_to_LF(char *string, size_t length);
+void recode_LF_to_NUL(char *string);
 #if !defined(ENABLE_TINY) || defined(ENABLE_TABCOMP) || defined(ENABLE_BROWSER)
 void free_chararray(char **array, size_t len);
 #endif
@@ -596,11 +574,11 @@ void new_magicline(void);
 void remove_magicline(void);
 #endif
 #ifndef NANO_TINY
-void get_region(const linestruct **top, size_t *top_x,
-		const linestruct **bot, size_t *bot_x, bool *right_side_up);
-void get_range(const linestruct **top, const linestruct **bot);
+bool mark_is_before_cursor(void);
+void get_region(linestruct **top, size_t *top_x, linestruct **bot, size_t *bot_x);
+void get_range(linestruct **top, linestruct **bot);
 #endif
-size_t get_totsize(const linestruct *begin, const linestruct *end);
+size_t number_of_characters_in(const linestruct *begin, const linestruct *end);
 #ifndef NANO_TINY
 linestruct *line_from_number(ssize_t lineno);
 #endif
@@ -616,8 +594,7 @@ int parse_kbinput(WINDOW *win);
 int get_kbinput(WINDOW *win, bool showcursor);
 int get_byte_kbinput(int kbinput);
 int get_control_kbinput(int kbinput);
-int *get_verbatim_kbinput(WINDOW *win, size_t *kbinput_len);
-int *parse_verbatim_kbinput(WINDOW *win, size_t *count);
+char *get_verbatim_kbinput(WINDOW *win, size_t *count);
 #ifdef ENABLE_MOUSE
 int get_mouseinput(int *mouse_row, int *mouse_col, bool allow_shortcuts);
 #endif

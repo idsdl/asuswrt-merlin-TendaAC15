@@ -3,7 +3,7 @@
  * synopsis: Creates a tree
  * purpose:  Shows how to create document, nodes and dump it to stdout or file.
  * usage:    tree2 <filename>  -Default output: stdout
- * test:     tree2 > tree2.tmp ; diff tree2.tmp tree2.res ; rm tree2.tmp
+ * test:     tree2 > tree2.tmp && diff tree2.tmp $(srcdir)/tree2.res
  * author:   Lucas Brasilino <brasilino@recife.pe.gov.br>
  * copy:     see Copyright for the status of this software
  */
@@ -27,7 +27,6 @@ main(int argc, char **argv)
 {
     xmlDocPtr doc = NULL;       /* document pointer */
     xmlNodePtr root_node = NULL, node = NULL, node1 = NULL;/* node pointers */
-    xmlDtdPtr dtd = NULL;       /* DTD pointer */
     char buff[256];
     int i, j;
 
@@ -43,7 +42,7 @@ main(int argc, char **argv)
     /*
      * Creates a DTD declaration. Isn't mandatory. 
      */
-    dtd = xmlCreateIntSubset(doc, BAD_CAST "root", NULL, BAD_CAST "tree2.dtd");
+    xmlCreateIntSubset(doc, BAD_CAST "root", NULL, BAD_CAST "tree2.dtd");
 
     /* 
      * xmlNewChild() creates a new node, which is "attached" as child node

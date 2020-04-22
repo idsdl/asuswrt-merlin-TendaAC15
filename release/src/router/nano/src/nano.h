@@ -172,16 +172,19 @@ typedef enum {
 #ifdef ENABLE_COMMENT
 	COMMENT, UNCOMMENT, PREFLIGHT,
 #endif
-	ZAP, CUT, CUT_TO_EOF, PASTE, INSERT, COUPLE_BEGIN, COUPLE_END, OTHER
+	ZAP, CUT, CUT_TO_EOF, COPY, PASTE, INSERT,
+	COUPLE_BEGIN, COUPLE_END, OTHER
 } undo_type;
 
 /* Structure types. */
 #ifdef ENABLE_COLOR
 typedef struct colortype {
+	short id;
+		/* An ordinal number (if this color combo is for a multiline regex). */
 	short fg;
-		/* This syntax's foreground color. */
+		/* This combo's foreground color. */
 	short bg;
-		/* This syntax's background color. */
+		/* This combo's background color. */
 	short pairnum;
 		/* The pair number for this foreground/background color combination. */
 	int attributes;
@@ -191,9 +194,7 @@ typedef struct colortype {
 	regex_t *end;
 		/* The compiled regular expression for 'end=', if any. */
 	struct colortype *next;
-		/* Next set of colors. */
-	int id;
-		/* Basic id for assigning to lines later. */
+		/* Next color combination. */
 } colortype;
 
 typedef struct regexlisttype {
@@ -241,7 +242,7 @@ typedef struct syntaxtype {
 #endif
 	colortype *color;
 		/* The colors and their regexes used in this syntax. */
-	int nmultis;
+	short nmultis;
 		/* How many multiline regex strings this syntax has. */
 	struct syntaxtype *next;
 		/* Next syntax. */
@@ -291,6 +292,10 @@ typedef struct linestruct {
 	short *multidata;
 		/* Array of which multi-line regexes apply to this line. */
 #endif
+#ifndef NANO_TINY
+	bool has_anchor;
+		/* Whether the user has placed an anchor at this line. */
+#endif
 } linestruct;
 
 #ifndef NANO_TINY
@@ -310,9 +315,9 @@ typedef struct undostruct {
 		/* The operation type that this undo item is for. */
 	int xflags;
 		/* Some flag data to mark certain corner cases. */
-	ssize_t lineno;
+	ssize_t head_lineno;
 		/* The line number where the operation began or ended. */
-	size_t begin;
+	size_t head_x;
 		/* The x position where the operation began or ended. */
 	char *strdata;
 		/* String data to help restore the affected line. */
@@ -324,9 +329,9 @@ typedef struct undostruct {
 		/* Undo info specific to groups of lines. */
 	linestruct *cutbuffer;
 		/* A copy of the cutbuffer. */
-	ssize_t mark_begin_lineno;
+	ssize_t tail_lineno;
 		/* Mostly the line number of the current line; sometimes something else. */
-	size_t mark_begin_x;
+	size_t tail_x;
 		/* The x position corresponding to the above line number. */
 	struct undostruct *next;
 		/* A pointer to the undo item of the preceding action. */
@@ -493,7 +498,7 @@ enum
 	CASE_SENSITIVE,
 	CONSTANT_SHOW,
 	NO_HELP,
-	SUSPEND,
+	SUSPENDABLE,
 	NO_WRAP,
 	AUTOINDENT,
 	VIEW_MODE,
@@ -565,9 +570,6 @@ enum
 #endif
 
 /* Basic control codes. */
-#define BS_CODE   0x08
-#define TAB_CODE  0x09
-#define CR_CODE   0x0D
 #define ESC_CODE  0x1B
 #define DEL_CODE  0x7F
 
@@ -590,6 +592,9 @@ enum
 #define ALT_RIGHT 0x422
 #define ALT_UP 0x423
 #define ALT_DOWN 0x424
+#define ALT_PAGEUP 0x427
+#define ALT_PAGEDOWN 0x428
+#define ALT_INSERT 0x42C
 #define ALT_DELETE 0x42D
 #define SHIFT_ALT_LEFT 0x431
 #define SHIFT_ALT_RIGHT 0x432
@@ -626,11 +631,11 @@ enum
 #define KEY_WINCH -2
 
 /* Some extra flags for the undo function. */
-#define WAS_FINAL_BACKSPACE   (1<<1)
+#define WAS_BACKSPACE_AT_EOF  (1<<1)
 #define WAS_WHOLE_LINE        (1<<2)
-#define WAS_FINAL_LINE        (1<<3)
+#define INCLUDED_LAST_LINE    (1<<3)
 #define MARK_WAS_SET          (1<<4)
-#define WAS_MARKED_FORWARD    (1<<5)
+#define CURSOR_WAS_AT_HEAD    (1<<5)
 #endif /* !NANO_TINY */
 
 /* The default number of columns from end of line where wrapping occurs. */

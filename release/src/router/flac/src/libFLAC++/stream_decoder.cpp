@@ -1,5 +1,6 @@
 /* libFLAC++ - Free Lossless Audio Codec library
- * Copyright (C) 2002,2003,2004,2005,2006,2007  Josh Coalson
+ * Copyright (C) 2002-2009  Josh Coalson
+ * Copyright (C) 2011-2016  Xiph.Org Foundation
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -28,6 +29,10 @@
  * NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
+
+#ifdef HAVE_CONFIG_H
+#include "config.h"
+#endif
 
 #include "FLAC++/decoder.h"
 #include "FLAC/assert.h"
@@ -129,7 +134,7 @@ namespace FLAC {
 			return ::FLAC__stream_decoder_get_total_samples(decoder_);
 		}
 
-		unsigned Stream::get_channels() const
+		uint32_t Stream::get_channels() const
 		{
 			FLAC__ASSERT(is_valid());
 			return ::FLAC__stream_decoder_get_channels(decoder_);
@@ -141,19 +146,19 @@ namespace FLAC {
 			return ::FLAC__stream_decoder_get_channel_assignment(decoder_);
 		}
 
-		unsigned Stream::get_bits_per_sample() const
+		uint32_t Stream::get_bits_per_sample() const
 		{
 			FLAC__ASSERT(is_valid());
 			return ::FLAC__stream_decoder_get_bits_per_sample(decoder_);
 		}
 
-		unsigned Stream::get_sample_rate() const
+		uint32_t Stream::get_sample_rate() const
 		{
 			FLAC__ASSERT(is_valid());
 			return ::FLAC__stream_decoder_get_sample_rate(decoder_);
 		}
 
-		unsigned Stream::get_blocksize() const
+		uint32_t Stream::get_blocksize() const
 		{
 			FLAC__ASSERT(is_valid());
 			return ::FLAC__stream_decoder_get_blocksize(decoder_);

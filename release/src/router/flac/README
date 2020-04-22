@@ -1,8 +1,9 @@
 /* FLAC - Free Lossless Audio Codec
- * Copyright (C) 2001,2002,2003,2004,2005,2006,2007  Josh Coalson
+ * Copyright (C) 2001-2009  Josh Coalson
+ * Copyright (C) 2011-2016  Xiph.Org Foundation
  *
  * This file is part the FLAC project.  FLAC is comprised of several
- * components distributed under difference licenses.  The codec libraries
+ * components distributed under different licenses.  The codec libraries
  * are distributed under Xiph.Org's BSD-like license (see the file
  * COPYING.Xiph in this distribution).  All other programs, libraries, and
  * plugins are distributed under the LGPL or GPL (see COPYING.LGPL and
@@ -17,8 +18,11 @@
  */
 
 
-FLAC (http://flac.sourceforge.net/) is an Open Source lossless audio
-codec developed by Josh Coalson.
+FLAC is an Open Source lossless audio codec developed by Josh Coalson from 2001
+to 2009.
+
+From January 2012 FLAC is being maintained by Erik de Castro Lopo under the
+auspices of the Xiph.org Foundation.
 
 FLAC is comprised of
   * `libFLAC', a library which implements reference encoders and
@@ -27,7 +31,7 @@ FLAC is comprised of
   * `flac', a command-line program for encoding and decoding files
   * `metaflac', a command-line program for viewing and editing FLAC
     metadata
-  * player plugins for XMMS and Winamp
+  * player plugin for XMMS
   * user and API documentation
 
 The libraries (libFLAC, libFLAC++) are
@@ -38,7 +42,7 @@ Documentation License (see COPYING.FDL).
 
 
 ===============================================================================
-FLAC - 1.2.1 - Contents
+FLAC - 1.3.2 - Contents
 ===============================================================================
 
 - Introduction
@@ -48,6 +52,7 @@ FLAC - 1.2.1 - Contents
 - Building with Makefile.lite
 - Building with MSVC
 - Building on Mac OS X
+- Building with CMake
 
 
 ===============================================================================
@@ -63,10 +68,16 @@ for full documentation.
 A brief description of the directory tree:
 
 	doc/          the HTML documentation
+	examples/     example programs demonstrating the use of libFLAC and libFLAC++
 	include/      public include files for libFLAC and libFLAC++
-	man/          the man page for `flac'
+	man/          the man pages for `flac' and `metaflac'
 	src/          the source code and private headers
 	test/         the test scripts
+
+If you have questions about building FLAC that this document does not answer,
+please submit them at the following tracker so this document can be improved:
+
+	https://sourceforge.net/p/flac/support-requests/
 
 
 ===============================================================================
@@ -89,7 +100,7 @@ Note to embedded developers
 libFLAC has grown larger over time as more functionality has been
 included, but much of it may be unnecessary for a particular embedded
 implementation.  Unused parts may be pruned by some simple editing of
-configure.in and src/libFLAC/Makefile.am; the following dependency
+configure.ac and src/libFLAC/Makefile.am; the following dependency
 graph shows which modules may be pruned without breaking things
 further down:
 
@@ -148,7 +159,7 @@ extra (and more verbose) error checking.
 assembly routines.  Many routines have assembly versions for
 speed and `configure' is pretty good about knowing what is
 supported, but you can use this option to build only from the
-C sources.  May be necessary for building on OS X (Intel)
+C sources.  May be necessary for building on OS X (Intel).
 
 --enable-sse : If you are building for an x86 CPU that supports
 SSE instructions, you can enable some of the faster routines
@@ -170,7 +181,7 @@ $HOME/.xmms/Plugins, instead of the global XMMS plugin area
 Use these if you have these packages but configure can't find them.
 
 If you want to build completely from scratch (i.e. starting with just
-configure.in and Makefile.am) you should be able to just run 'autogen.sh'
+configure.ac and Makefile.am) you should be able to just run 'autogen.sh'
 but make sure and read the comments in that file first.
 
 
@@ -200,55 +211,126 @@ not an x86, change -DFLAC__CPU_IA32 to -DFLAC__CPU_UNKNOWN.
 Building with MSVC
 ===============================================================================
 
-There are .dsp projects and a master FLAC.dsw workspace to build all
-the libraries and executables with MSVC6.  There are also .vcproj
-projects and a master FLAC.sln solution to build all the libraries and
-executables with VC++ 2005.
+There are .vcproj projects and a master FLAC.sln solution to build all
+the libraries and executables with MSVC 2005 or newer.
 
 Prerequisite: you must have the Ogg libraries installed as described
 later.
 
-Prerequisite: you must have nasm installed, and nasmw.exe must be in
-your PATH, or the path to nasmw.exe must be added to the list of
+Prerequisite: you must have nasm installed, and nasm.exe must be in
+your PATH, or the path to nasm.exe must be added to the list of
 directories for executable files in the MSVC global options.
 
-MSVC6:
-To build everything, run Developer Studio, do File|Open Workspace,
-and open FLAC.dsw.  Select "Build | Set active configuration..."
-from the menu, then in the dialog, select "All - Win32 Release" (or
-Debug if you prefer).  Click "Ok" then hit F7 to build.
-
-VC++ 2005:
 To build everything, run Visual Studio, do File|Open and open FLAC.sln.
 From the dropdown in the toolbar, select "Release" instead of "Debug",
-then hit F7 to build.
+then do Build|Build Solution.
 
-Either way, this will build all libraries both statically (e.g.
-obj\release\lib\libFLAC_static.lib) and as DLLs (e.g.
-obj\release\lib\libFLAC.dll), and it will build all binaries, statically
-linked (e.g. obj\release\bin\flac.exe).
+This will build all libraries both statically (e.g.
+objs\release\lib\libFLAC_static.lib) and as DLLs (e.g.
+objs\release\lib\libFLAC.dll), and it will build all binaries, statically
+linked (e.g. objs\release\bin\flac.exe).
 
-Everything will end up in the "obj" directory.  DLLs and .exe files
+Everything will end up in the "objs" directory.  DLLs and .exe files
 are all that are needed and can be copied to an installation area and
-added to the PATH.  The plugins have to be copied to their appropriate
-place in the player area.  For Winamp2 this is <winamp2-dir>\Plugins.
+added to the PATH.
 
-By default the code is configured with Ogg support.  Before building FLAC
+By default the code is configured with Ogg support. Before building FLAC
 you will need to get the Ogg source distribution
-(see http://xiph.org/ogg/vorbis/download/), build ogg_static.lib (load and
-build win32\ogg_static.dsp), copy ogg_static.lib into FLAC's
-'obj\release\lib' directory, and copy the entire include\ogg tree into
-FLAC's 'include' directory (so that there is an 'ogg' directory in FLAC's
+(see http://xiph.org/downloads/), build libogg_static.lib (load
+win32\libogg_static.sln, change solution configuration to "Release" and
+code generation to "Multi-threaded (/MT)", then build), copy libogg_static.lib
+into FLAC's 'objs\release\lib' directory, and copy the entire include\ogg tree
+into FLAC's 'include' directory (so that there is an 'ogg' directory in FLAC's
 'include' directory with the files ogg.h, os_types.h and config_types.h).
 
-If you want to build without Ogg support, instead edit all .dsp or
-.vcproj files and remove any occurrences of "/D FLAC__HAS_OGG".
+If you want to build without Ogg support, instead edit all .vcproj files
+and remove any "FLAC__HAS_OGG" definitions.
 
 
 ===============================================================================
 Building on Mac OS X
 ===============================================================================
 
-If you have Fink or a recent version of OS X with the proper autotooles,
-the GNU flow above should work.  The Project Builder project has been
-deprecated but we are working on replacing it with an Xcode equivalent.
+If you have Fink or a recent version of OS X with the proper autotools,
+the GNU flow above should work.
+
+
+===============================================================================
+Building with CMake
+===============================================================================
+
+CMake is a cross-platform build system. FLAC can be built on Windows, Linux, Mac
+OS X using CMake.
+
+You can use either CMake's CLI or GUI. We recommend you to have a separate build
+folder outside the repository in order to not spoil it with generated files.
+
+CLI
+---
+   Go to your build folder and run something like this:
+
+   /path/to/flac/build$ cmake /path/to/flac/source
+
+   or e.g. in Windows shell
+
+   C:\path\to\flac\build> cmake \path\to\flac\source
+   (provided that cmake is in your %PATH% variable)
+
+   That will generate build scripts for the default build system (e.g. Makefiles
+   for UNIX). After that you start build with a command like this:
+
+   /path/to/flac/build$ make
+
+   And afterwards you can run tests or install the built libraries and headers
+
+   /path/to/flac/build$ make test
+   /path/to/flac/build$ make install
+
+   If you want use a build system other than default add -G flag to cmake, e.g.:
+
+   /path/to/flac/build$ cmake /path/to/flac/source -GNinja
+   /path/to/flac/build$ ninja
+
+   or:
+
+   /path/to/flac/build$ cmake /path/to/flac/source -GXcode
+
+   Use cmake --help to see the list of available generators.
+
+   If you have OGG on your system you can tell CMake to use it:
+
+   /path/to/flac/build$ cmake /path/to/flac/source -DWITH_OGG=ON
+
+   If CMake fails to find it you can help CMake by specifying the exact path:
+
+   /path/to/flac/build$ cmake /path/to/flac/source -DWITH_OGG=ON -DOGG_ROOT=/path/to/ogg
+
+   CMake will search for OGG by default so if you don't have it you can tell
+   cmake to not do so:
+
+   /path/to/flac/build$ cmake /path/to/flac/source -DWITH_OGG=OFF
+
+   Other FLAC's options (e.g. building C++ lib or docs) can also be put to cmake
+   through -D flag.
+
+GUI
+---
+   It is likely that you would prefer to use it on Windows building for Visual
+   Studio.  It's in essence the same process as building using CLI.
+
+   Open cmake-gui. In the window select a source directory (the repository's
+   root), a build directory (some other directory outside the repository). Then
+   press button "Configure". CMake will ask you which build system you prefer.
+   Choose that version of Visual Studio which you have on your system, choose
+   whether you want to build for x86 or amd64. Press OK. After CMake finishes
+   press "Generate" button, and after that "Open Project". In response CMake
+   will launch Visual Studio and open the generated solution. You can use it as
+   usual but remember that it was generated by CMake. That means that your
+   changes (e.g. some addidional compile flags) will be lost when you run CMake
+   next time.
+
+   Again, if you have OGG on your system set WITH_OGG flag in the list of
+   variables in cmake-gui window before you press "Configure".
+
+   If CMake fails to find MSVC compiler then running cmake-gui from MS Developer
+   comand prompt should help.

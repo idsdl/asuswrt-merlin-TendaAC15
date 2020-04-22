@@ -1,5 +1,7 @@
 /* struct options.
-   Copyright (C) 1996-2011, 2015, 2018 Free Software Foundation, Inc.
+   Copyright (C) 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004,
+   2005, 2006, 2007, 2008, 2009, 2010, 2011, 2015 Free Software
+   Foundation, Inc.
 
 This file is part of GNU Wget.
 
@@ -228,7 +230,6 @@ struct options
     secure_protocol_tlsv1,
     secure_protocol_tlsv1_1,
     secure_protocol_tlsv1_2,
-    secure_protocol_tlsv1_3,
     secure_protocol_pfs
   } secure_protocol;            /* type of secure protocol to use. */
   int check_cert;               /* whether to validate the server's cert */
@@ -257,8 +258,6 @@ struct options
   bool ftps_fallback_to_ftp;
   bool ftps_implicit;
   bool ftps_clear_data_connection;
-
-  char *tls_ciphers_string;
 #endif /* HAVE_SSL */
 
   bool cookies;                 /* whether cookies are used. */
@@ -341,9 +340,6 @@ struct options
   bool hsts;
   char *hsts_file;
 #endif
-
-  const char *homedir;          /* the homedir of the running process */
-  const char *wgetrcfile;       /* the wgetrc file to be loaded */
 };
 
 extern struct options opt;

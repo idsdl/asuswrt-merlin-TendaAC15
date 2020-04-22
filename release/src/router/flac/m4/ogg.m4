@@ -9,23 +9,29 @@ AC_DEFUN([XIPH_PATH_OGG],
 [dnl 
 dnl Get the cflags and libraries
 dnl
-AC_ARG_WITH(ogg,[  --with-ogg=PFX   Prefix where libogg is installed (optional)], ogg_prefix="$withval", ogg_prefix="")
-AC_ARG_WITH(ogg-libraries,[  --with-ogg-libraries=DIR   Directory where libogg library is installed (optional)], ogg_libraries="$withval", ogg_libraries="")
-AC_ARG_WITH(ogg-includes,[  --with-ogg-includes=DIR   Directory where libogg header files are installed (optional)], ogg_includes="$withval", ogg_includes="")
-AC_ARG_ENABLE(oggtest, [  --disable-oggtest       Do not try to compile and run a test Ogg program],, enable_oggtest=yes)
+AC_ARG_WITH(ogg,AC_HELP_STRING([--with-ogg=PFX],[Prefix where libogg is installed (optional)]), ogg_prefix="$withval", ogg_prefix="")
+AC_ARG_WITH(ogg-libraries,AC_HELP_STRING([--with-ogg-libraries=DIR],[Directory where libogg library is installed (optional)]), ogg_libraries="$withval", ogg_libraries="")
+AC_ARG_WITH(ogg-includes,AC_HELP_STRING([--with-ogg-includes=DIR],[Directory where libogg header files are installed (optional)]), ogg_includes="$withval", ogg_includes="")
+AC_ARG_ENABLE(oggtest,AC_HELP_STRING([--disable-oggtest],[Do not try to compile and run a test Ogg program]),, enable_oggtest=yes)
 
   if test "x$ogg_libraries" != "x" ; then
     OGG_LIBS="-L$ogg_libraries"
+  elif test "x$ogg_prefix" = "xno" || test "x$ogg_prefix" = "xyes" ; then
+    OGG_LIBS=""
   elif test "x$ogg_prefix" != "x" ; then
     OGG_LIBS="-L$ogg_prefix/lib"
   elif test "x$prefix" != "xNONE" ; then
     OGG_LIBS="-L$prefix/lib"
   fi
 
-  OGG_LIBS="$OGG_LIBS -logg"
+  if test "x$ogg_prefix" != "xno" ; then
+    OGG_LIBS="$OGG_LIBS -logg"
+  fi
 
   if test "x$ogg_includes" != "x" ; then
     OGG_CFLAGS="-I$ogg_includes"
+  elif test "x$ogg_prefix" = "xno" || test "x$ogg_prefix" = "xyes" ; then
+    OGG_CFLAGS=""
   elif test "x$ogg_prefix" != "x" ; then
     OGG_CFLAGS="-I$ogg_prefix/include"
   elif test "x$prefix" != "xNONE"; then
@@ -33,7 +39,12 @@ AC_ARG_ENABLE(oggtest, [  --disable-oggtest       Do not try to compile and run 
   fi
 
   AC_MSG_CHECKING(for Ogg)
-  no_ogg=""
+  if test "x$ogg_prefix" = "xno" ; then
+    no_ogg="disabled"
+    enable_oggtest="no"
+  else
+    no_ogg=""
+  fi
 
 
   if test "x$enable_oggtest" = "xyes" ; then
@@ -62,9 +73,12 @@ int main ()
        LIBS="$ac_save_LIBS"
   fi
 
-  if test "x$no_ogg" = "x" ; then
+  if test "x$no_ogg" = "xdisabled" ; then
+     AC_MSG_RESULT(no)
+     ifelse([$2], , :, [$2])
+  elif test "x$no_ogg" = "x" ; then
      AC_MSG_RESULT(yes)
-     ifelse([$1], , :, [$1])     
+     ifelse([$1], , :, [$1])
   else
      AC_MSG_RESULT(no)
      if test -f conf.oggtest ; then
@@ -87,7 +101,7 @@ int main ()
        echo "*** If you have an old version installed, it is best to remove it, although"
        echo "*** you may also be able to get things to work by modifying LD_LIBRARY_PATH"],
        [ echo "*** The test program failed to compile or link. See the file config.log for the"
-       echo "*** exact error that occured. This usually means Ogg was incorrectly installed"
+       echo "*** exact error that occurred. This usually means Ogg was incorrectly installed"
        echo "*** or that you have moved Ogg since it was installed." ])
        CFLAGS="$ac_save_CFLAGS"
        LIBS="$ac_save_LIBS"

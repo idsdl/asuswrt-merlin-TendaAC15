@@ -183,7 +183,7 @@ am__CONFIG_DISTCLEAN_FILES = config.status config.cache config.log \
  configure.lineno config.status.lineno
 mkinstalldirs = $(install_sh) -d
 CONFIG_HEADER = config.h
-CONFIG_CLEAN_FILES = nano.spec
+CONFIG_CLEAN_FILES =
 CONFIG_CLEAN_VPATH_FILES =
 AM_V_P = $(am__v_P_@AM_V@)
 am__v_P_ = $(am__v_P_@AM_DEFAULT_V@)
@@ -245,9 +245,9 @@ CTAGS = ctags
 CSCOPE = cscope
 DIST_SUBDIRS = doc lib m4 po src syntax
 am__DIST_COMMON = $(srcdir)/Makefile.in $(srcdir)/config.h.in \
-	$(srcdir)/nano.spec.in ABOUT-NLS AUTHORS COPYING COPYING.DOC \
-	ChangeLog INSTALL NEWS README THANKS TODO config.guess \
-	config.rpath config.sub depcomp install-sh missing
+	ABOUT-NLS AUTHORS COPYING COPYING.DOC ChangeLog INSTALL NEWS \
+	README THANKS TODO config.guess config.rpath config.sub \
+	depcomp install-sh missing
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
 distdir = $(PACKAGE)-$(VERSION)
 top_distdir = $(distdir)
@@ -1245,6 +1245,7 @@ REPLACE_EXPM1F = @REPLACE_EXPM1F@
 REPLACE_EXPM1L = @REPLACE_EXPM1L@
 REPLACE_FABSL = @REPLACE_FABSL@
 REPLACE_FACCESSAT = @REPLACE_FACCESSAT@
+REPLACE_FCHMODAT = @REPLACE_FCHMODAT@
 REPLACE_FCHOWNAT = @REPLACE_FCHOWNAT@
 REPLACE_FCLOSE = @REPLACE_FCLOSE@
 REPLACE_FCNTL = @REPLACE_FCNTL@
@@ -1544,7 +1545,7 @@ top_srcdir = @top_srcdir@
 AUTOMAKE_OPTIONS = gnu no-dependencies
 SUBDIRS = doc lib m4 po src $(am__append_1)
 EXTRA_DIST = ChangeLog.1999-2006 ChangeLog.2007-2015 \
-		IMPROVEMENTS README.GIT nano.spec
+		IMPROVEMENTS README.GIT
 
 ACLOCAL_AMFLAGS = -I m4
 all: config.h
@@ -1599,8 +1600,6 @@ $(srcdir)/config.h.in:  $(am__configure_deps)
 
 distclean-hdr:
 	-rm -f config.h stamp-h1
-nano.spec: $(top_builddir)/config.status $(srcdir)/nano.spec.in
-	cd $(top_builddir) && $(SHELL) ./config.status $@
 
 # This directory's subdirectories are mostly independent; you can cd
 # into them and run 'make' without going through this Makefile.

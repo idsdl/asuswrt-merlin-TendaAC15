@@ -1,4 +1,4 @@
-This is nano.info, produced by makeinfo version 6.7 from nano.texi.
+This is nano.info, produced by makeinfo version 6.5 from nano.texi.
 
 INFO-DIR-SECTION Editors
 START-INFO-DIR-ENTRY
@@ -11,7 +11,7 @@ File: nano.info,  Node: Top,  Next: Introduction,  Up: (dir)
 nano
 ****
 
-This manual documents the GNU ‘nano’ editor, version 4.8.
+This manual documents the GNU ‘nano’ editor, version 4.9.
 
 * Menu:
 
@@ -44,7 +44,7 @@ reasonable while offering a superset of Pico’s functionality.  *Note
 Pico Compatibility:: for more details on how ‘nano’ and Pico differ.
 
    Starting with version 4.0, ‘nano’ no longer hard-wraps an overlong
-line by default.  It further uses smooth scrolling by default, and by
+line by default.  It further uses linewise scrolling by default, and by
 default includes the line below the title bar into the editing area.
 
    If you want the old, Pico behavior back, you can use the following
@@ -171,12 +171,6 @@ File: nano.info,  Node: Command-line Options,  Next: Editor Basics,  Prev: Invok
 ‘--noconvert’
      Disable automatic conversion of files from DOS/Mac format.
 
-‘-O’
-‘--morespace’
-     Obsolete and ignored option, since the line below the title bar is
-     included into the editing space by default.  If you prefer to keep
-     this line blank, use ‘-e’ or ‘--emptyline’.
-
 ‘-P’
 ‘--positionlog’
      For the 200 most recent files, log the last position of the cursor,
@@ -201,10 +195,11 @@ File: nano.info,  Node: Command-line Options,  Next: Editor Basics,  Prev: Invok
      name beginning with ‘r’ (e.g. ‘rnano’).
 
 ‘-S’
-‘--smooth’
-     Obsolete and ignored option, since smooth scrolling has become the
-     default.  If you prefer the chunk-by-chunk scrolling behavior, use
-     ‘-j’ or ‘--jumpyscrolling’.
+‘--softwrap’
+     Display over multiple screen rows lines that exceed the screen’s
+     width.  (You can make this soft-wrapping occur at whitespace
+     instead of rudely at the screen’s edge, by using also
+     ‘--atblanks’.)  (The old short option, ‘-$’, is deprecated.)
 
 ‘-T NUMBER’
 ‘--tabsize=NUMBER’
@@ -229,8 +224,8 @@ File: nano.info,  Node: Command-line Options,  Next: Editor Basics,  Prev: Invok
 ‘-X "CHARACTERS"’
 ‘--wordchars="CHARACTERS"’
      Specify which other characters (besides the normal alphanumeric
-     ones) should be considered as parts of words.  This overrides
-     option ‘-W’ (‘--wordbounds’).
+     ones) should be considered as parts of words.  When using this
+     option, you probably want to omit ‘-W’ (‘--wordbounds’).
 
 ‘-Y NAME’
 ‘--syntax=NAME’
@@ -387,21 +382,13 @@ File: nano.info,  Node: Command-line Options,  Next: Editor Basics,  Prev: Invok
 
 ‘-y’
 ‘--afterends’
-     Make Ctrl+Right stop at word ends instead of beginnings.
+     Make Ctrl+Right and Ctrl+Delete stop at word ends instead of
+     beginnings.
 
 ‘-z’
-‘--suspend’
+‘--suspendable’
      Enable the ability to suspend ‘nano’ using the system’s suspend
      keystroke (usually ‘^Z’).
-
-‘-$’
-‘--softwrap’
-     Enable ’soft wrapping’.  This will make ‘nano’ attempt to display
-     the entire contents of any line, even if it is longer than the
-     screen width, by continuing it over multiple screen lines.  Since
-     ‘$’ normally refers to a variable in the Unix shell, you should
-     specify this option last when using other options (e.g. ‘nano
-     -wS$’) or pass it separately (e.g. ‘nano -wS -$’).
 
 
 File: nano.info,  Node: Editor Basics,  Next: Built-in Help,  Prev: Command-line Options,  Up: Top
@@ -418,6 +405,7 @@ File: nano.info,  Node: Editor Basics,  Next: Built-in Help,  Prev: Command-line
 * Screen Layout::
 * Search and Replace::
 * Using the Mouse::
+* Anchors::
 * Limitations::
 
 
@@ -550,7 +538,7 @@ it cannot span multiple lines.  And when replacing (with ‘^\’ or ‘M-R’)
 the replacement string cannot contain a newline (LF).
 
 
-File: nano.info,  Node: Using the Mouse,  Next: Limitations,  Prev: Search and Replace,  Up: Editor Basics
+File: nano.info,  Node: Using the Mouse,  Next: Anchors,  Prev: Search and Replace,  Up: Editor Basics
 
 4.7 Using the Mouse
 ===================
@@ -566,9 +554,24 @@ during those actions.
 gpm is running.
 
 
-File: nano.info,  Node: Limitations,  Prev: Using the Mouse,  Up: Editor Basics
+File: nano.info,  Node: Anchors,  Next: Limitations,  Prev: Using the Mouse,  Up: Editor Basics
 
-4.8 Limitations
+4.8 Anchors
+===========
+
+With ‘M-Ins’ you can place an anchor (a kind of temporary bookmark) at
+the current line.  With ‘M-PgUp’ and ‘M-PgDn’ you can jump to an anchor
+in the backward/forward direction.  This jumping wraps around at the top
+and bottom.
+
+   When a line with an anchor is deleted or cut, the line where the
+cursor ends up inherits the anchor.  When you close the buffer, any
+anchors disappear.
+
+
+File: nano.info,  Node: Limitations,  Prev: Anchors,  Up: Editor Basics
+
+4.9 Limitations
 ===============
 
 The recording and playback of keyboard macros works correctly only on a
@@ -625,7 +628,7 @@ following global toggles are available:
      ‘Meta-P’ toggles the displaying of whitespace (*note Whitespace::).
 
 ‘Soft Wrapping’
-     ‘Meta-S’ toggles the ‘-$’ (‘--softwrap’) command-line option.
+     ‘Meta-S’ toggles the ‘-S’ (‘--softwrap’) command-line option.
 
 ‘Expert/No Help’
      ‘Meta-X’ toggles the ‘-x’ (‘--nohelp’) command-line option.
@@ -635,7 +638,7 @@ following global toggles are available:
      syntaxes — *note Syntax Highlighting::).
 
 ‘Suspension’
-     ‘Meta-Z’ toggles the ‘-z’ (‘--suspend’) command-line option.
+     ‘Meta-Z’ toggles the ‘-z’ (‘--suspendable’) command-line option.
 
 
 File: nano.info,  Node: Nanorc Files,  Next: The File Browser,  Prev: Feature Toggles,  Up: Top
@@ -643,10 +646,9 @@ File: nano.info,  Node: Nanorc Files,  Next: The File Browser,  Prev: Feature To
 7 Nanorc Files
 **************
 
-The nanorc files contain the default settings for ‘nano’.  They should
-be in Unix format, not in DOS or Mac format.  During startup, if
-‘--rcfile’ is not given, ‘nano’ will read two files: first the
-system-wide settings, from ‘/etc/nanorc’ (the exact path might be
+The nanorc files contain the default settings for ‘nano’.  During
+startup, if ‘--rcfile’ is not given, ‘nano’ will read two files: first
+the system-wide settings, from ‘/etc/nanorc’ (the exact path might be
 different on your system), and then the user-specific settings, either
 from ‘~/.nanorc’ or from ‘$XDG_CONFIG_HOME/nano/nanorc’ or from
 ‘.config/nano/nanorc’, whichever exists first.  If ‘--rcfile’ is given,
@@ -683,7 +685,8 @@ File: nano.info,  Node: Settings,  Next: Syntax Highlighting,  Up: Nanorc Files
 The supported settings in a nanorc file are:
 
 ‘set afterends’
-     Make Ctrl+Right stop at word ends instead of beginnings.
+     Make Ctrl+Right and Ctrl+Delete stop at word ends instead of
+     beginnings.
 
 ‘set allow_insecure_backup’
      When backing up files, allow the backup to succeed even if its
@@ -893,7 +896,10 @@ The supported settings in a nanorc file are:
      needed, use ‘unset jumpyscrolling’ instead.
 
 ‘set softwrap’
-     Enable soft line wrapping for easier viewing of very long lines.
+     Display lines that exceed the screen’s width over multiple screen
+     lines.  (You can make this soft-wrapping occur at whitespace
+     instead of rudely at the screen’s edge, by using also ‘set
+     atblanks’.)
 
 ‘set speller "PROGRAM [ARGUMENT ...]"’
      Use the given program to do spell checking and correcting.  *Note
@@ -907,8 +913,8 @@ The supported settings in a nanorc file are:
      Use this color combination for the vertical guiding stripe.  *Note
      set functioncolor:: for valid color names.
 
-‘set suspend’
-     Allow ‘nano’ to be suspended.
+‘set suspendable’
+     Allow ‘nano’ to be suspended (with ‘^Z’ by default).
 
 ‘set tabsize NUMBER’
      Use a tab size of NUMBER columns.  The value of NUMBER must be
@@ -949,8 +955,8 @@ The supported settings in a nanorc file are:
 
 ‘set wordchars "CHARACTERS"’
      Specify which other characters (besides the normal alphanumeric
-     ones) should be considered as parts of words.  This overrides the
-     option ‘wordbounds’.
+     ones) should be considered as parts of words.  When using this
+     option, you probably want to unset ‘wordbounds’.
 
 ‘set zap’
      Let an unmodified <Backspace> or <Delete> erase the marked region
@@ -1121,9 +1127,13 @@ file:
 
      ‘Ins’ or ‘Del’.
 
-   Rebinding ‘^M’ (Enter) or ‘^I’ (Tab) is probably not a good idea.  On
-some terminals it’s not possible to rebind ‘^H’ (unless ‘--raw’ is used)
-because its keycode is identical to that of the Backspace key.
+   Rebinding ‘^M’ (Enter) or ‘^I’ (Tab) is probably not a good idea.
+Rebinding ‘^[’ (Esc) is not possible, because its keycode is the starter
+byte of Meta keystrokes and escape sequences.  Rebinding any of the
+dedicated cursor-moving keys (the arrows, Home, End, PageUp and
+PageDown) is not possible.  On some terminals it’s not possible to
+rebind ‘^H’ (unless ‘--raw’ is used) because its keycode is identical to
+that of the Backspace key.
 
 
    Valid names for the ‘function’ to be bound are:
@@ -1186,7 +1196,7 @@ because its keycode is identical to that of the Backspace key.
      word.  (This function is bound by default to <Shift+Ctrl+Delete>.
      If your terminal produces ‘^H’ for <Ctrl+Backspace>, you can make
      <Ctrl+Backspace> delete the word to the left of the cursor by
-     rebinding ^H to this function.)
+     rebinding ‘^H’ to this function.)
 
 ‘chopwordright’
      Deletes from the cursor position to the beginning of the next word.
@@ -1308,6 +1318,16 @@ because its keycode is identical to that of the Backspace key.
      Moves the cursor to the bracket (brace, parenthesis, etc.)  that
      matches (pairs) with the one under the cursor.
 
+‘anchor’
+     Places an anchor at the current line, or removes it when already
+     present.
+
+‘prevanchor’
+     Goes to the first anchor before the current line.
+
+‘nextanchor’
+     Goes to the first anchor after the current line.
+
 ‘prevbuf’
      Switches to editing/viewing the previous buffer when multiple
      buffers are open.
@@ -1349,7 +1369,7 @@ because its keycode is identical to that of the Backspace key.
 
 ‘suspend’
      Suspends the editor (if the suspending function is enabled, see the
-     "suspendenable" entry below).
+     ‘suspendable’ toggle item below).
 
 ‘casesens’
      Toggles whether searching/replacing ignores or respects the case of
@@ -1466,9 +1486,10 @@ because its keycode is identical to that of the Backspace key.
 ‘mouse’
      Toggles mouse support.
 
-‘suspendenable’
-     Toggles whether the suspend shortcut (normally ‘^Z’) will suspend
-     the editor.
+‘suspendable’
+     Toggles whether the suspend keystroke (‘^Z’ by default) will
+     actually suspend the editor.  (The old name of this function,
+     ’suspendenable’, is deprecated.)
 
 
    Valid names for ‘menu’ are:
@@ -1774,29 +1795,30 @@ familiar with compiling programs with autoconf support:
 Tag Table:
 Node: Top199
 Node: Introduction554
-Node: Invoking1698
-Node: Command-line Options3314
-Ref: --speller12103
-Node: Editor Basics14621
-Node: Entering Text14905
-Node: Commands15894
-Node: The Cutbuffer16691
-Node: The Mark17412
-Node: Screen Layout18411
-Node: Search and Replace19590
-Node: Using the Mouse20325
-Node: Limitations20942
-Node: Built-in Help21267
-Node: Feature Toggles21691
-Node: Nanorc Files23491
-Node: Settings25168
-Ref: set functioncolor28247
-Ref: Whitespace35464
-Node: Syntax Highlighting36194
-Node: Rebinding Keys42468
-Node: The File Browser55410
-Node: Pico Compatibility56303
-Node: Building and Configure Options60847
+Node: Invoking1700
+Node: Command-line Options3316
+Ref: --speller11994
+Node: Editor Basics14088
+Node: Entering Text14384
+Node: Commands15373
+Node: The Cutbuffer16170
+Node: The Mark16891
+Node: Screen Layout17890
+Node: Search and Replace19069
+Node: Using the Mouse19804
+Node: Anchors20417
+Node: Limitations20938
+Node: Built-in Help21255
+Node: Feature Toggles21679
+Node: Nanorc Files23483
+Node: Settings25102
+Ref: set functioncolor28202
+Ref: Whitespace35606
+Node: Syntax Highlighting36361
+Node: Rebinding Keys42635
+Node: The File Browser56155
+Node: Pico Compatibility57048
+Node: Building and Configure Options61592
 
 End Tag Table
 

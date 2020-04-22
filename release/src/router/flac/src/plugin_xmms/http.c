@@ -11,15 +11,17 @@
  *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  *  GNU General Public License for more details.
  *
- *  You should have received a copy of the GNU General Public License
- *  along with this program; if not, write to the Free Software
- *  Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
+ *  You should have received a copy of the GNU General Public License along
+ *  with this program; if not, write to the Free Software Foundation, Inc.,
+ *  with this program; if not, write to the Free Software Foundation, Inc.,
  */
 /* modified for FLAC support by Steven Richman (2003) */
 
-#if HAVE_CONFIG_H
-#  include <config.h>
+#ifdef HAVE_CONFIG_H
+#include "config.h"
 #endif
+
+#include "plugin.h"
 
 #include <sys/types.h>
 #include <sys/socket.h>
@@ -34,6 +36,7 @@
 #include <errno.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <inttypes.h>
 
 #include <pthread.h>
 
@@ -43,11 +46,10 @@
 #include "FLAC/format.h"
 #include "configure.h"
 #include "locale_hack.h"
-#include "plugin.h"
 
 /* on FreeBSD we get socklen_t from <sys/socket.h> */
 #if (!defined HAVE_SOCKLEN_T) && !defined(__FreeBSD__)
-typedef unsigned int socklen_t;
+typedef uint32_t socklen_t;
 #endif
 
 #define min(x,y) ((x)<(y)?(x):(y))
@@ -58,8 +60,6 @@ static gchar *icy_name = NULL;
 static gint icy_metaint = 0;
 
 extern InputPlugin flac_ip;
-
-#undef DEBUG_UDP
 
 /* Static udp channel functions */
 static int udp_establish_listener (gint *sock);
@@ -131,7 +131,7 @@ static gchar *basic_authentication_encode (const gchar *user, const gchar *passw
 	res = g_strdup_printf("%s: Basic %s\r\n", header, t2);
 	g_free(t2);
 	g_free(t1);
-	
+
 	return res;
 }
 
@@ -181,7 +181,7 @@ static void parse_url(const gchar * url, gchar ** user, gchar ** pass, gchar ** 
 		*port = 80;
 	}
 	*host = g_strdup(h);
-	
+
 	if (f)
 		*filename = g_strdup(f + 1);
 	else
@@ -369,7 +369,7 @@ static int http_connect (gchar *url_, gboolean head, guint64 offset)
 	do
 	{
 		redirect=FALSE;
-	
+
 		g_strstrip(url);
 
 		parse_url(url, &user, &pass, &host, &port, &filename);
@@ -441,7 +441,7 @@ static int http_connect (gchar *url_, gboolean head, guint64 offset)
 
 						flac_ip.set_info_text(NULL);
 						eof = TRUE;
-						
+
 					}
 					break;
 				}
@@ -455,12 +455,12 @@ static int http_connect (gchar *url_, gboolean head, guint64 offset)
 				if (flac_cfg.stream.use_udp_channel)
 				{
 					udp_port = udp_establish_listener (&udp_sock);
-					if (udp_port > 0) 
-						sprintf (udpspace, "x-audiocast-udpport: %d\r\n", udp_port);
+					if (udp_port > 0)
+						flac_snprintf (udpspace, sizeof (udpspace), "x-audiocast-udpport: %d\r\n", udp_port);
 					else
 						udp_sock = 0;
 				}
-					
+
 				if(user && pass)
 					auth = basic_authentication_encode(user, pass, "Authorization");
 
@@ -481,17 +481,17 @@ static int http_connect (gchar *url_, gboolean head, guint64 offset)
 						       "Host: %s\r\n"
 						       "User-Agent: %s/%s\r\n"
 						       "%s%s%s%s",
-						       file, host, "Reference FLAC Player", FLAC__VERSION_STRING, 
+						       file, host, "Reference FLAC Player", FLAC__VERSION_STRING,
 						       proxy_auth ? proxy_auth : "", auth ? auth : "",
 						       flac_cfg.stream.cast_title_streaming ?  "Icy-MetaData:1\r\n" : "",
 						       flac_cfg.stream.use_udp_channel ? udpspace : "");
 				if (offset && !head) {
 					gchar *temp_dead = temp;
-					temp = g_strdup_printf ("%sRange: %llu-\r\n", temp, offset);
-					fprintf (stderr, "%s", temp);
+					temp = g_strdup_printf ("%sRange: %" PRIu64 "-\r\n", temp, offset);
+					fputs (temp, stderr);
 					g_free (temp_dead);
 				}
-				
+
 				g_free(file);
 				if(proxy_auth)
 					g_free(proxy_auth);
@@ -535,7 +535,7 @@ static int http_connect (gchar *url_, gboolean head, guint64 offset)
 												break;
 											}
 										}
-									}			
+									}
 									redirect=TRUE;
 									break;
 								}
@@ -571,12 +571,12 @@ static int http_connect (gchar *url_, gboolean head, guint64 offset)
 							if (!strncmp(line, "icy-metaint:", 12))
 								icy_metaint = atoi(line + 12);
 							if (!strncmp(line, "x-audiocast-udpport:", 20)) {
-#ifdef DEBUG_UDP
+#ifndef NDEBUG
 								fprintf (stderr, "Server wants udp messages on port %d\n", atoi (line + 20));
 #endif
 								/*udp_serverport = atoi (line + 20);*/
 							}
-							
+
 						}
 						else
 						{
@@ -588,7 +588,7 @@ static int http_connect (gchar *url_, gboolean head, guint64 offset)
 				}
 			}
 		}
-	
+
 		if(redirect)
 		{
 			if (output_file)
@@ -617,7 +617,7 @@ static void *http_buffer_loop(void *arg)
 
 	url = (gchar *) arg;
 	sock = http_connect (url, false, offset);
-	
+
 	if (sock >= 0 && flac_cfg.stream.save_http_stream) {
 		gchar *output_name;
 		file = flac_http_get_title(url);
@@ -705,7 +705,7 @@ static void *http_buffer_loop(void *arg)
 
 	g_free(buffer);
 	g_free(url);
-	
+
 	pthread_exit(NULL);
 	return NULL; /* avoid compiler warning */
 }
@@ -749,11 +749,11 @@ static int udp_establish_listener(int *sock)
 {
 	struct sockaddr_in sin;
 	socklen_t sinlen = sizeof (struct sockaddr_in);
-	
-#ifdef DEBUG_UDP
+
+#ifndef NDEBUG
 	fprintf (stderr,"Establishing udp listener\n");
 #endif
-	
+
 	if ((*sock = socket(AF_INET, SOCK_DGRAM, 0)) < 0)
 	{
 		g_log(NULL, G_LOG_LEVEL_CRITICAL,
@@ -764,7 +764,7 @@ static int udp_establish_listener(int *sock)
 	memset(&sin, 0, sinlen);
 	sin.sin_family = AF_INET;
 	sin.sin_addr.s_addr = g_htonl(INADDR_ANY);
-			
+
 	if (bind(*sock, (struct sockaddr *)&sin, sinlen) < 0)
 	{
 		g_log(NULL, G_LOG_LEVEL_CRITICAL,
@@ -789,10 +789,10 @@ static int udp_establish_listener(int *sock)
 		return -1;
 	}
 
-#ifdef DEBUG_UDP
+#ifndef NDEBUG
 	fprintf (stderr,"Listening on local %s:%d\n", inet_ntoa(sin.sin_addr), g_ntohs(sin.sin_port));
 #endif
-	
+
 	return g_ntohs(sin.sin_port);
 }
 
@@ -806,7 +806,7 @@ static int udp_check_for_data(int sock)
 	socklen_t fromlen;
 
 	fromlen = sizeof(struct sockaddr_in);
-	
+
 	if ((len = recvfrom(sock, buf, 1024, 0, (struct sockaddr *)&from, &fromlen)) < 0)
 	{
 		if (errno != EAGAIN)
@@ -818,30 +818,30 @@ static int udp_check_for_data(int sock)
 		return 0;
 	}
 	buf[len] = '\0';
-#ifdef DEBUG_UDP
+#ifndef NDEBUG
 	fprintf (stderr,"Received: [%s]\n", buf);
 #endif
 	lines = g_strsplit(buf, "\n", 0);
 	if (!lines)
 		return 0;
-	
+
 	for (i = 0; lines[i]; i++)
 	{
 		while ((lines[i][strlen(lines[i]) - 1] == '\n') ||
 		       (lines[i][strlen(lines[i]) - 1] == '\r'))
 			lines[i][strlen(lines[i]) - 1] = '\0';
-		
+
 		valptr = strchr(lines[i], ':');
-		
+
 		if (!valptr)
 			continue;
 		else
 			valptr++;
-		
+
 		g_strstrip(valptr);
 		if (!strlen(valptr))
 			continue;
-		
+
 		if (strstr(lines[i], "x-audiocast-streamtitle") != NULL)
 		{
 			title = g_strdup_printf ("%s (%s)", valptr, icy_name);
@@ -857,7 +857,7 @@ static int udp_check_for_data(int sock)
 				set_track_info(NULL, atoi(valptr));
 		}
 #endif
-				
+
 		else if (strstr(lines[i], "x-audiocast-streammsg") != NULL)
 		{
 			/* set_track_info(title, -1); */
@@ -881,13 +881,13 @@ static int udp_check_for_data(int sock)
 		else if (strstr(lines[i], "x-audiocast-udpseqnr:") != NULL)
 		{
 			gchar obuf[60];
-			sprintf(obuf, "x-audiocast-ack: %ld \r\n", atol(valptr));
+			flac_snprintf(obuf, sizeof (obuf), "x-audiocast-ack: %ld \r\n", atol(valptr));
 			if (sendto(sock, obuf, strlen(obuf), 0, (struct sockaddr *) &from, fromlen) < 0)
 			{
 				g_log(NULL, G_LOG_LEVEL_WARNING,
 				      "udp_check_for_data(): Unable to send ack to server: %s", strerror(errno));
 			}
-#ifdef DEBUG_UDP
+#ifndef NDEBUG
 			else
 				fprintf(stderr,"Sent ack: %s", obuf);
 			fprintf (stderr,"Remote: %s:%d\n", inet_ntoa(from.sin_addr), g_ntohs(from.sin_port));

@@ -125,15 +125,13 @@ void search_init(bool replacing, bool keep_the_answer)
 #endif
 			}
 
-			/* When not doing a regular-expression search, just search;
-			 * otherwise compile the search string, and only search when
-			 * the expression is valid. */
-			if (!ISSET(USE_REGEXP) || regexp_init(last_search)) {
-				if (replacing)
-					ask_for_replacement();
-				else
-					go_looking();
-			}
+			if (ISSET(USE_REGEXP) && !regexp_init(last_search))
+				break;
+
+			if (replacing)
+				ask_for_and_do_replacements();
+			else
+				go_looking();
 
 			break;
 		}
@@ -518,14 +516,11 @@ ssize_t do_replace_loop(const char *needle, bool whole_word_only,
 	linestruct *was_mark = openfile->mark;
 	linestruct *top, *bot;
 	size_t top_x, bot_x;
-	bool right_side_up = FALSE;
-		/* TRUE if (mark_begin, mark_begin_x) is the top of the mark,
-		 * FALSE if (current, current_x) is. */
+	bool right_side_up = (openfile->mark && mark_is_before_cursor());
 
 	/* If the mark is on, frame the region, and turn the mark off. */
 	if (openfile->mark) {
-		get_region((const linestruct **)&top, &top_x,
-					(const linestruct **)&bot, &bot_x, &right_side_up);
+		get_region(&top, &top_x, &bot, &bot_x);
 		openfile->mark = NULL;
 		modus = INREGION;
 
@@ -693,18 +688,20 @@ void do_replace(void)
 	}
 }
 
-/* Ask the user what the already given search string should be replaced with. */
-void ask_for_replacement(void)
+/* Ask the user what to replace the search string with, and do the replacements. */
+void ask_for_and_do_replacements(void)
 {
-	linestruct *edittop_save, *begin;
-	size_t firstcolumn_save, begin_x;
+	linestruct *was_edittop = openfile->edittop;
+	size_t was_firstcolumn = openfile->firstcolumn;
+	linestruct *beginline = openfile->current;
+	size_t begin_x = openfile->current_x;
 	ssize_t numreplaced;
 	int response = do_prompt(FALSE, FALSE, MREPLACEWITH, "",
 						/* TRANSLATORS: This is a prompt. */
 						&replace_history, edit_refresh, _("Replace with"));
 
 #ifdef ENABLE_HISTORIES
-	/* If the replace string is not "", add it to the replace history list. */
+	/* When not "", add the replace string to the replace history list. */
 	if (response == 0)
 		update_history(&replace_history, answer);
 #endif
@@ -716,18 +713,12 @@ void ask_for_replacement(void)
 	} else if (response > 0)
 		return;
 
-	/* Save where we are. */
-	edittop_save = openfile->edittop;
-	firstcolumn_save = openfile->firstcolumn;
-	begin = openfile->current;
-	begin_x = openfile->current_x;
-
-	numreplaced = do_replace_loop(last_search, FALSE, begin, &begin_x);
+	numreplaced = do_replace_loop(last_search, FALSE, beginline, &begin_x);
 
 	/* Restore where we were. */
-	openfile->edittop = edittop_save;
-	openfile->firstcolumn = firstcolumn_save;
-	openfile->current = begin;
+	openfile->edittop = was_edittop;
+	openfile->firstcolumn = was_firstcolumn;
+	openfile->current = beginline;
 	openfile->current_x = begin_x;
 	refresh_needed = TRUE;
 
@@ -985,5 +976,56 @@ void do_find_bracket(void)
 	/* Restore the cursor position. */
 	openfile->current = was_current;
 	openfile->current_x = was_current_x;
+}
+
+/* Place an anchor at the current line when none exists, otherwise remove it. */
+void put_or_lift_anchor(void)
+{
+	openfile->current->has_anchor = !openfile->current->has_anchor;
+
+	update_line(openfile->current, openfile->current_x);
+
+	if (openfile->current->has_anchor)
+		statusbar(_("Placed anchor"));
+	else
+		statusbar(_("Removed anchor"));
+}
+
+/* Make the given line the current line, or report the anchoredness. */
+void go_to_and_confirm(linestruct *line)
+{
+	linestruct *was_current = openfile->current;
+
+	if (line != openfile->current) {
+		openfile->current = line;
+		openfile->current_x = 0;
+		edit_redraw(was_current, CENTERING);
+		statusbar(_("Jumped to anchor"));
+	} else if (openfile->current->has_anchor)
+		statusbar(_("This is the only anchor"));
+	else
+		statusbar(_("There are no anchors"));
+}
+
+/* Jump to the first anchor before the current line; wrap around at the top. */
+void to_prev_anchor(void)
+{
+	linestruct *line = openfile->current;
+
+	do { line = (line->prev) ? line->prev : openfile->filebot;
+	} while (!line->has_anchor && line != openfile->current);
+
+	go_to_and_confirm(line);
+}
+
+/* Jump to the first anchor after the current line; wrap around at the bottom. */
+void to_next_anchor(void)
+{
+	linestruct *line = openfile->current;
+
+	do { line = (line->next) ? line->next : openfile->filetop;
+	} while (!line->has_anchor && line != openfile->current);
+
+	go_to_and_confirm(line);
 }
 #endif /* !NANO_TINY */

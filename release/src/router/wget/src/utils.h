@@ -1,5 +1,7 @@
 /* Declarations for utils.c.
-   Copyright (C) 1996-2011, 2015, 2018 Free Software Foundation, Inc.
+   Copyright (C) 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004,
+   2005, 2006, 2007, 2008, 2009, 2010, 2011, 2015 Free Software
+   Foundation, Inc.
 
 This file is part of GNU Wget.
 
@@ -30,8 +32,7 @@ as that of the covered work.  */
 #ifndef UTILS_H
 #define UTILS_H
 
-#include <stdlib.h>
-#include <wget.h>
+# include <stdlib.h>
 
 /* Constant is using when we don`t know attempted size exactly */
 #define UNKNOWN_ATTEMPTED_SIZE -3
@@ -72,7 +73,7 @@ char *xstrdup_lower (const char *);
 char *strdupdelim (const char *, const char *);
 char **sepstring (const char *);
 bool subdir_p (const char *, const char *);
-bool fork_to_background (void);
+void fork_to_background (void);
 
 char *aprintf (const char *, ...) GCC_FORMAT_ATTR (1, 2);
 char *concat_strings (const char *, ...);

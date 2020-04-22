@@ -1,5 +1,6 @@
 /* plugin_common - Routines common to several plugins
- * Copyright (C) 2002,2003,2004,2005,2006,2007  Josh Coalson
+ * Copyright (C) 2002-2009  Josh Coalson
+ * Copyright (C) 2011-2016  Xiph.Org Foundation
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -16,7 +17,7 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
  */
 
-#if HAVE_CONFIG_H
+#ifdef HAVE_CONFIG_H
 #  include <config.h>
 #endif
 
@@ -48,7 +49,7 @@ static FLaC__INLINE size_t local__wide_strlen(const FLAC__uint16 *s)
  * and a more clear explanation at the end of this section:
  *   http://www.cl.cam.ac.uk/~mgk25/unicode.html#utf-8
  */
-static FLaC__INLINE size_t local__utf8len(const FLAC__byte *utf8)
+static size_t local__utf8len(const FLAC__byte *utf8)
 {
 	FLAC__ASSERT(0 != utf8);
 	if ((utf8[0] & 0x80) == 0) {
@@ -90,7 +91,7 @@ static FLaC__INLINE size_t local__utf8len(const FLAC__byte *utf8)
 }
 
 
-static FLaC__INLINE size_t local__utf8_to_ucs2(const FLAC__byte *utf8, FLAC__uint16 *ucs2)
+static size_t local__utf8_to_ucs2(const FLAC__byte *utf8, FLAC__uint16 *ucs2)
 {
 	const size_t len = local__utf8len(utf8);
 
@@ -108,7 +109,7 @@ static FLaC__INLINE size_t local__utf8_to_ucs2(const FLAC__byte *utf8, FLAC__uin
 	return len;
 }
 
-static FLAC__uint16 *local__convert_utf8_to_ucs2(const char *src, unsigned length)
+static FLAC__uint16 *local__convert_utf8_to_ucs2(const char *src, uint32_t length)
 {
 	FLAC__uint16 *out;
 	size_t chars = 0;
@@ -117,9 +118,9 @@ static FLAC__uint16 *local__convert_utf8_to_ucs2(const char *src, unsigned lengt
 
 	/* calculate length */
 	{
-		const unsigned char *s, *end;
-		for (s=(const unsigned char *)src, end=s+length; s<end; chars++) {
-			const unsigned n = local__utf8len(s);
+		const uint8_t *s, *end;
+		for (s=(const uint8_t *)src, end=s+length; s<end; chars++) {
+			const uint32_t n = local__utf8len(s);
 			if (n == 0)
 				return 0;
 			s += n;
@@ -128,7 +129,7 @@ static FLAC__uint16 *local__convert_utf8_to_ucs2(const char *src, unsigned lengt
 	}
 
 	/* allocate */
-	out = (FLAC__uint16*)safe_malloc_mul_2op_(chars, /*times*/sizeof(FLAC__uint16));
+	out = safe_malloc_mul_2op_(chars, /*times*/sizeof(FLAC__uint16));
 	if (0 == out) {
 		FLAC__ASSERT(0);
 		return 0;
@@ -136,7 +137,7 @@ static FLAC__uint16 *local__convert_utf8_to_ucs2(const char *src, unsigned lengt
 
 	/* convert */
 	{
-		const unsigned char *s = (const unsigned char *)src;
+		const uint8_t *s = (const uint8_t *)src;
 		FLAC__uint16 *u = out;
 		for ( ; chars; chars--)
 			s += local__utf8_to_ucs2(s, u++);
@@ -155,7 +156,7 @@ static FLaC__INLINE size_t local__ucs2len(FLAC__uint16 ucs2)
 		return 3;
 }
 
-static FLaC__INLINE size_t local__ucs2_to_utf8(FLAC__uint16 ucs2, FLAC__byte *utf8)
+static size_t local__ucs2_to_utf8(FLAC__uint16 ucs2, FLAC__byte *utf8)
 {
 	if (ucs2 < 0x080) {
 		utf8[0] = (FLAC__byte)ucs2;
@@ -174,7 +175,7 @@ static FLaC__INLINE size_t local__ucs2_to_utf8(FLAC__uint16 ucs2, FLAC__byte *ut
 	}
 }
 
-static char *local__convert_ucs2_to_utf8(const FLAC__uint16 *src, unsigned length)
+static char *local__convert_ucs2_to_utf8(const FLAC__uint16 *src, uint32_t length)
 {
 	char *out;
 	size_t len = 0, n;
@@ -183,7 +184,7 @@ static char *local__convert_ucs2_to_utf8(const FLAC__uint16 *src, unsigned lengt
 
 	/* calculate length */
 	{
-		unsigned i;
+		uint32_t i;
 		for (i = 0; i < length; i++) {
 			n = local__ucs2len(src[i]);
 			if(len + n < len) /* overflow check */
@@ -193,13 +194,13 @@ static char *local__convert_ucs2_to_utf8(const FLAC__uint16 *src, unsigned lengt
 	}
 
 	/* allocate */
-	out = (char*)safe_malloc_mul_2op_(len, /*times*/sizeof(char));
+	out = safe_malloc_mul_2op_(len, /*times*/sizeof(char));
 	if (0 == out)
 		return 0;
 
 	/* convert */
 	{
-		unsigned char *u = (unsigned char *)out;
+		uint8_t *u = (uint8_t *)out;
 		for ( ; *src; src++)
 			u += local__ucs2_to_utf8(*src, u);
 		local__ucs2_to_utf8(*src, u);
@@ -316,7 +317,7 @@ FLAC__bool FLAC_plugin__tags_add_tag_utf8(FLAC__StreamMetadata *tags, const char
 		const size_t value_len = strlen(value);
 		const size_t separator_len = strlen(separator);
 		FLAC__byte *new_entry;
-		if(0 == (new_entry = (FLAC__byte*)safe_realloc_add_4op_(entry->entry, entry->length, /*+*/value_len, /*+*/separator_len, /*+*/1)))
+		if(0 == (new_entry = safe_realloc_add_4op_(entry->entry, entry->length, /*+*/value_len, /*+*/separator_len, /*+*/1)))
 			return false;
 		memcpy(new_entry+entry->length, separator, separator_len);
 		entry->length += separator_len;

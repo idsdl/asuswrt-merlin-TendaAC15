@@ -1,6 +1,7 @@
 /* HTTP support.
-   Copyright (C) 1996-2012, 2014-2015, 2018 Free Software Foundation,
-   Inc.
+   Copyright (C) 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004,
+   2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2014, 2015 Free
+   Software Foundation, Inc.
 
 This file is part of GNU Wget.
 
@@ -71,7 +72,7 @@ as that of the covered work.  */
 #endif
 
 #ifdef TESTING
-#include "../tests/unit-tests.h"
+#include "test.h"
 #endif
 
 #ifdef __VMS
@@ -103,8 +104,7 @@ static struct cookie_jar *wget_cookie_jar;
 #define H_REDIRECTED(x) ((x) == HTTP_STATUS_MOVED_PERMANENTLY          \
                          || (x) == HTTP_STATUS_MOVED_TEMPORARILY       \
                          || (x) == HTTP_STATUS_SEE_OTHER               \
-                         || (x) == HTTP_STATUS_TEMPORARY_REDIRECT      \
-                         || (x) == HTTP_STATUS_PERMANENT_REDIRECT)
+                         || (x) == HTTP_STATUS_TEMPORARY_REDIRECT)
 
 /* HTTP/1.0 status codes from RFC1945, provided for reference.  */
 /* Successful 2xx.  */
@@ -121,7 +121,6 @@ static struct cookie_jar *wget_cookie_jar;
 #define HTTP_STATUS_SEE_OTHER             303 /* from HTTP/1.1 */
 #define HTTP_STATUS_NOT_MODIFIED          304
 #define HTTP_STATUS_TEMPORARY_REDIRECT    307 /* from HTTP/1.1 */
-#define HTTP_STATUS_PERMANENT_REDIRECT    308 /* from HTTP/1.1 */
 
 /* Client error 4xx.  */
 #define HTTP_STATUS_BAD_REQUEST           400
@@ -613,9 +612,9 @@ struct response {
    resp_header_*.  */
 
 static struct response *
-resp_new (char *head)
+resp_new (const char *head)
 {
-  char *hdr;
+  const char *hdr;
   int count, size;
 
   struct response *resp = xnew0 (struct response);
@@ -644,23 +643,15 @@ resp_new (char *head)
         break;
 
       /* Find the end of HDR, including continuations. */
-      for (;;)
+      do
         {
-          char *end = strchr (hdr, '\n');
-
+          const char *end = strchr (hdr, '\n');
           if (end)
             hdr = end + 1;
           else
             hdr += strlen (hdr);
-
-          if (*hdr != ' ' && *hdr != '\t')
-            break;
-
-          // continuation, transform \r and \n into spaces
-          *end = ' ';
-          if (end > head && end[-1] == '\r')
-            end[-1] = ' ';
         }
+      while (*hdr == ' ' || *hdr == '\t');
     }
   DO_REALLOC (resp->headers, size, count + 1, const char *);
   resp->headers[count] = NULL;
@@ -1876,7 +1867,7 @@ initialize_request (const struct url *u, struct http_stat *hs, int *dt, struct u
   if (*dt & SEND_NOCACHE)
     {
       /* Cache-Control MUST be obeyed by all HTTP/1.1 caching mechanisms...  */
-      request_set_header (req, "Cache-Control", "no-cache", rel_none);
+      request_set_header (req, "Cache-Control", "no-cache, must-revalidate", rel_none);
 
       /* ... but some HTTP/1.0 caches doesn't implement Cache-Control.  */
       request_set_header (req, "Pragma", "no-cache", rel_none);
@@ -1935,10 +1926,10 @@ initialize_request (const struct url *u, struct http_stat *hs, int *dt, struct u
 
   /* Check for ~/.netrc if none of the above match */
   if (opt.netrc && (!*user || !*passwd))
-    search_netrc (u->host, (const char **) user, (const char **) passwd, 0, NULL);
+    search_netrc (u->host, (const char **) user, (const char **) passwd, 0);
 
   /* We only do "site-wide" authentication with "global" user/password
-   * values unless --auth-no-challenge has been requested; URL user/password
+   * values unless --auth-no-challange has been requested; URL user/password
    * info overrides. */
   if (*user && *passwd && (!u->user || opt.auth_without_challenge))
     {
@@ -3720,42 +3711,23 @@ gethttp (const struct url *u, struct url *original_url, struct http_stat *hs,
       else if (hs->local_encoding == ENC_GZIP
                && opt.compression != compression_none)
         {
-          const char *p;
-
           /* Make sure the Content-Type is not gzip before decompressing */
-          if (type)
+          const char * p = strchr (type, '/');
+          if (p == NULL)
             {
-              p = strchr (type, '/');
-              if (p == NULL)
+              hs->remote_encoding = ENC_GZIP;
+              hs->local_encoding = ENC_NONE;
+            }
+          else
+            {
+              p++;
+              if (c_tolower(p[0]) == 'x' && p[1] == '-')
+                p += 2;
+              if (0 != c_strcasecmp (p, "gzip"))
                 {
                   hs->remote_encoding = ENC_GZIP;
                   hs->local_encoding = ENC_NONE;
                 }
-              else
-                {
-                  p++;
-                  if (c_tolower(p[0]) == 'x' && p[1] == '-')
-                    p += 2;
-                  if (0 != c_strcasecmp (p, "gzip"))
-                    {
-                      hs->remote_encoding = ENC_GZIP;
-                      hs->local_encoding = ENC_NONE;
-                    }
-                }
-            }
-          else
-            {
-               hs->remote_encoding = ENC_GZIP;
-               hs->local_encoding = ENC_NONE;
-            }
-
-          /* don't uncompress if a file ends with '.gz' or '.tgz' */
-          if (hs->remote_encoding == ENC_GZIP
-              && (p = strrchr(u->file, '.'))
-              && (c_strcasecmp(p, ".gz") == 0 || c_strcasecmp(p, ".tgz") == 0))
-            {
-               DEBUGP (("Enabling broken server workaround. Will not decompress this GZip file.\n"));
-               hs->remote_encoding = ENC_NONE;
             }
         }
 #endif
@@ -3803,7 +3775,7 @@ gethttp (const struct url *u, struct url *original_url, struct http_stat *hs,
           hs->restval = 0;
 
           /* Normally we are not interested in the response body of a redirect.
-             But if we are writing a WARC file we are: we like to keep everything.  */
+             But if we are writing a WARC file we are: we like to keep everyting.  */
           if (warc_enabled)
             {
               int _err = read_response_body (hs, sock, NULL, contlen, 0,
@@ -3849,7 +3821,6 @@ gethttp (const struct url *u, struct url *original_url, struct http_stat *hs,
           switch (statcode)
             {
             case HTTP_STATUS_TEMPORARY_REDIRECT:
-            case HTTP_STATUS_PERMANENT_REDIRECT:
               retval = NEWLOCATION_KEEP_POST;
               goto cleanup;
             case HTTP_STATUS_MOVED_PERMANENTLY:
@@ -3872,6 +3843,8 @@ gethttp (const struct url *u, struct url *original_url, struct http_stat *hs,
         }
     }
 
+  set_content_type (dt, type);
+
   if (cond_get)
     {
       if (statcode == HTTP_STATUS_NOT_MODIFIED)
@@ -3885,8 +3858,6 @@ gethttp (const struct url *u, struct url *original_url, struct http_stat *hs,
           goto cleanup;
         }
     }
-
-  set_content_type (dt, type);
 
   if (opt.adjust_extension)
     {
@@ -3987,16 +3958,11 @@ gethttp (const struct url *u, struct url *original_url, struct http_stat *hs,
       hs->res = 0;
       /* Mark as successfully retrieved. */
       *dt |= RETROKF;
-
-      /* Try to maintain the keep-alive connection. It is often cheaper to
-       * consume some bytes which have already been sent than to negotiate
-       * a new connection. However, if the body is too large, or we don't
-       * care about keep-alive, then simply terminate the connection */
-      if (keep_alive &&
-          skip_short_body (sock, contlen, chunked_transfer_encoding))
+      if (statcode == HTTP_STATUS_RANGE_NOT_SATISFIABLE)
         CLOSE_FINISH (sock);
       else
-        CLOSE_INVALIDATE (sock);
+        CLOSE_INVALIDATE (sock);        /* would be CLOSE_FINISH, but there
+                                   might be more bytes in the body. */
       retval = RETRUNNEEDED;
       goto cleanup;
     }
@@ -4602,7 +4568,7 @@ The sizes do not match (local %s) -- retrieving.\n"),
                   bool finished = true;
                   if (opt.recursive)
                     {
-                      if ((*dt & TEXTHTML) || (*dt & TEXTCSS))
+                      if (*dt & TEXTHTML)
                         {
                           logputs (LOG_VERBOSE, _("\
 Remote file exists and could contain links to other resources -- retrieving.\n\n"));
@@ -4617,7 +4583,7 @@ Remote file exists but does not contain any link -- not retrieving.\n\n"));
                     }
                   else
                     {
-                      if ((*dt & TEXTHTML) || (*dt & TEXTCSS))
+                      if (*dt & TEXTHTML)
                         {
                           logprintf (LOG_VERBOSE, _("\
 Remote file exists and could contain further links,\n\

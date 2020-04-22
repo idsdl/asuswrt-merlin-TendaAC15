@@ -107,7 +107,7 @@ struct wbint_LookupSids {
 
 struct wbint_LookupName {
 	struct {
-		const char *domain;/* [ref,charset(UTF8)] */
+		const char *domain;/* [charset(UTF8),ref] */
 		const char *name;/* [ref,charset(UTF8)] */
 		uint32_t flags;
 	} in;
@@ -179,7 +179,7 @@ struct wbint_Uid2Sid {
 
 struct wbint_Gid2Sid {
 	struct {
-		const char *dom_name;/* [unique,charset(UTF8)] */
+		const char *dom_name;/* [charset(UTF8),unique] */
 		uint64_t gid;
 	} in;
 
@@ -293,7 +293,7 @@ struct wbint_DsGetDcName {
 	struct {
 		const char *domain_name;/* [ref,charset(UTF8)] */
 		struct GUID *domain_guid;/* [unique] */
-		const char *site_name;/* [unique,charset(UTF8)] */
+		const char *site_name;/* [charset(UTF8),unique] */
 		uint32_t flags;
 	} in;
 

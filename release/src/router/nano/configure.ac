@@ -16,7 +16,7 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see https://www.gnu.org/licenses/.
 
-AC_INIT([GNU nano], [4.8], [nano-devel@gnu.org], [nano])
+AC_INIT([GNU nano], [4.9], [nano-devel@gnu.org], [nano])
 AC_CONFIG_SRCDIR([src/nano.c])
 AC_CANONICAL_HOST
 AM_INIT_AUTOMAKE([1.14])
@@ -738,7 +738,6 @@ m4/Makefile
 po/Makefile.in
 src/Makefile
 syntax/Makefile
-nano.spec
 ])
 
 AC_OUTPUT
