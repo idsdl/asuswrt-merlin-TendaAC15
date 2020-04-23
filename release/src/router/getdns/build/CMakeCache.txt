@@ -230,7 +230,7 @@ CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
 //Current date of the compilation, set to fixed date for reproducible
 // builds.
-CURRENT_DATE:STRING=2020-04-22T12:41:49Z
+CURRENT_DATE:STRING=2020-04-23T15:53:32Z
 
 //Enable/disable DNSSEC roadblock avoidance.
 DNSSEC_ROADBLOCK_AVOIDANCE:BOOL=ON

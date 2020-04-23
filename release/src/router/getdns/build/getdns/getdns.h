@@ -45,7 +45,7 @@
 extern "C" {
 #endif
 
-#define GETDNS_COMPILATION_COMMENT "getdns 1.6.0 configured on 2020-04-22T12:41:49Z for the December 2015 version of the API"
+#define GETDNS_COMPILATION_COMMENT "getdns 1.6.0 configured on 2020-04-23T15:53:32Z for the December 2015 version of the API"
 
 /**
  * \defgroup functions Functions

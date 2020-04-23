@@ -2475,6 +2475,28 @@ define KernelConfig
 		echo "# CONFIG_RTL8365MB is not set" >>$(1); \
 	fi; \
 	fi; \
+		if [ "$(SPI)" = "y" ]; then \
+		echo "# CONFIG_MTD_DATAFLASH is not set" >>$(1); \
+		echo "CONFIG_MTD_M25P80=y" >>$(1); \
+		echo "CONFIG_M25PXX_USE_FAST_READ=y" >>$(1); \
+		echo "# CONFIG_MTD_SST25L is not set" >>$(1); \
+		echo "# CONFIG_AD525X_DPOT is not set" >>$(1); \
+		echo "# CONFIG_TI_DAC7512 is not set" >>$(1); \
+		echo "# CONFIG_EEPROM_AT25 is not set" >>$(1); \
+		echo "# CONFIG_SERIAL_MAX3100 is not set" >>$(1); \
+		echo "# CONFIG_SERIAL_MAX3107 is not set" >>$(1); \
+		echo "CONFIG_SPI=y" >>$(1); \
+		echo "CONFIG_SPI_MASTER=y" >>$(1); \
+		echo "# SPI Master Controller Drivers" >>$(1); \
+		echo "# CONFIG_SPI_BITBANG is not set" >>$(1); \
+		echo "# CONFIG_SPI_XILINX is not set" >>$(1); \
+		echo "# CONFIG_SPI_DESIGNWARE is not set" >>$(1); \
+		echo "# CONFIG_SPI_SPIDEV is not set" >>$(1); \
+		echo "# CONFIG_SPI_TLE62X0 is not set" >>$(1); \
+		echo "# CONFIG_SND_SPI is not set" >>$(1); \
+		echo "# CONFIG_SND_SOC is not set" >>$(1); \
+		echo "# CONFIG_LEDS_DAC124S085 is not set" >>$(1); \
+	fi; \
 	if [ "$(BCM_MMC)" = "y" ]; then \
 		sed -i "/CONFIG_MMC/d" $(1); \
 		echo "CONFIG_MMC=y" >>$(1); \

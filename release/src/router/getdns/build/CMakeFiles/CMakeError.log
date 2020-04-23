@@ -1,120 +1,120 @@
 Determining if the include file sys/limits.h exists failed with the following output:
 Change Dir: /home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/gmake" "cmTC_d3eca/fast"
+Run Build Command:"/usr/bin/gmake" "cmTC_d43fd/fast"
 gmake[4]: Entering directory '/home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp'
-/usr/bin/gmake -f CMakeFiles/cmTC_d3eca.dir/build.make CMakeFiles/cmTC_d3eca.dir/build
+/usr/bin/gmake -f CMakeFiles/cmTC_d43fd.dir/build.make CMakeFiles/cmTC_d43fd.dir/build
 gmake[5]: Entering directory '/home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_d3eca.dir/CheckIncludeFile.c.o
-/opt/brcm-arm/bin/arm-brcm-linux-uclibcgnueabi-gcc   -Os -DNDEBUG -ffunction-sections -fdata-sections -DLINUX26 -DCONFIG_BCMWL5 -DDEBUG_NOISY -DDEBUG_RCTEST -pipe -DBCMWPA2 -DBCMARM -fno-strict-aliasing -marm -DRTCONFIG_NVRAM_64K -DLINUX_KERNEL_VERSION=132644 -D_POSIX_C_SOURCE=200112L -D_XOPEN_SOURCE=600 -D_BSD_SOURCE -D_DEFAULT_SOURCE    -o CMakeFiles/cmTC_d3eca.dir/CheckIncludeFile.c.o   -c /home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Building C object CMakeFiles/cmTC_d43fd.dir/CheckIncludeFile.c.o
+/opt/brcm-arm/bin/arm-brcm-linux-uclibcgnueabi-gcc   -Os -DNDEBUG -ffunction-sections -fdata-sections -DLINUX26 -DCONFIG_BCMWL5 -DDEBUG_NOISY -DDEBUG_RCTEST -pipe -DBCMWPA2 -DBCMARM -fno-strict-aliasing -marm -DRTCONFIG_NVRAM_64K -DLINUX_KERNEL_VERSION=132644 -D_POSIX_C_SOURCE=200112L -D_XOPEN_SOURCE=600 -D_BSD_SOURCE -D_DEFAULT_SOURCE    -o CMakeFiles/cmTC_d43fd.dir/CheckIncludeFile.c.o   -c /home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
 /home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:24: fatal error: sys/limits.h: No such file or directory
 compilation terminated.
-gmake[5]: *** [CMakeFiles/cmTC_d3eca.dir/build.make:66: CMakeFiles/cmTC_d3eca.dir/CheckIncludeFile.c.o] Error 1
+gmake[5]: *** [CMakeFiles/cmTC_d43fd.dir/build.make:66: CMakeFiles/cmTC_d43fd.dir/CheckIncludeFile.c.o] Error 1
 gmake[5]: Leaving directory '/home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp'
-gmake[4]: *** [Makefile:126: cmTC_d3eca/fast] Error 2
+gmake[4]: *** [Makefile:126: cmTC_d43fd/fast] Error 2
 gmake[4]: Leaving directory '/home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp'
 
 
 Determining if the include file resource.h exists failed with the following output:
 Change Dir: /home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/gmake" "cmTC_08421/fast"
+Run Build Command:"/usr/bin/gmake" "cmTC_7dcc6/fast"
 gmake[4]: Entering directory '/home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp'
-/usr/bin/gmake -f CMakeFiles/cmTC_08421.dir/build.make CMakeFiles/cmTC_08421.dir/build
+/usr/bin/gmake -f CMakeFiles/cmTC_7dcc6.dir/build.make CMakeFiles/cmTC_7dcc6.dir/build
 gmake[5]: Entering directory '/home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_08421.dir/CheckIncludeFile.c.o
-/opt/brcm-arm/bin/arm-brcm-linux-uclibcgnueabi-gcc   -Os -DNDEBUG -ffunction-sections -fdata-sections -DLINUX26 -DCONFIG_BCMWL5 -DDEBUG_NOISY -DDEBUG_RCTEST -pipe -DBCMWPA2 -DBCMARM -fno-strict-aliasing -marm -DRTCONFIG_NVRAM_64K -DLINUX_KERNEL_VERSION=132644 -D_POSIX_C_SOURCE=200112L -D_XOPEN_SOURCE=600 -D_BSD_SOURCE -D_DEFAULT_SOURCE    -o CMakeFiles/cmTC_08421.dir/CheckIncludeFile.c.o   -c /home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Building C object CMakeFiles/cmTC_7dcc6.dir/CheckIncludeFile.c.o
+/opt/brcm-arm/bin/arm-brcm-linux-uclibcgnueabi-gcc   -Os -DNDEBUG -ffunction-sections -fdata-sections -DLINUX26 -DCONFIG_BCMWL5 -DDEBUG_NOISY -DDEBUG_RCTEST -pipe -DBCMWPA2 -DBCMARM -fno-strict-aliasing -marm -DRTCONFIG_NVRAM_64K -DLINUX_KERNEL_VERSION=132644 -D_POSIX_C_SOURCE=200112L -D_XOPEN_SOURCE=600 -D_BSD_SOURCE -D_DEFAULT_SOURCE    -o CMakeFiles/cmTC_7dcc6.dir/CheckIncludeFile.c.o   -c /home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
 /home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:22: fatal error: resource.h: No such file or directory
 compilation terminated.
-gmake[5]: *** [CMakeFiles/cmTC_08421.dir/build.make:66: CMakeFiles/cmTC_08421.dir/CheckIncludeFile.c.o] Error 1
+gmake[5]: *** [CMakeFiles/cmTC_7dcc6.dir/build.make:66: CMakeFiles/cmTC_7dcc6.dir/CheckIncludeFile.c.o] Error 1
 gmake[5]: Leaving directory '/home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp'
-gmake[4]: *** [Makefile:126: cmTC_08421/fast] Error 2
+gmake[4]: *** [Makefile:126: cmTC_7dcc6/fast] Error 2
 gmake[4]: Leaving directory '/home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp'
 
 
 Determining if the include file windows.h exists failed with the following output:
 Change Dir: /home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/gmake" "cmTC_c244f/fast"
+Run Build Command:"/usr/bin/gmake" "cmTC_e562d/fast"
 gmake[4]: Entering directory '/home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp'
-/usr/bin/gmake -f CMakeFiles/cmTC_c244f.dir/build.make CMakeFiles/cmTC_c244f.dir/build
+/usr/bin/gmake -f CMakeFiles/cmTC_e562d.dir/build.make CMakeFiles/cmTC_e562d.dir/build
 gmake[5]: Entering directory '/home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_c244f.dir/CheckIncludeFile.c.o
-/opt/brcm-arm/bin/arm-brcm-linux-uclibcgnueabi-gcc   -Os -DNDEBUG -ffunction-sections -fdata-sections -DLINUX26 -DCONFIG_BCMWL5 -DDEBUG_NOISY -DDEBUG_RCTEST -pipe -DBCMWPA2 -DBCMARM -fno-strict-aliasing -marm -DRTCONFIG_NVRAM_64K -DLINUX_KERNEL_VERSION=132644 -D_POSIX_C_SOURCE=200112L -D_XOPEN_SOURCE=600 -D_BSD_SOURCE -D_DEFAULT_SOURCE    -o CMakeFiles/cmTC_c244f.dir/CheckIncludeFile.c.o   -c /home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Building C object CMakeFiles/cmTC_e562d.dir/CheckIncludeFile.c.o
+/opt/brcm-arm/bin/arm-brcm-linux-uclibcgnueabi-gcc   -Os -DNDEBUG -ffunction-sections -fdata-sections -DLINUX26 -DCONFIG_BCMWL5 -DDEBUG_NOISY -DDEBUG_RCTEST -pipe -DBCMWPA2 -DBCMARM -fno-strict-aliasing -marm -DRTCONFIG_NVRAM_64K -DLINUX_KERNEL_VERSION=132644 -D_POSIX_C_SOURCE=200112L -D_XOPEN_SOURCE=600 -D_BSD_SOURCE -D_DEFAULT_SOURCE    -o CMakeFiles/cmTC_e562d.dir/CheckIncludeFile.c.o   -c /home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
 /home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:21: fatal error: windows.h: No such file or directory
 compilation terminated.
-gmake[5]: *** [CMakeFiles/cmTC_c244f.dir/build.make:66: CMakeFiles/cmTC_c244f.dir/CheckIncludeFile.c.o] Error 1
+gmake[5]: *** [CMakeFiles/cmTC_e562d.dir/build.make:66: CMakeFiles/cmTC_e562d.dir/CheckIncludeFile.c.o] Error 1
 gmake[5]: Leaving directory '/home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp'
-gmake[4]: *** [Makefile:126: cmTC_c244f/fast] Error 2
+gmake[4]: *** [Makefile:126: cmTC_e562d/fast] Error 2
 gmake[4]: Leaving directory '/home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp'
 
 
 Determining if the include file winsock.h exists failed with the following output:
 Change Dir: /home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/gmake" "cmTC_94133/fast"
+Run Build Command:"/usr/bin/gmake" "cmTC_8e350/fast"
 gmake[4]: Entering directory '/home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp'
-/usr/bin/gmake -f CMakeFiles/cmTC_94133.dir/build.make CMakeFiles/cmTC_94133.dir/build
+/usr/bin/gmake -f CMakeFiles/cmTC_8e350.dir/build.make CMakeFiles/cmTC_8e350.dir/build
 gmake[5]: Entering directory '/home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_94133.dir/CheckIncludeFile.c.o
-/opt/brcm-arm/bin/arm-brcm-linux-uclibcgnueabi-gcc   -Os -DNDEBUG -ffunction-sections -fdata-sections -DLINUX26 -DCONFIG_BCMWL5 -DDEBUG_NOISY -DDEBUG_RCTEST -pipe -DBCMWPA2 -DBCMARM -fno-strict-aliasing -marm -DRTCONFIG_NVRAM_64K -DLINUX_KERNEL_VERSION=132644 -D_POSIX_C_SOURCE=200112L -D_XOPEN_SOURCE=600 -D_BSD_SOURCE -D_DEFAULT_SOURCE    -o CMakeFiles/cmTC_94133.dir/CheckIncludeFile.c.o   -c /home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Building C object CMakeFiles/cmTC_8e350.dir/CheckIncludeFile.c.o
+/opt/brcm-arm/bin/arm-brcm-linux-uclibcgnueabi-gcc   -Os -DNDEBUG -ffunction-sections -fdata-sections -DLINUX26 -DCONFIG_BCMWL5 -DDEBUG_NOISY -DDEBUG_RCTEST -pipe -DBCMWPA2 -DBCMARM -fno-strict-aliasing -marm -DRTCONFIG_NVRAM_64K -DLINUX_KERNEL_VERSION=132644 -D_POSIX_C_SOURCE=200112L -D_XOPEN_SOURCE=600 -D_BSD_SOURCE -D_DEFAULT_SOURCE    -o CMakeFiles/cmTC_8e350.dir/CheckIncludeFile.c.o   -c /home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
 /home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:21: fatal error: winsock.h: No such file or directory
 compilation terminated.
-gmake[5]: *** [CMakeFiles/cmTC_94133.dir/build.make:66: CMakeFiles/cmTC_94133.dir/CheckIncludeFile.c.o] Error 1
+gmake[5]: *** [CMakeFiles/cmTC_8e350.dir/build.make:66: CMakeFiles/cmTC_8e350.dir/CheckIncludeFile.c.o] Error 1
 gmake[5]: Leaving directory '/home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp'
-gmake[4]: *** [Makefile:126: cmTC_94133/fast] Error 2
+gmake[4]: *** [Makefile:126: cmTC_8e350/fast] Error 2
 gmake[4]: Leaving directory '/home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp'
 
 
 Determining if the include file winsock2.h exists failed with the following output:
 Change Dir: /home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/gmake" "cmTC_a8b85/fast"
+Run Build Command:"/usr/bin/gmake" "cmTC_cef58/fast"
 gmake[4]: Entering directory '/home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp'
-/usr/bin/gmake -f CMakeFiles/cmTC_a8b85.dir/build.make CMakeFiles/cmTC_a8b85.dir/build
+/usr/bin/gmake -f CMakeFiles/cmTC_cef58.dir/build.make CMakeFiles/cmTC_cef58.dir/build
 gmake[5]: Entering directory '/home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_a8b85.dir/CheckIncludeFile.c.o
-/opt/brcm-arm/bin/arm-brcm-linux-uclibcgnueabi-gcc   -Os -DNDEBUG -ffunction-sections -fdata-sections -DLINUX26 -DCONFIG_BCMWL5 -DDEBUG_NOISY -DDEBUG_RCTEST -pipe -DBCMWPA2 -DBCMARM -fno-strict-aliasing -marm -DRTCONFIG_NVRAM_64K -DLINUX_KERNEL_VERSION=132644 -D_POSIX_C_SOURCE=200112L -D_XOPEN_SOURCE=600 -D_BSD_SOURCE -D_DEFAULT_SOURCE    -o CMakeFiles/cmTC_a8b85.dir/CheckIncludeFile.c.o   -c /home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Building C object CMakeFiles/cmTC_cef58.dir/CheckIncludeFile.c.o
+/opt/brcm-arm/bin/arm-brcm-linux-uclibcgnueabi-gcc   -Os -DNDEBUG -ffunction-sections -fdata-sections -DLINUX26 -DCONFIG_BCMWL5 -DDEBUG_NOISY -DDEBUG_RCTEST -pipe -DBCMWPA2 -DBCMARM -fno-strict-aliasing -marm -DRTCONFIG_NVRAM_64K -DLINUX_KERNEL_VERSION=132644 -D_POSIX_C_SOURCE=200112L -D_XOPEN_SOURCE=600 -D_BSD_SOURCE -D_DEFAULT_SOURCE    -o CMakeFiles/cmTC_cef58.dir/CheckIncludeFile.c.o   -c /home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
 /home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:22: fatal error: winsock2.h: No such file or directory
 compilation terminated.
-gmake[5]: *** [CMakeFiles/cmTC_a8b85.dir/build.make:66: CMakeFiles/cmTC_a8b85.dir/CheckIncludeFile.c.o] Error 1
+gmake[5]: *** [CMakeFiles/cmTC_cef58.dir/build.make:66: CMakeFiles/cmTC_cef58.dir/CheckIncludeFile.c.o] Error 1
 gmake[5]: Leaving directory '/home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp'
-gmake[4]: *** [Makefile:126: cmTC_a8b85/fast] Error 2
+gmake[4]: *** [Makefile:126: cmTC_cef58/fast] Error 2
 gmake[4]: Leaving directory '/home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp'
 
 
 Determining if the include file ws2tcpip.h exists failed with the following output:
 Change Dir: /home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/gmake" "cmTC_c41c7/fast"
+Run Build Command:"/usr/bin/gmake" "cmTC_7ce4c/fast"
 gmake[4]: Entering directory '/home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp'
-/usr/bin/gmake -f CMakeFiles/cmTC_c41c7.dir/build.make CMakeFiles/cmTC_c41c7.dir/build
+/usr/bin/gmake -f CMakeFiles/cmTC_7ce4c.dir/build.make CMakeFiles/cmTC_7ce4c.dir/build
 gmake[5]: Entering directory '/home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_c41c7.dir/CheckIncludeFile.c.o
-/opt/brcm-arm/bin/arm-brcm-linux-uclibcgnueabi-gcc   -Os -DNDEBUG -ffunction-sections -fdata-sections -DLINUX26 -DCONFIG_BCMWL5 -DDEBUG_NOISY -DDEBUG_RCTEST -pipe -DBCMWPA2 -DBCMARM -fno-strict-aliasing -marm -DRTCONFIG_NVRAM_64K -DLINUX_KERNEL_VERSION=132644 -D_POSIX_C_SOURCE=200112L -D_XOPEN_SOURCE=600 -D_BSD_SOURCE -D_DEFAULT_SOURCE    -o CMakeFiles/cmTC_c41c7.dir/CheckIncludeFile.c.o   -c /home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Building C object CMakeFiles/cmTC_7ce4c.dir/CheckIncludeFile.c.o
+/opt/brcm-arm/bin/arm-brcm-linux-uclibcgnueabi-gcc   -Os -DNDEBUG -ffunction-sections -fdata-sections -DLINUX26 -DCONFIG_BCMWL5 -DDEBUG_NOISY -DDEBUG_RCTEST -pipe -DBCMWPA2 -DBCMARM -fno-strict-aliasing -marm -DRTCONFIG_NVRAM_64K -DLINUX_KERNEL_VERSION=132644 -D_POSIX_C_SOURCE=200112L -D_XOPEN_SOURCE=600 -D_BSD_SOURCE -D_DEFAULT_SOURCE    -o CMakeFiles/cmTC_7ce4c.dir/CheckIncludeFile.c.o   -c /home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
 /home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:22: fatal error: ws2tcpip.h: No such file or directory
 compilation terminated.
-gmake[5]: *** [CMakeFiles/cmTC_c41c7.dir/build.make:66: CMakeFiles/cmTC_c41c7.dir/CheckIncludeFile.c.o] Error 1
+gmake[5]: *** [CMakeFiles/cmTC_7ce4c.dir/build.make:66: CMakeFiles/cmTC_7ce4c.dir/CheckIncludeFile.c.o] Error 1
 gmake[5]: Leaving directory '/home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp'
-gmake[4]: *** [Makefile:126: cmTC_c41c7/fast] Error 2
+gmake[4]: *** [Makefile:126: cmTC_7ce4c/fast] Error 2
 gmake[4]: Leaving directory '/home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp'
 
 
 Determining if the getentropy exist failed with the following output:
 Change Dir: /home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/gmake" "cmTC_19a0d/fast"
+Run Build Command:"/usr/bin/gmake" "cmTC_151c6/fast"
 gmake[4]: Entering directory '/home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp'
-/usr/bin/gmake -f CMakeFiles/cmTC_19a0d.dir/build.make CMakeFiles/cmTC_19a0d.dir/build
+/usr/bin/gmake -f CMakeFiles/cmTC_151c6.dir/build.make CMakeFiles/cmTC_151c6.dir/build
 gmake[5]: Entering directory '/home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_19a0d.dir/CheckSymbolExists.c.o
-/opt/brcm-arm/bin/arm-brcm-linux-uclibcgnueabi-gcc   -Os -DNDEBUG -ffunction-sections -fdata-sections -DLINUX26 -DCONFIG_BCMWL5 -DDEBUG_NOISY -DDEBUG_RCTEST -pipe -DBCMWPA2 -DBCMARM -fno-strict-aliasing -marm -DRTCONFIG_NVRAM_64K -DLINUX_KERNEL_VERSION=132644 -D_POSIX_C_SOURCE=200112L -D_XOPEN_SOURCE=600 -D_BSD_SOURCE -D_DEFAULT_SOURCE    -o CMakeFiles/cmTC_19a0d.dir/CheckSymbolExists.c.o   -c /home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Building C object CMakeFiles/cmTC_151c6.dir/CheckSymbolExists.c.o
+/opt/brcm-arm/bin/arm-brcm-linux-uclibcgnueabi-gcc   -Os -DNDEBUG -ffunction-sections -fdata-sections -DLINUX26 -DCONFIG_BCMWL5 -DDEBUG_NOISY -DDEBUG_RCTEST -pipe -DBCMWPA2 -DBCMARM -fno-strict-aliasing -marm -DRTCONFIG_NVRAM_64K -DLINUX_KERNEL_VERSION=132644 -D_POSIX_C_SOURCE=200112L -D_XOPEN_SOURCE=600 -D_BSD_SOURCE -D_DEFAULT_SOURCE    -o CMakeFiles/cmTC_151c6.dir/CheckSymbolExists.c.o   -c /home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
 /home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
 /home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: error: ‘getentropy’ undeclared (first use in this function)
 /home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: note: each undeclared identifier is reported only once for each function it appears in
-gmake[5]: *** [CMakeFiles/cmTC_19a0d.dir/build.make:66: CMakeFiles/cmTC_19a0d.dir/CheckSymbolExists.c.o] Error 1
+gmake[5]: *** [CMakeFiles/cmTC_151c6.dir/build.make:66: CMakeFiles/cmTC_151c6.dir/CheckSymbolExists.c.o] Error 1
 gmake[5]: Leaving directory '/home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp'
-gmake[4]: *** [Makefile:126: cmTC_19a0d/fast] Error 2
+gmake[4]: *** [Makefile:126: cmTC_151c6/fast] Error 2
 gmake[4]: Leaving directory '/home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp'
 
 File /home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -135,58 +135,58 @@ int main(int argc, char** argv)
 Determining if the function getauxval exists failed with the following output:
 Change Dir: /home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/gmake" "cmTC_fdc22/fast"
+Run Build Command:"/usr/bin/gmake" "cmTC_f24dc/fast"
 gmake[4]: Entering directory '/home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp'
-/usr/bin/gmake -f CMakeFiles/cmTC_fdc22.dir/build.make CMakeFiles/cmTC_fdc22.dir/build
+/usr/bin/gmake -f CMakeFiles/cmTC_f24dc.dir/build.make CMakeFiles/cmTC_f24dc.dir/build
 gmake[5]: Entering directory '/home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_fdc22.dir/CheckFunctionExists.c.o
-/opt/brcm-arm/bin/arm-brcm-linux-uclibcgnueabi-gcc   -Os -DNDEBUG -ffunction-sections -fdata-sections -DLINUX26 -DCONFIG_BCMWL5 -DDEBUG_NOISY -DDEBUG_RCTEST -pipe -DBCMWPA2 -DBCMARM -fno-strict-aliasing -marm -DRTCONFIG_NVRAM_64K -DLINUX_KERNEL_VERSION=132644 -D_POSIX_C_SOURCE=200112L -D_XOPEN_SOURCE=600 -D_BSD_SOURCE -D_DEFAULT_SOURCE -DCHECK_FUNCTION_EXISTS=getauxval   -o CMakeFiles/cmTC_fdc22.dir/CheckFunctionExists.c.o   -c /usr/share/cmake/Modules/CheckFunctionExists.c
-Linking C executable cmTC_fdc22
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fdc22.dir/link.txt --verbose=1
-/opt/brcm-arm/bin/arm-brcm-linux-uclibcgnueabi-gcc -Os -DNDEBUG -ffunction-sections -fdata-sections -DLINUX26 -DCONFIG_BCMWL5 -DDEBUG_NOISY -DDEBUG_RCTEST -pipe -DBCMWPA2 -DBCMARM -fno-strict-aliasing -marm -DRTCONFIG_NVRAM_64K -DLINUX_KERNEL_VERSION=132644 -D_POSIX_C_SOURCE=200112L -D_XOPEN_SOURCE=600 -D_BSD_SOURCE -D_DEFAULT_SOURCE -DCHECK_FUNCTION_EXISTS=getauxval  -Wl,--gc-sections -lgcc_s -lpthread  CMakeFiles/cmTC_fdc22.dir/CheckFunctionExists.c.o  -o cmTC_fdc22 
-CMakeFiles/cmTC_fdc22.dir/CheckFunctionExists.c.o: In function `main':
+Building C object CMakeFiles/cmTC_f24dc.dir/CheckFunctionExists.c.o
+/opt/brcm-arm/bin/arm-brcm-linux-uclibcgnueabi-gcc   -Os -DNDEBUG -ffunction-sections -fdata-sections -DLINUX26 -DCONFIG_BCMWL5 -DDEBUG_NOISY -DDEBUG_RCTEST -pipe -DBCMWPA2 -DBCMARM -fno-strict-aliasing -marm -DRTCONFIG_NVRAM_64K -DLINUX_KERNEL_VERSION=132644 -D_POSIX_C_SOURCE=200112L -D_XOPEN_SOURCE=600 -D_BSD_SOURCE -D_DEFAULT_SOURCE -DCHECK_FUNCTION_EXISTS=getauxval   -o CMakeFiles/cmTC_f24dc.dir/CheckFunctionExists.c.o   -c /usr/share/cmake/Modules/CheckFunctionExists.c
+Linking C executable cmTC_f24dc
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f24dc.dir/link.txt --verbose=1
+/opt/brcm-arm/bin/arm-brcm-linux-uclibcgnueabi-gcc -Os -DNDEBUG -ffunction-sections -fdata-sections -DLINUX26 -DCONFIG_BCMWL5 -DDEBUG_NOISY -DDEBUG_RCTEST -pipe -DBCMWPA2 -DBCMARM -fno-strict-aliasing -marm -DRTCONFIG_NVRAM_64K -DLINUX_KERNEL_VERSION=132644 -D_POSIX_C_SOURCE=200112L -D_XOPEN_SOURCE=600 -D_BSD_SOURCE -D_DEFAULT_SOURCE -DCHECK_FUNCTION_EXISTS=getauxval  -Wl,--gc-sections -lgcc_s -lpthread  CMakeFiles/cmTC_f24dc.dir/CheckFunctionExists.c.o  -o cmTC_f24dc 
+CMakeFiles/cmTC_f24dc.dir/CheckFunctionExists.c.o: In function `main':
 CheckFunctionExists.c:(.text.main+0xc): undefined reference to `getauxval'
 collect2: ld returned 1 exit status
-gmake[5]: *** [CMakeFiles/cmTC_fdc22.dir/build.make:87: cmTC_fdc22] Error 1
+gmake[5]: *** [CMakeFiles/cmTC_f24dc.dir/build.make:87: cmTC_f24dc] Error 1
 gmake[5]: Leaving directory '/home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp'
-gmake[4]: *** [Makefile:126: cmTC_fdc22/fast] Error 2
+gmake[4]: *** [Makefile:126: cmTC_f24dc/fast] Error 2
 gmake[4]: Leaving directory '/home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp'
 
 
 Determining if the function ioctlsocket exists failed with the following output:
 Change Dir: /home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/gmake" "cmTC_07010/fast"
+Run Build Command:"/usr/bin/gmake" "cmTC_8d51b/fast"
 gmake[4]: Entering directory '/home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp'
-/usr/bin/gmake -f CMakeFiles/cmTC_07010.dir/build.make CMakeFiles/cmTC_07010.dir/build
+/usr/bin/gmake -f CMakeFiles/cmTC_8d51b.dir/build.make CMakeFiles/cmTC_8d51b.dir/build
 gmake[5]: Entering directory '/home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_07010.dir/CheckFunctionExists.c.o
-/opt/brcm-arm/bin/arm-brcm-linux-uclibcgnueabi-gcc   -Os -DNDEBUG -ffunction-sections -fdata-sections -DLINUX26 -DCONFIG_BCMWL5 -DDEBUG_NOISY -DDEBUG_RCTEST -pipe -DBCMWPA2 -DBCMARM -fno-strict-aliasing -marm -DRTCONFIG_NVRAM_64K -DLINUX_KERNEL_VERSION=132644 -D_POSIX_C_SOURCE=200112L -D_XOPEN_SOURCE=600 -D_BSD_SOURCE -D_DEFAULT_SOURCE -DCHECK_FUNCTION_EXISTS=ioctlsocket   -o CMakeFiles/cmTC_07010.dir/CheckFunctionExists.c.o   -c /usr/share/cmake/Modules/CheckFunctionExists.c
-Linking C executable cmTC_07010
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_07010.dir/link.txt --verbose=1
-/opt/brcm-arm/bin/arm-brcm-linux-uclibcgnueabi-gcc -Os -DNDEBUG -ffunction-sections -fdata-sections -DLINUX26 -DCONFIG_BCMWL5 -DDEBUG_NOISY -DDEBUG_RCTEST -pipe -DBCMWPA2 -DBCMARM -fno-strict-aliasing -marm -DRTCONFIG_NVRAM_64K -DLINUX_KERNEL_VERSION=132644 -D_POSIX_C_SOURCE=200112L -D_XOPEN_SOURCE=600 -D_BSD_SOURCE -D_DEFAULT_SOURCE -DCHECK_FUNCTION_EXISTS=ioctlsocket  -Wl,--gc-sections -lgcc_s -lpthread  CMakeFiles/cmTC_07010.dir/CheckFunctionExists.c.o  -o cmTC_07010 
-CMakeFiles/cmTC_07010.dir/CheckFunctionExists.c.o: In function `main':
+Building C object CMakeFiles/cmTC_8d51b.dir/CheckFunctionExists.c.o
+/opt/brcm-arm/bin/arm-brcm-linux-uclibcgnueabi-gcc   -Os -DNDEBUG -ffunction-sections -fdata-sections -DLINUX26 -DCONFIG_BCMWL5 -DDEBUG_NOISY -DDEBUG_RCTEST -pipe -DBCMWPA2 -DBCMARM -fno-strict-aliasing -marm -DRTCONFIG_NVRAM_64K -DLINUX_KERNEL_VERSION=132644 -D_POSIX_C_SOURCE=200112L -D_XOPEN_SOURCE=600 -D_BSD_SOURCE -D_DEFAULT_SOURCE -DCHECK_FUNCTION_EXISTS=ioctlsocket   -o CMakeFiles/cmTC_8d51b.dir/CheckFunctionExists.c.o   -c /usr/share/cmake/Modules/CheckFunctionExists.c
+Linking C executable cmTC_8d51b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8d51b.dir/link.txt --verbose=1
+/opt/brcm-arm/bin/arm-brcm-linux-uclibcgnueabi-gcc -Os -DNDEBUG -ffunction-sections -fdata-sections -DLINUX26 -DCONFIG_BCMWL5 -DDEBUG_NOISY -DDEBUG_RCTEST -pipe -DBCMWPA2 -DBCMARM -fno-strict-aliasing -marm -DRTCONFIG_NVRAM_64K -DLINUX_KERNEL_VERSION=132644 -D_POSIX_C_SOURCE=200112L -D_XOPEN_SOURCE=600 -D_BSD_SOURCE -D_DEFAULT_SOURCE -DCHECK_FUNCTION_EXISTS=ioctlsocket  -Wl,--gc-sections -lgcc_s -lpthread  CMakeFiles/cmTC_8d51b.dir/CheckFunctionExists.c.o  -o cmTC_8d51b 
+CMakeFiles/cmTC_8d51b.dir/CheckFunctionExists.c.o: In function `main':
 CheckFunctionExists.c:(.text.main+0xc): undefined reference to `ioctlsocket'
 collect2: ld returned 1 exit status
-gmake[5]: *** [CMakeFiles/cmTC_07010.dir/build.make:87: cmTC_07010] Error 1
+gmake[5]: *** [CMakeFiles/cmTC_8d51b.dir/build.make:87: cmTC_8d51b] Error 1
 gmake[5]: Leaving directory '/home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp'
-gmake[4]: *** [Makefile:126: cmTC_07010/fast] Error 2
+gmake[4]: *** [Makefile:126: cmTC_8d51b/fast] Error 2
 gmake[4]: Leaving directory '/home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp'
 
 
 Determining size of _sigset_t failed with the following output:
 Change Dir: /home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/gmake" "cmTC_f13e0/fast"
+Run Build Command:"/usr/bin/gmake" "cmTC_30936/fast"
 gmake[4]: Entering directory '/home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp'
-/usr/bin/gmake -f CMakeFiles/cmTC_f13e0.dir/build.make CMakeFiles/cmTC_f13e0.dir/build
+/usr/bin/gmake -f CMakeFiles/cmTC_30936.dir/build.make CMakeFiles/cmTC_30936.dir/build
 gmake[5]: Entering directory '/home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_f13e0.dir/_SIGSET_T.c.o
-/opt/brcm-arm/bin/arm-brcm-linux-uclibcgnueabi-gcc   -Os -DNDEBUG -ffunction-sections -fdata-sections -DLINUX26 -DCONFIG_BCMWL5 -DDEBUG_NOISY -DDEBUG_RCTEST -pipe -DBCMWPA2 -DBCMARM -fno-strict-aliasing -marm -DRTCONFIG_NVRAM_64K -DLINUX_KERNEL_VERSION=132644 -D_POSIX_C_SOURCE=200112L -D_XOPEN_SOURCE=600 -D_BSD_SOURCE -D_DEFAULT_SOURCE    -o CMakeFiles/cmTC_f13e0.dir/_SIGSET_T.c.o   -c /home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CheckTypeSize/_SIGSET_T.c
+Building C object CMakeFiles/cmTC_30936.dir/_SIGSET_T.c.o
+/opt/brcm-arm/bin/arm-brcm-linux-uclibcgnueabi-gcc   -Os -DNDEBUG -ffunction-sections -fdata-sections -DLINUX26 -DCONFIG_BCMWL5 -DDEBUG_NOISY -DDEBUG_RCTEST -pipe -DBCMWPA2 -DBCMARM -fno-strict-aliasing -marm -DRTCONFIG_NVRAM_64K -DLINUX_KERNEL_VERSION=132644 -D_POSIX_C_SOURCE=200112L -D_XOPEN_SOURCE=600 -D_BSD_SOURCE -D_DEFAULT_SOURCE    -o CMakeFiles/cmTC_30936.dir/_SIGSET_T.c.o   -c /home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CheckTypeSize/_SIGSET_T.c
 /home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CheckTypeSize/_SIGSET_T.c:25:12: error: ‘_sigset_t’ undeclared here (not in a function)
-gmake[5]: *** [CMakeFiles/cmTC_f13e0.dir/build.make:66: CMakeFiles/cmTC_f13e0.dir/_SIGSET_T.c.o] Error 1
+gmake[5]: *** [CMakeFiles/cmTC_30936.dir/build.make:66: CMakeFiles/cmTC_30936.dir/_SIGSET_T.c.o] Error 1
 gmake[5]: Leaving directory '/home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp'
-gmake[4]: *** [Makefile:126: cmTC_f13e0/fast] Error 2
+gmake[4]: *** [Makefile:126: cmTC_30936/fast] Error 2
 gmake[4]: Leaving directory '/home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp'
 
 /home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CheckTypeSize/_SIGSET_T.c:
@@ -241,39 +241,39 @@ int main(int argc, char *argv[])
 Determining if the function EVP_dss1 exists failed with the following output:
 Change Dir: /home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/gmake" "cmTC_3accd/fast"
+Run Build Command:"/usr/bin/gmake" "cmTC_85c13/fast"
 gmake[4]: Entering directory '/home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp'
-/usr/bin/gmake -f CMakeFiles/cmTC_3accd.dir/build.make CMakeFiles/cmTC_3accd.dir/build
+/usr/bin/gmake -f CMakeFiles/cmTC_85c13.dir/build.make CMakeFiles/cmTC_85c13.dir/build
 gmake[5]: Entering directory '/home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_3accd.dir/CheckFunctionExists.c.o
-/opt/brcm-arm/bin/arm-brcm-linux-uclibcgnueabi-gcc  -I/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl-1.1/include  -Os -DNDEBUG -ffunction-sections -fdata-sections -DLINUX26 -DCONFIG_BCMWL5 -DDEBUG_NOISY -DDEBUG_RCTEST -pipe -DBCMWPA2 -DBCMARM -fno-strict-aliasing -marm -DRTCONFIG_NVRAM_64K -DLINUX_KERNEL_VERSION=132644 -D_POSIX_C_SOURCE=200112L -D_XOPEN_SOURCE=600 -D_BSD_SOURCE -D_DEFAULT_SOURCE -DCHECK_FUNCTION_EXISTS=EVP_dss1   -o CMakeFiles/cmTC_3accd.dir/CheckFunctionExists.c.o   -c /usr/share/cmake/Modules/CheckFunctionExists.c
-Linking C executable cmTC_3accd
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3accd.dir/link.txt --verbose=1
-/opt/brcm-arm/bin/arm-brcm-linux-uclibcgnueabi-gcc -Os -DNDEBUG -ffunction-sections -fdata-sections -DLINUX26 -DCONFIG_BCMWL5 -DDEBUG_NOISY -DDEBUG_RCTEST -pipe -DBCMWPA2 -DBCMARM -fno-strict-aliasing -marm -DRTCONFIG_NVRAM_64K -DLINUX_KERNEL_VERSION=132644 -D_POSIX_C_SOURCE=200112L -D_XOPEN_SOURCE=600 -D_BSD_SOURCE -D_DEFAULT_SOURCE -DCHECK_FUNCTION_EXISTS=EVP_dss1  -Wl,--gc-sections -lgcc_s -lpthread  CMakeFiles/cmTC_3accd.dir/CheckFunctionExists.c.o  -o cmTC_3accd -Wl,-rpath,/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl-1.1 /home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl-1.1/libssl.so /home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl-1.1/libcrypto.so 
-CMakeFiles/cmTC_3accd.dir/CheckFunctionExists.c.o: In function `main':
+Building C object CMakeFiles/cmTC_85c13.dir/CheckFunctionExists.c.o
+/opt/brcm-arm/bin/arm-brcm-linux-uclibcgnueabi-gcc  -I/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl-1.1/include  -Os -DNDEBUG -ffunction-sections -fdata-sections -DLINUX26 -DCONFIG_BCMWL5 -DDEBUG_NOISY -DDEBUG_RCTEST -pipe -DBCMWPA2 -DBCMARM -fno-strict-aliasing -marm -DRTCONFIG_NVRAM_64K -DLINUX_KERNEL_VERSION=132644 -D_POSIX_C_SOURCE=200112L -D_XOPEN_SOURCE=600 -D_BSD_SOURCE -D_DEFAULT_SOURCE -DCHECK_FUNCTION_EXISTS=EVP_dss1   -o CMakeFiles/cmTC_85c13.dir/CheckFunctionExists.c.o   -c /usr/share/cmake/Modules/CheckFunctionExists.c
+Linking C executable cmTC_85c13
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_85c13.dir/link.txt --verbose=1
+/opt/brcm-arm/bin/arm-brcm-linux-uclibcgnueabi-gcc -Os -DNDEBUG -ffunction-sections -fdata-sections -DLINUX26 -DCONFIG_BCMWL5 -DDEBUG_NOISY -DDEBUG_RCTEST -pipe -DBCMWPA2 -DBCMARM -fno-strict-aliasing -marm -DRTCONFIG_NVRAM_64K -DLINUX_KERNEL_VERSION=132644 -D_POSIX_C_SOURCE=200112L -D_XOPEN_SOURCE=600 -D_BSD_SOURCE -D_DEFAULT_SOURCE -DCHECK_FUNCTION_EXISTS=EVP_dss1  -Wl,--gc-sections -lgcc_s -lpthread  CMakeFiles/cmTC_85c13.dir/CheckFunctionExists.c.o  -o cmTC_85c13 -Wl,-rpath,/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl-1.1 /home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl-1.1/libssl.so /home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl-1.1/libcrypto.so 
+CMakeFiles/cmTC_85c13.dir/CheckFunctionExists.c.o: In function `main':
 CheckFunctionExists.c:(.text.main+0xc): undefined reference to `EVP_dss1'
 collect2: ld returned 1 exit status
-gmake[5]: *** [CMakeFiles/cmTC_3accd.dir/build.make:89: cmTC_3accd] Error 1
+gmake[5]: *** [CMakeFiles/cmTC_85c13.dir/build.make:89: cmTC_85c13] Error 1
 gmake[5]: Leaving directory '/home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp'
-gmake[4]: *** [Makefile:126: cmTC_3accd/fast] Error 2
+gmake[4]: *** [Makefile:126: cmTC_85c13/fast] Error 2
 gmake[4]: Leaving directory '/home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp'
 
 
 Determining if the arc4random exist failed with the following output:
 Change Dir: /home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/gmake" "cmTC_903fd/fast"
+Run Build Command:"/usr/bin/gmake" "cmTC_2a572/fast"
 gmake[4]: Entering directory '/home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp'
-/usr/bin/gmake -f CMakeFiles/cmTC_903fd.dir/build.make CMakeFiles/cmTC_903fd.dir/build
+/usr/bin/gmake -f CMakeFiles/cmTC_2a572.dir/build.make CMakeFiles/cmTC_2a572.dir/build
 gmake[5]: Entering directory '/home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_903fd.dir/CheckSymbolExists.c.o
-/opt/brcm-arm/bin/arm-brcm-linux-uclibcgnueabi-gcc  -I/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl-1.1/include  -Os -DNDEBUG -ffunction-sections -fdata-sections -DLINUX26 -DCONFIG_BCMWL5 -DDEBUG_NOISY -DDEBUG_RCTEST -pipe -DBCMWPA2 -DBCMARM -fno-strict-aliasing -marm -DRTCONFIG_NVRAM_64K -DLINUX_KERNEL_VERSION=132644 -D_POSIX_C_SOURCE=200112L -D_XOPEN_SOURCE=600 -D_BSD_SOURCE -D_DEFAULT_SOURCE    -o CMakeFiles/cmTC_903fd.dir/CheckSymbolExists.c.o   -c /home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Building C object CMakeFiles/cmTC_2a572.dir/CheckSymbolExists.c.o
+/opt/brcm-arm/bin/arm-brcm-linux-uclibcgnueabi-gcc  -I/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl-1.1/include  -Os -DNDEBUG -ffunction-sections -fdata-sections -DLINUX26 -DCONFIG_BCMWL5 -DDEBUG_NOISY -DDEBUG_RCTEST -pipe -DBCMWPA2 -DBCMARM -fno-strict-aliasing -marm -DRTCONFIG_NVRAM_64K -DLINUX_KERNEL_VERSION=132644 -D_POSIX_C_SOURCE=200112L -D_XOPEN_SOURCE=600 -D_BSD_SOURCE -D_DEFAULT_SOURCE    -o CMakeFiles/cmTC_2a572.dir/CheckSymbolExists.c.o   -c /home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
 /home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
 /home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: error: ‘arc4random’ undeclared (first use in this function)
 /home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: note: each undeclared identifier is reported only once for each function it appears in
-gmake[5]: *** [CMakeFiles/cmTC_903fd.dir/build.make:66: CMakeFiles/cmTC_903fd.dir/CheckSymbolExists.c.o] Error 1
+gmake[5]: *** [CMakeFiles/cmTC_2a572.dir/build.make:66: CMakeFiles/cmTC_2a572.dir/CheckSymbolExists.c.o] Error 1
 gmake[5]: Leaving directory '/home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp'
-gmake[4]: *** [Makefile:126: cmTC_903fd/fast] Error 2
+gmake[4]: *** [Makefile:126: cmTC_2a572/fast] Error 2
 gmake[4]: Leaving directory '/home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp'
 
 File /home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -294,18 +294,18 @@ int main(int argc, char** argv)
 Determining if the arc4random_uniform exist failed with the following output:
 Change Dir: /home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/gmake" "cmTC_d922f/fast"
+Run Build Command:"/usr/bin/gmake" "cmTC_e4f02/fast"
 gmake[4]: Entering directory '/home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp'
-/usr/bin/gmake -f CMakeFiles/cmTC_d922f.dir/build.make CMakeFiles/cmTC_d922f.dir/build
+/usr/bin/gmake -f CMakeFiles/cmTC_e4f02.dir/build.make CMakeFiles/cmTC_e4f02.dir/build
 gmake[5]: Entering directory '/home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_d922f.dir/CheckSymbolExists.c.o
-/opt/brcm-arm/bin/arm-brcm-linux-uclibcgnueabi-gcc  -I/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl-1.1/include  -Os -DNDEBUG -ffunction-sections -fdata-sections -DLINUX26 -DCONFIG_BCMWL5 -DDEBUG_NOISY -DDEBUG_RCTEST -pipe -DBCMWPA2 -DBCMARM -fno-strict-aliasing -marm -DRTCONFIG_NVRAM_64K -DLINUX_KERNEL_VERSION=132644 -D_POSIX_C_SOURCE=200112L -D_XOPEN_SOURCE=600 -D_BSD_SOURCE -D_DEFAULT_SOURCE    -o CMakeFiles/cmTC_d922f.dir/CheckSymbolExists.c.o   -c /home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Building C object CMakeFiles/cmTC_e4f02.dir/CheckSymbolExists.c.o
+/opt/brcm-arm/bin/arm-brcm-linux-uclibcgnueabi-gcc  -I/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl-1.1/include  -Os -DNDEBUG -ffunction-sections -fdata-sections -DLINUX26 -DCONFIG_BCMWL5 -DDEBUG_NOISY -DDEBUG_RCTEST -pipe -DBCMWPA2 -DBCMARM -fno-strict-aliasing -marm -DRTCONFIG_NVRAM_64K -DLINUX_KERNEL_VERSION=132644 -D_POSIX_C_SOURCE=200112L -D_XOPEN_SOURCE=600 -D_BSD_SOURCE -D_DEFAULT_SOURCE    -o CMakeFiles/cmTC_e4f02.dir/CheckSymbolExists.c.o   -c /home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
 /home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
 /home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: error: ‘arc4random_uniform’ undeclared (first use in this function)
 /home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: note: each undeclared identifier is reported only once for each function it appears in
-gmake[5]: *** [CMakeFiles/cmTC_d922f.dir/build.make:66: CMakeFiles/cmTC_d922f.dir/CheckSymbolExists.c.o] Error 1
+gmake[5]: *** [CMakeFiles/cmTC_e4f02.dir/build.make:66: CMakeFiles/cmTC_e4f02.dir/CheckSymbolExists.c.o] Error 1
 gmake[5]: Leaving directory '/home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp'
-gmake[4]: *** [Makefile:126: cmTC_d922f/fast] Error 2
+gmake[4]: *** [Makefile:126: cmTC_e4f02/fast] Error 2
 gmake[4]: Leaving directory '/home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp'
 
 File /home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -326,60 +326,60 @@ int main(int argc, char** argv)
 Determining if the function arc4random exists failed with the following output:
 Change Dir: /home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/gmake" "cmTC_e7d3f/fast"
+Run Build Command:"/usr/bin/gmake" "cmTC_3c55f/fast"
 gmake[4]: Entering directory '/home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp'
-/usr/bin/gmake -f CMakeFiles/cmTC_e7d3f.dir/build.make CMakeFiles/cmTC_e7d3f.dir/build
+/usr/bin/gmake -f CMakeFiles/cmTC_3c55f.dir/build.make CMakeFiles/cmTC_3c55f.dir/build
 gmake[5]: Entering directory '/home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_e7d3f.dir/CheckFunctionExists.c.o
-/opt/brcm-arm/bin/arm-brcm-linux-uclibcgnueabi-gcc  -I/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl-1.1/include  -Os -DNDEBUG -ffunction-sections -fdata-sections -DLINUX26 -DCONFIG_BCMWL5 -DDEBUG_NOISY -DDEBUG_RCTEST -pipe -DBCMWPA2 -DBCMARM -fno-strict-aliasing -marm -DRTCONFIG_NVRAM_64K -DLINUX_KERNEL_VERSION=132644 -D_POSIX_C_SOURCE=200112L -D_XOPEN_SOURCE=600 -D_BSD_SOURCE -D_DEFAULT_SOURCE -DCHECK_FUNCTION_EXISTS=arc4random   -o CMakeFiles/cmTC_e7d3f.dir/CheckFunctionExists.c.o   -c /usr/share/cmake/Modules/CheckFunctionExists.c
-Linking C executable cmTC_e7d3f
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e7d3f.dir/link.txt --verbose=1
-/opt/brcm-arm/bin/arm-brcm-linux-uclibcgnueabi-gcc -Os -DNDEBUG -ffunction-sections -fdata-sections -DLINUX26 -DCONFIG_BCMWL5 -DDEBUG_NOISY -DDEBUG_RCTEST -pipe -DBCMWPA2 -DBCMARM -fno-strict-aliasing -marm -DRTCONFIG_NVRAM_64K -DLINUX_KERNEL_VERSION=132644 -D_POSIX_C_SOURCE=200112L -D_XOPEN_SOURCE=600 -D_BSD_SOURCE -D_DEFAULT_SOURCE -DCHECK_FUNCTION_EXISTS=arc4random  -Wl,--gc-sections -lgcc_s -lpthread  CMakeFiles/cmTC_e7d3f.dir/CheckFunctionExists.c.o  -o cmTC_e7d3f -Wl,-rpath,/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl-1.1 /home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl-1.1/libssl.so /home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl-1.1/libcrypto.so 
-CMakeFiles/cmTC_e7d3f.dir/CheckFunctionExists.c.o: In function `main':
+Building C object CMakeFiles/cmTC_3c55f.dir/CheckFunctionExists.c.o
+/opt/brcm-arm/bin/arm-brcm-linux-uclibcgnueabi-gcc  -I/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl-1.1/include  -Os -DNDEBUG -ffunction-sections -fdata-sections -DLINUX26 -DCONFIG_BCMWL5 -DDEBUG_NOISY -DDEBUG_RCTEST -pipe -DBCMWPA2 -DBCMARM -fno-strict-aliasing -marm -DRTCONFIG_NVRAM_64K -DLINUX_KERNEL_VERSION=132644 -D_POSIX_C_SOURCE=200112L -D_XOPEN_SOURCE=600 -D_BSD_SOURCE -D_DEFAULT_SOURCE -DCHECK_FUNCTION_EXISTS=arc4random   -o CMakeFiles/cmTC_3c55f.dir/CheckFunctionExists.c.o   -c /usr/share/cmake/Modules/CheckFunctionExists.c
+Linking C executable cmTC_3c55f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3c55f.dir/link.txt --verbose=1
+/opt/brcm-arm/bin/arm-brcm-linux-uclibcgnueabi-gcc -Os -DNDEBUG -ffunction-sections -fdata-sections -DLINUX26 -DCONFIG_BCMWL5 -DDEBUG_NOISY -DDEBUG_RCTEST -pipe -DBCMWPA2 -DBCMARM -fno-strict-aliasing -marm -DRTCONFIG_NVRAM_64K -DLINUX_KERNEL_VERSION=132644 -D_POSIX_C_SOURCE=200112L -D_XOPEN_SOURCE=600 -D_BSD_SOURCE -D_DEFAULT_SOURCE -DCHECK_FUNCTION_EXISTS=arc4random  -Wl,--gc-sections -lgcc_s -lpthread  CMakeFiles/cmTC_3c55f.dir/CheckFunctionExists.c.o  -o cmTC_3c55f -Wl,-rpath,/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl-1.1 /home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl-1.1/libssl.so /home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl-1.1/libcrypto.so 
+CMakeFiles/cmTC_3c55f.dir/CheckFunctionExists.c.o: In function `main':
 CheckFunctionExists.c:(.text.main+0xc): undefined reference to `arc4random'
 collect2: ld returned 1 exit status
-gmake[5]: *** [CMakeFiles/cmTC_e7d3f.dir/build.make:89: cmTC_e7d3f] Error 1
+gmake[5]: *** [CMakeFiles/cmTC_3c55f.dir/build.make:89: cmTC_3c55f] Error 1
 gmake[5]: Leaving directory '/home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp'
-gmake[4]: *** [Makefile:126: cmTC_e7d3f/fast] Error 2
+gmake[4]: *** [Makefile:126: cmTC_3c55f/fast] Error 2
 gmake[4]: Leaving directory '/home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp'
 
 
 Determining if the function arc4random_uniform exists failed with the following output:
 Change Dir: /home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/gmake" "cmTC_46b74/fast"
+Run Build Command:"/usr/bin/gmake" "cmTC_02f40/fast"
 gmake[4]: Entering directory '/home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp'
-/usr/bin/gmake -f CMakeFiles/cmTC_46b74.dir/build.make CMakeFiles/cmTC_46b74.dir/build
+/usr/bin/gmake -f CMakeFiles/cmTC_02f40.dir/build.make CMakeFiles/cmTC_02f40.dir/build
 gmake[5]: Entering directory '/home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_46b74.dir/CheckFunctionExists.c.o
-/opt/brcm-arm/bin/arm-brcm-linux-uclibcgnueabi-gcc  -I/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl-1.1/include  -Os -DNDEBUG -ffunction-sections -fdata-sections -DLINUX26 -DCONFIG_BCMWL5 -DDEBUG_NOISY -DDEBUG_RCTEST -pipe -DBCMWPA2 -DBCMARM -fno-strict-aliasing -marm -DRTCONFIG_NVRAM_64K -DLINUX_KERNEL_VERSION=132644 -D_POSIX_C_SOURCE=200112L -D_XOPEN_SOURCE=600 -D_BSD_SOURCE -D_DEFAULT_SOURCE -DCHECK_FUNCTION_EXISTS=arc4random_uniform   -o CMakeFiles/cmTC_46b74.dir/CheckFunctionExists.c.o   -c /usr/share/cmake/Modules/CheckFunctionExists.c
-Linking C executable cmTC_46b74
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_46b74.dir/link.txt --verbose=1
-/opt/brcm-arm/bin/arm-brcm-linux-uclibcgnueabi-gcc -Os -DNDEBUG -ffunction-sections -fdata-sections -DLINUX26 -DCONFIG_BCMWL5 -DDEBUG_NOISY -DDEBUG_RCTEST -pipe -DBCMWPA2 -DBCMARM -fno-strict-aliasing -marm -DRTCONFIG_NVRAM_64K -DLINUX_KERNEL_VERSION=132644 -D_POSIX_C_SOURCE=200112L -D_XOPEN_SOURCE=600 -D_BSD_SOURCE -D_DEFAULT_SOURCE -DCHECK_FUNCTION_EXISTS=arc4random_uniform  -Wl,--gc-sections -lgcc_s -lpthread  CMakeFiles/cmTC_46b74.dir/CheckFunctionExists.c.o  -o cmTC_46b74 -Wl,-rpath,/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl-1.1 /home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl-1.1/libssl.so /home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl-1.1/libcrypto.so 
-CMakeFiles/cmTC_46b74.dir/CheckFunctionExists.c.o: In function `main':
+Building C object CMakeFiles/cmTC_02f40.dir/CheckFunctionExists.c.o
+/opt/brcm-arm/bin/arm-brcm-linux-uclibcgnueabi-gcc  -I/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl-1.1/include  -Os -DNDEBUG -ffunction-sections -fdata-sections -DLINUX26 -DCONFIG_BCMWL5 -DDEBUG_NOISY -DDEBUG_RCTEST -pipe -DBCMWPA2 -DBCMARM -fno-strict-aliasing -marm -DRTCONFIG_NVRAM_64K -DLINUX_KERNEL_VERSION=132644 -D_POSIX_C_SOURCE=200112L -D_XOPEN_SOURCE=600 -D_BSD_SOURCE -D_DEFAULT_SOURCE -DCHECK_FUNCTION_EXISTS=arc4random_uniform   -o CMakeFiles/cmTC_02f40.dir/CheckFunctionExists.c.o   -c /usr/share/cmake/Modules/CheckFunctionExists.c
+Linking C executable cmTC_02f40
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_02f40.dir/link.txt --verbose=1
+/opt/brcm-arm/bin/arm-brcm-linux-uclibcgnueabi-gcc -Os -DNDEBUG -ffunction-sections -fdata-sections -DLINUX26 -DCONFIG_BCMWL5 -DDEBUG_NOISY -DDEBUG_RCTEST -pipe -DBCMWPA2 -DBCMARM -fno-strict-aliasing -marm -DRTCONFIG_NVRAM_64K -DLINUX_KERNEL_VERSION=132644 -D_POSIX_C_SOURCE=200112L -D_XOPEN_SOURCE=600 -D_BSD_SOURCE -D_DEFAULT_SOURCE -DCHECK_FUNCTION_EXISTS=arc4random_uniform  -Wl,--gc-sections -lgcc_s -lpthread  CMakeFiles/cmTC_02f40.dir/CheckFunctionExists.c.o  -o cmTC_02f40 -Wl,-rpath,/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl-1.1 /home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl-1.1/libssl.so /home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl-1.1/libcrypto.so 
+CMakeFiles/cmTC_02f40.dir/CheckFunctionExists.c.o: In function `main':
 CheckFunctionExists.c:(.text.main+0xc): undefined reference to `arc4random_uniform'
 collect2: ld returned 1 exit status
-gmake[5]: *** [CMakeFiles/cmTC_46b74.dir/build.make:89: cmTC_46b74] Error 1
+gmake[5]: *** [CMakeFiles/cmTC_02f40.dir/build.make:89: cmTC_02f40] Error 1
 gmake[5]: Leaving directory '/home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp'
-gmake[4]: *** [Makefile:126: cmTC_46b74/fast] Error 2
+gmake[4]: *** [Makefile:126: cmTC_02f40/fast] Error 2
 gmake[4]: Leaving directory '/home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp'
 
 
 Determining if the TCP_FASTOPEN exist failed with the following output:
 Change Dir: /home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/gmake" "cmTC_fe34e/fast"
+Run Build Command:"/usr/bin/gmake" "cmTC_6f20c/fast"
 gmake[4]: Entering directory '/home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp'
-/usr/bin/gmake -f CMakeFiles/cmTC_fe34e.dir/build.make CMakeFiles/cmTC_fe34e.dir/build
+/usr/bin/gmake -f CMakeFiles/cmTC_6f20c.dir/build.make CMakeFiles/cmTC_6f20c.dir/build
 gmake[5]: Entering directory '/home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_fe34e.dir/CheckSymbolExists.c.o
-/opt/brcm-arm/bin/arm-brcm-linux-uclibcgnueabi-gcc  -I/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl-1.1/include  -Os -DNDEBUG -ffunction-sections -fdata-sections -DLINUX26 -DCONFIG_BCMWL5 -DDEBUG_NOISY -DDEBUG_RCTEST -pipe -DBCMWPA2 -DBCMARM -fno-strict-aliasing -marm -DRTCONFIG_NVRAM_64K -DLINUX_KERNEL_VERSION=132644 -D_POSIX_C_SOURCE=200112L -D_XOPEN_SOURCE=600 -D_BSD_SOURCE -D_DEFAULT_SOURCE    -o CMakeFiles/cmTC_fe34e.dir/CheckSymbolExists.c.o   -c /home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Building C object CMakeFiles/cmTC_6f20c.dir/CheckSymbolExists.c.o
+/opt/brcm-arm/bin/arm-brcm-linux-uclibcgnueabi-gcc  -I/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl-1.1/include  -Os -DNDEBUG -ffunction-sections -fdata-sections -DLINUX26 -DCONFIG_BCMWL5 -DDEBUG_NOISY -DDEBUG_RCTEST -pipe -DBCMWPA2 -DBCMARM -fno-strict-aliasing -marm -DRTCONFIG_NVRAM_64K -DLINUX_KERNEL_VERSION=132644 -D_POSIX_C_SOURCE=200112L -D_XOPEN_SOURCE=600 -D_BSD_SOURCE -D_DEFAULT_SOURCE    -o CMakeFiles/cmTC_6f20c.dir/CheckSymbolExists.c.o   -c /home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
 /home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
 /home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:9:19: error: ‘TCP_FASTOPEN’ undeclared (first use in this function)
 /home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:9:19: note: each undeclared identifier is reported only once for each function it appears in
-gmake[5]: *** [CMakeFiles/cmTC_fe34e.dir/build.make:66: CMakeFiles/cmTC_fe34e.dir/CheckSymbolExists.c.o] Error 1
+gmake[5]: *** [CMakeFiles/cmTC_6f20c.dir/build.make:66: CMakeFiles/cmTC_6f20c.dir/CheckSymbolExists.c.o] Error 1
 gmake[5]: Leaving directory '/home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp'
-gmake[4]: *** [Makefile:126: cmTC_fe34e/fast] Error 2
+gmake[4]: *** [Makefile:126: cmTC_6f20c/fast] Error 2
 gmake[4]: Leaving directory '/home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp'
 
 File /home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -401,18 +401,18 @@ int main(int argc, char** argv)
 Determining if the TCP_FASTOPEN_CONNECT exist failed with the following output:
 Change Dir: /home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/gmake" "cmTC_3d315/fast"
+Run Build Command:"/usr/bin/gmake" "cmTC_c5c04/fast"
 gmake[4]: Entering directory '/home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp'
-/usr/bin/gmake -f CMakeFiles/cmTC_3d315.dir/build.make CMakeFiles/cmTC_3d315.dir/build
+/usr/bin/gmake -f CMakeFiles/cmTC_c5c04.dir/build.make CMakeFiles/cmTC_c5c04.dir/build
 gmake[5]: Entering directory '/home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_3d315.dir/CheckSymbolExists.c.o
-/opt/brcm-arm/bin/arm-brcm-linux-uclibcgnueabi-gcc  -I/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl-1.1/include  -Os -DNDEBUG -ffunction-sections -fdata-sections -DLINUX26 -DCONFIG_BCMWL5 -DDEBUG_NOISY -DDEBUG_RCTEST -pipe -DBCMWPA2 -DBCMARM -fno-strict-aliasing -marm -DRTCONFIG_NVRAM_64K -DLINUX_KERNEL_VERSION=132644 -D_POSIX_C_SOURCE=200112L -D_XOPEN_SOURCE=600 -D_BSD_SOURCE -D_DEFAULT_SOURCE    -o CMakeFiles/cmTC_3d315.dir/CheckSymbolExists.c.o   -c /home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Building C object CMakeFiles/cmTC_c5c04.dir/CheckSymbolExists.c.o
+/opt/brcm-arm/bin/arm-brcm-linux-uclibcgnueabi-gcc  -I/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl-1.1/include  -Os -DNDEBUG -ffunction-sections -fdata-sections -DLINUX26 -DCONFIG_BCMWL5 -DDEBUG_NOISY -DDEBUG_RCTEST -pipe -DBCMWPA2 -DBCMARM -fno-strict-aliasing -marm -DRTCONFIG_NVRAM_64K -DLINUX_KERNEL_VERSION=132644 -D_POSIX_C_SOURCE=200112L -D_XOPEN_SOURCE=600 -D_BSD_SOURCE -D_DEFAULT_SOURCE    -o CMakeFiles/cmTC_c5c04.dir/CheckSymbolExists.c.o   -c /home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
 /home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
 /home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:9:19: error: ‘TCP_FASTOPEN_CONNECT’ undeclared (first use in this function)
 /home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:9:19: note: each undeclared identifier is reported only once for each function it appears in
-gmake[5]: *** [CMakeFiles/cmTC_3d315.dir/build.make:66: CMakeFiles/cmTC_3d315.dir/CheckSymbolExists.c.o] Error 1
+gmake[5]: *** [CMakeFiles/cmTC_c5c04.dir/build.make:66: CMakeFiles/cmTC_c5c04.dir/CheckSymbolExists.c.o] Error 1
 gmake[5]: Leaving directory '/home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp'
-gmake[4]: *** [Makefile:126: cmTC_3d315/fast] Error 2
+gmake[4]: *** [Makefile:126: cmTC_c5c04/fast] Error 2
 gmake[4]: Leaving directory '/home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp'
 
 File /home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -434,18 +434,18 @@ int main(int argc, char** argv)
 Determining if the MSG_FASTOPEN exist failed with the following output:
 Change Dir: /home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/gmake" "cmTC_9e4b2/fast"
+Run Build Command:"/usr/bin/gmake" "cmTC_2db65/fast"
 gmake[4]: Entering directory '/home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp'
-/usr/bin/gmake -f CMakeFiles/cmTC_9e4b2.dir/build.make CMakeFiles/cmTC_9e4b2.dir/build
+/usr/bin/gmake -f CMakeFiles/cmTC_2db65.dir/build.make CMakeFiles/cmTC_2db65.dir/build
 gmake[5]: Entering directory '/home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_9e4b2.dir/CheckSymbolExists.c.o
-/opt/brcm-arm/bin/arm-brcm-linux-uclibcgnueabi-gcc  -I/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl-1.1/include  -Os -DNDEBUG -ffunction-sections -fdata-sections -DLINUX26 -DCONFIG_BCMWL5 -DDEBUG_NOISY -DDEBUG_RCTEST -pipe -DBCMWPA2 -DBCMARM -fno-strict-aliasing -marm -DRTCONFIG_NVRAM_64K -DLINUX_KERNEL_VERSION=132644 -D_POSIX_C_SOURCE=200112L -D_XOPEN_SOURCE=600 -D_BSD_SOURCE -D_DEFAULT_SOURCE    -o CMakeFiles/cmTC_9e4b2.dir/CheckSymbolExists.c.o   -c /home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Building C object CMakeFiles/cmTC_2db65.dir/CheckSymbolExists.c.o
+/opt/brcm-arm/bin/arm-brcm-linux-uclibcgnueabi-gcc  -I/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl-1.1/include  -Os -DNDEBUG -ffunction-sections -fdata-sections -DLINUX26 -DCONFIG_BCMWL5 -DDEBUG_NOISY -DDEBUG_RCTEST -pipe -DBCMWPA2 -DBCMARM -fno-strict-aliasing -marm -DRTCONFIG_NVRAM_64K -DLINUX_KERNEL_VERSION=132644 -D_POSIX_C_SOURCE=200112L -D_XOPEN_SOURCE=600 -D_BSD_SOURCE -D_DEFAULT_SOURCE    -o CMakeFiles/cmTC_2db65.dir/CheckSymbolExists.c.o   -c /home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
 /home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
 /home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:9:19: error: ‘MSG_FASTOPEN’ undeclared (first use in this function)
 /home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:9:19: note: each undeclared identifier is reported only once for each function it appears in
-gmake[5]: *** [CMakeFiles/cmTC_9e4b2.dir/build.make:66: CMakeFiles/cmTC_9e4b2.dir/CheckSymbolExists.c.o] Error 1
+gmake[5]: *** [CMakeFiles/cmTC_2db65.dir/build.make:66: CMakeFiles/cmTC_2db65.dir/CheckSymbolExists.c.o] Error 1
 gmake[5]: Leaving directory '/home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp'
-gmake[4]: *** [Makefile:126: cmTC_9e4b2/fast] Error 2
+gmake[4]: *** [Makefile:126: cmTC_2db65/fast] Error 2
 gmake[4]: Leaving directory '/home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp'
 
 File /home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -467,17 +467,17 @@ int main(int argc, char** argv)
 Determining if the include file os/log.h exists failed with the following output:
 Change Dir: /home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/gmake" "cmTC_61f6d/fast"
+Run Build Command:"/usr/bin/gmake" "cmTC_8b1b2/fast"
 gmake[4]: Entering directory '/home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp'
-/usr/bin/gmake -f CMakeFiles/cmTC_61f6d.dir/build.make CMakeFiles/cmTC_61f6d.dir/build
+/usr/bin/gmake -f CMakeFiles/cmTC_8b1b2.dir/build.make CMakeFiles/cmTC_8b1b2.dir/build
 gmake[5]: Entering directory '/home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_61f6d.dir/CheckIncludeFile.c.o
-/opt/brcm-arm/bin/arm-brcm-linux-uclibcgnueabi-gcc  -I/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl-1.1/include  -Os -DNDEBUG -ffunction-sections -fdata-sections -DLINUX26 -DCONFIG_BCMWL5 -DDEBUG_NOISY -DDEBUG_RCTEST -pipe -DBCMWPA2 -DBCMARM -fno-strict-aliasing -marm -DRTCONFIG_NVRAM_64K -DLINUX_KERNEL_VERSION=132644 -D_POSIX_C_SOURCE=200112L -D_XOPEN_SOURCE=600 -D_BSD_SOURCE -D_DEFAULT_SOURCE    -o CMakeFiles/cmTC_61f6d.dir/CheckIncludeFile.c.o   -c /home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Building C object CMakeFiles/cmTC_8b1b2.dir/CheckIncludeFile.c.o
+/opt/brcm-arm/bin/arm-brcm-linux-uclibcgnueabi-gcc  -I/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl-1.1/include  -Os -DNDEBUG -ffunction-sections -fdata-sections -DLINUX26 -DCONFIG_BCMWL5 -DDEBUG_NOISY -DDEBUG_RCTEST -pipe -DBCMWPA2 -DBCMARM -fno-strict-aliasing -marm -DRTCONFIG_NVRAM_64K -DLINUX_KERNEL_VERSION=132644 -D_POSIX_C_SOURCE=200112L -D_XOPEN_SOURCE=600 -D_BSD_SOURCE -D_DEFAULT_SOURCE    -o CMakeFiles/cmTC_8b1b2.dir/CheckIncludeFile.c.o   -c /home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
 /home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:20: fatal error: os/log.h: No such file or directory
 compilation terminated.
-gmake[5]: *** [CMakeFiles/cmTC_61f6d.dir/build.make:66: CMakeFiles/cmTC_61f6d.dir/CheckIncludeFile.c.o] Error 1
+gmake[5]: *** [CMakeFiles/cmTC_8b1b2.dir/build.make:66: CMakeFiles/cmTC_8b1b2.dir/CheckIncludeFile.c.o] Error 1
 gmake[5]: Leaving directory '/home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp'
-gmake[4]: *** [Makefile:126: cmTC_61f6d/fast] Error 2
+gmake[4]: *** [Makefile:126: cmTC_8b1b2/fast] Error 2
 gmake[4]: Leaving directory '/home/id/asuswrt-merlin/release/src/router/getdns/build/CMakeFiles/CMakeTmp'
 
 

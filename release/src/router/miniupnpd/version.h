@@ -6,5 +6,5 @@
 #define RT_EXTENDNO "43E6j9527"
 #define RT_SWPJVERNO ""
 #define RT_BUILD_NAME "RT-AC68U"
-#define RT_BUILD_INFO "Wed Apr 22 16:11:45 UTC 2020 id@4bb4fae41"
+#define RT_BUILD_INFO "Thu Apr 23 12:33:27 UTC 2020 id@a7290a295"
 #endif
