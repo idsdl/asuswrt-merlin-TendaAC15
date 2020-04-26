@@ -71,10 +71,65 @@ struct nvram_tuple router_defaults[] = {
 	{ "wl_corerev", "", 0 },		/* Current core revision */
 	{ "wl_phytypes", "", 0 },		/* List of supported wireless bands (e.g. "ga") */
 	{ "wl_radioids", "", 0 },		/* List of radio IDs */
-	{ "wl_ssid", "ASUS", 0 },		/* Service set ID (network name) */
-	{ "wl1_ssid", "ASUS_5G" },
+	{ "wl_ssid", "ROUTER_2G", 0 },		/* Service set ID (network name) */
+	{ "wl1_ssid", "ROUTER_5G", 0 },
 	{ "wl_bss_enabled", "1", 0 },		/* Service set Enable (1) or disable (0) radio */
-						/* See "default_get" below. */
+	/* Country code override to #a (unlimited) */
+	{ "0:regrev", "0", 0 },
+	{ "1:regrev", "0", 0 },
+	{ "0:ccode", "#a", 0 },
+	{ "1:ccode", "#a", 0 },
+	{ "regulation_domain", "#a", 0 },
+	{ "regulation_domain_5G", "#a", 0 },
+	{ "wl_country_code", "#a", 0 },
+	{ "wl_country_rev", "0", 0 },
+	{ "wl0_country", "#a", 0 },
+	{ "wl0_country_code", "#a", 0 },
+	{ "wl0_country_rev", "0", 0 },
+	{ "wl0_reg_mode", "off", 0 },
+	{ "wl1_country", "#a", 0 },
+	{ "wl1_country_code", "#a", 0 },
+	{ "wl1_country_rev", "0", 0 },
+	{ "wl1_reg_mode", "off", 0 },
+	/* Set Max txpower up to 114  */
+	{ "0:maxp2ga0", "114", 0 },
+	{ "0:maxp2ga1", "114", 0 },
+	{ "0:maxp2ga2", "114", 0 },
+	{ "1:maxp5ga0", "114,114,114,114", 0 },
+	{ "1:maxp5ga1", "114,114,114,114", 0 },
+	{ "1:maxp5ga2", "114,114,114,114", 0 },
+	{ "wl_TxPower", "200", 0 },
+	{ "wl0_TxPower", "200", 0 },
+	{ "wl1_TxPower", "200", 0 },
+	/* new 2Ghz TX calibration settings for Tenda ac15 */
+	{ "0:pdgain2g", "4", 0 },
+	{ "0:agbg0", "0x47", 0 },
+	{ "0:agbg1", "0x47", 0 },
+	{ "0:agbg2", "0x47", 0 },
+	{ "0:dot11agofdmhrbw202gpo", "0x6666", 0 },
+	{ "0:mcsbw202gpo", "0xCC666600", 0 },
+	{ "0:mcsbw402gpo", "0xCC666600", 0 },
+	{ "0:pa2ga0", "0xff22,0x1a4f,0xfcc1", 0 },
+	{ "0:pa2ga1", "0xff22,0x1a71,0xfcbb", 0 },
+	{ "0:pa2ga2", "0xff1f,0x1a21,0xfcc2", 0 },
+	{ "0:pdoffset2g40ma0", "0x3", 0 },
+	{ "0:pdoffset2g40ma1", "0x3", 0 },
+	{ "0:pdoffset2g40ma2", "0x3", 0 },
+	{ "0:rpcal2g", "47823", 0 },
+	/* new  5Ghz TX calibration settings for Tenda ac15  */
+	{ "1:pa5ga0", "0xff2e,0x185a,0xfcfc,0xff37,0x1903,0xfcf1,0xff4b,0x197f,0xfcff,0xff37,0x180f,0xfd12", 0 },
+	{ "1:pa5ga1", "0xff33,0x1944,0xfce5,0xff30,0x18c6,0xfcf5,0xff40,0x19c7,0xfce5,0xff38,0x18cc,0xfcf9", 0 },
+	{ "1:pa5ga2", "0xff34,0x1962,0xfce1,0xff35,0x193b,0xfceb,0xff38,0x1921,0xfcf1,0xff39,0x188f,0xfd00", 0 },
+	{ "1:mcsbw205glpo", "0x88653320", 0 },
+	{ "1:mcsbw405glpo", "0x88653320", 0 },
+	{ "1:mcsbw805glpo", "0x88653320", 0 },
+	{ "1:mcsbw205gmpo", "0x88653320", 0 },
+	{ "1:mcsbw405gmpo", "0x88653320", 0 },
+	{ "1:mcsbw805gmpo", "0x88653320", 0 },
+	{ "1:mcsbw205ghpo", "0x88653320", 0 },
+	{ "1:mcsbw405ghpo", "0x88653320", 0 },
+	{ "1:mcsbw805ghpo", "0x88653320", 0 },
+	/* See "default_get" below. */
 #ifdef __CONFIG_HSPOT__
 	{ "wl_bss_hs2_enabled", "1", 0 },	/* Service set Hotspot Enable (1), disable (0) radio */
 						/* See "default_get" below. */
@@ -1289,7 +1344,7 @@ struct nvram_tuple router_defaults[] = {
 	{ "cron_loglevel", "8"},        /* <  CROND_INFO */
 
 #if defined(RTCONFIG_JFFS2) || defined(RTCONFIG_BRCM_NAND_JFFS2)
-	{ "jffs2_on", "1" },
+	{ "jffs2_on", "0" },
 	{ "jffs2_scripts", "0" },
 	{ "jffs2_exec", "" },
 	{ "jffs2_format", "0" },

@@ -346,9 +346,10 @@ function submitForm(){
 				</ol>
 			</div>
 		  <br>
-		  <div class="formfontdesc">Visit <a style="text-decoration: underline;" href="http://bit.ly/1YdgUcP" target="_blank">asuswrt-merlin-fork > Public</a> for the latest release.<br>
-		  Visit <a style="text-decoration: underline;" href="http://bit.ly/1UGjcOX" target="_blank">asuswrt-merlin-fork > Beta</a> to check for an available Beta release.<br>
-		  For support related to the original firmware, visit <a style="text-decoration: underline;" href="http://www.asus.com/support/" target="_blank">http://www.asus.com/support/</a></div>
+<!--		  <div class="formfontdesc">Visit <a style="text-decoration: underline;" href="http://bit.ly/1YdgUcP" target="_blank">asuswrt-merlin-fork > Public</a> for the latest release.<br>
+		  Visit <a style="text-decoration: underline;" href="http://bit.ly/1UGjcOX" target="_blank">asuswrt-merlin-fork > Beta</a> to check for an available Beta release.<br> -->
+		<div class="formfontdesc">IDSDL_tenda is light Fork for Tenda AC15 router based on GPL code from asuswrt-merlin and john9527. A lot of thanks all developers!<br>
+		For support related to the original firmware, visit <a style="text-decoration: underline;" href="http://www.asus.com/support/" target="_blank">http://www.asus.com/support/</a></div>
 		<table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3"  class="FormTable">
 			<tr>
 				<th><#FW_item1#></th>

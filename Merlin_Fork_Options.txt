@@ -1,3 +1,24 @@
+
+IDSDL Fork for Tenda ac15 router (use rt-ac68u profile) 
+--------------------------------------------------------------------------------------------------------------
+Add SPI flash support for Tenda ac15 router (AC68 profile) /26-Apr-2020/
+        Can be set in gui:      No
+        Enable via NVRAM:       No
+        Routers Supported:      use AC68 profile
+        Released:
+        Reboot Required:        Yes
+        Notes:
+----------------------------------------------------------------------------------------------------------------
+Add new TX power calibration (2.4Ghz and 5Ghz) /26-Apr-2020/
+Add "#a" country code into AC68 profile for Tenda ac15 router
+        Can be set in gui:      No
+        Enable via NVRAM:       No
+        Routers Supported:      use AC68 profile
+        Released:
+        Reboot Required:        Yes
+        Notes:                  You have to restore default for update NVRAM settings 
+==============================================================================================================
+
 Merlin Fork Custom Options
 
 ----------------------------------------------------------------------------------------------------------------

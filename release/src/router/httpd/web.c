@@ -2999,7 +2999,7 @@ extern long uptime(void);
 static int login_state_hook(int eid, webs_t wp, int argc, char_t **argv){
 	unsigned int ip, login_ip, login_port;
 	char ip_str[16], login_ip_str[16];
-	time_t login_timestamp;
+	time_t login_timestamp_t;
 	struct in_addr now_ip_addr, login_ip_addr;
 	time_t now;
 	const int MAX = 80;
@@ -3020,7 +3020,7 @@ static int login_state_hook(int eid, webs_t wp, int argc, char_t **argv){
 	memset(login_ip_str, 0, 16);
 	strcpy(login_ip_str, inet_ntoa(login_ip_addr));
 //	login_timestamp = (unsigned long)atol(nvram_safe_get("login_timestamp"));
-	login_timestamp = strtoul(nvram_safe_get("login_timestamp"), NULL, 10);
+	login_timestamp_t = strtoul(nvram_safe_get("login_timestamp"), NULL, 10);
 	login_port = (unsigned int)atol(nvram_safe_get("login_port"));
 
 	FILE *fp = fopen("/proc/net/arp", "r");
@@ -3056,13 +3056,13 @@ static int login_state_hook(int eid, webs_t wp, int argc, char_t **argv){
 		else
 			websWrite(wp, "function login_mac_str() { return ''; }\n");
 //		time(&login_timestamp);
-		login_timestamp = uptime();
+		login_timestamp_t = uptime();
 	}
 	else{
 		websWrite(wp, "function is_logined() { return 0; }\n");
 		websWrite(wp, "function login_ip_dec() { return '%u'; }\n", login_ip);
 
-		if ((unsigned long)(now-login_timestamp) > 60)	//one minitues
+		if ((unsigned long)(now-login_timestamp_t) > 60)	//one minitues
 			websWrite(wp, "function login_ip_str() { return '0.0.0.0'; }\n");
 		else
 			websWrite(wp, "function login_ip_str() { return '%s'; }\n", login_ip_str);
