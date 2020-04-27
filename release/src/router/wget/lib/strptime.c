@@ -1,4 +1,4 @@
-/* Copyright (C) 2002, 2004-2005, 2007, 2009-2017 Free Software Foundation,
+/* Copyright (C) 2002, 2004-2005, 2007, 2009-2019 Free Software Foundation,
    Inc.
    This file is part of the GNU C Library.
 
@@ -13,7 +13,7 @@
    GNU General Public License for more details.
 
    You should have received a copy of the GNU General Public License along
-   with this program; if not, see <http://www.gnu.org/licenses/>.  */
+   with this program; if not, see <https://www.gnu.org/licenses/>.  */
 
 #ifndef _LIBC
 # include <config.h>
@@ -277,7 +277,7 @@ __strptime_internal (rp, fmt, tm, decided, era_cnt LOCALE_PARAM)
         }
 
       /* Any character but '%' must be matched by the same character
-         in the iput string.  */
+         in the input string.  */
       if (*fmt != '%')
         {
           match_char (*fmt++, *rp++);

@@ -2,6 +2,7 @@
 *.o
 *.so
 Makefile
+!Makefile.org
 Makefile.bak
 apps/openssl
 lib

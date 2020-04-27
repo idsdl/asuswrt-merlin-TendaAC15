@@ -24,10 +24,13 @@ export RT-N16 := IPV6SUPP=y  HTTPS=y MIPS32=r2 NTFS=y BBEXTRAS=y USBEXTRAS=y EBT
                  IPSEC=y REPEATER=y DUALWAN=y YANDEXDNS=n DNSFILTER=y REBOOT_SCHEDULE=y UPNPIGD2=n \
                  DEBUGFS=n TFAT=n HFS="none" NTFS="paragon" DNSSEC=y DNSCRYPT=n STUBBY=y NANO=y
 
-# Broadcom ARM platform
-
 # =======================================
-# Lite version of RT-AC68U profile for small 16Mb SPI flash rom Tenda ac15 
+# Broadcom ARM platform
+#
+
+ifeq ($(SUBID),TENDA-AC15)
+
+# Lite version of RT-AC68U profile for small 16Mb SPI flash rom Tenda ac15 router
 export RT-AC68U := IPV6SUPP=y HTTPS=y ARM=y BCM57=y NTFS=y AUTODICT=y BBEXTRAS=y USBEXTRAS=y EBTABLES=y \
                    SAMBA3=y SAMBA36=y MEDIASRV=y MODEM=y MODEMPIN=y BECEEM=n PARENTAL2=y ACCEL_PPTPD=y PRINTER=y \
                    WEBDAV=n CLOUDSYNC=n USB="USB" GROdrop=y APP="nolocaldm" BUILD_NAME="RT-AC68U" PROXYSTA=y \
@@ -38,19 +41,20 @@ export RT-AC68U := IPV6SUPP=y HTTPS=y ARM=y BCM57=y NTFS=y AUTODICT=y BBEXTRAS=y
                    IPSEC=y REPEATER=y DUALWAN=y YANDEXDNS=n DNSFILTER=y REBOOT_SCHEDULE=y LINUX_MTD="64" TEMPROOTFS=y \
                    DEBUGFS=n TFAT=n HFS="paragon" NTFS="paragon" DNSSEC=y DNSCRYPT=n STUBBY=y NANO=n USBHID=n DPSTA=y SPI=y
 #                  DEBUGFS=y TFAT=y HFS="tuxera" NTFS="tuxera" DNSSEC=y DNSCRYPT=n STUBBY=n NANO=y USBHID=y DPSTA=y
-# ========================================
+else
 
 # Original profile RT-AC68U
-#export RT-AC68U := IPV6SUPP=y HTTPS=y ARM=y BCM57=y NTFS=y AUTODICT=y BBEXTRAS=y USBEXTRAS=y EBTABLES=y \
-#                   SAMBA3=y SAMBA36=y MEDIASRV=y MODEM=y MODEMPIN=y BECEEM=y PARENTAL2=y ACCEL_PPTPD=y PRINTER=y \
-#                   WEBDAV=y CLOUDSYNC=y USB="USB" GRO=y APP="nolocaldm" BUILD_NAME="RT-AC68U" PROXYSTA=y \
-#                   DNSMQ=y SHP=y NVRAM_64K=y RTAC68U=y BCMWL6=y BCMWL6A=y TUNEK="n" BCM5301X=y DISK_MONITOR=y \
-#                   BTN_WIFITOG=y TURBO=y BCM4352_5G=y OPTIMIZE_XBOX=y USBEJECT=y ODMPID=y LED_BTN=y \
-#                   LED_BTN_MODE=y BCMSMP=y XHCI=y USBRESET=n SSH=y JFFS2=y NFS=y OPENVPN=y USER_LOW_RSSI=y \
-#                   TIMEMACHINE=y MDNS=y VPNC=y BRCM_NAND_JFFS2=y JFFS2LOG=y DUMP_OOPS_MSG=y BCMFA=y XHCIMODE=y BWDPI=n \
-#                   IPSEC=y REPEATER=y DUALWAN=y YANDEXDNS=n DNSFILTER=y REBOOT_SCHEDULE=y LINUX_MTD="64" TEMPROOTFS=y \
-#                   DEBUGFS=n TFAT=n HFS="paragon" NTFS="paragon" DNSSEC=y DNSCRYPT=n STUBBY=y NANO=y USBHID=y DPSTA=y
-##                  DEBUGFS=y TFAT=y HFS="tuxera" NTFS="tuxera" DNSSEC=y DNSCRYPT=n STUBBY=n NANO=y USBHID=y DPSTA=y
+export RT-AC68U := IPV6SUPP=y HTTPS=y ARM=y BCM57=y NTFS=y AUTODICT=y BBEXTRAS=y USBEXTRAS=y EBTABLES=y \
+                   SAMBA3=y SAMBA36=y MEDIASRV=y MODEM=y MODEMPIN=y BECEEM=y PARENTAL2=y ACCEL_PPTPD=y PRINTER=y \
+                   WEBDAV=y CLOUDSYNC=y USB="USB" GRO=y APP="nolocaldm" BUILD_NAME="RT-AC68U" PROXYSTA=y \
+                   DNSMQ=y SHP=y NVRAM_64K=y RTAC68U=y BCMWL6=y BCMWL6A=y TUNEK="n" BCM5301X=y DISK_MONITOR=y \
+                   BTN_WIFITOG=y TURBO=y BCM4352_5G=y OPTIMIZE_XBOX=y USBEJECT=y ODMPID=y LED_BTN=y \
+                   LED_BTN_MODE=y BCMSMP=y XHCI=y USBRESET=n SSH=y JFFS2=y NFS=y OPENVPN=y USER_LOW_RSSI=y \
+                   TIMEMACHINE=y MDNS=y VPNC=y BRCM_NAND_JFFS2=y JFFS2LOG=y DUMP_OOPS_MSG=y BCMFA=y XHCIMODE=y BWDPI=n \
+                   IPSEC=y REPEATER=y DUALWAN=y YANDEXDNS=n DNSFILTER=y REBOOT_SCHEDULE=y LINUX_MTD="64" TEMPROOTFS=y \
+                   DEBUGFS=n TFAT=n HFS="paragon" NTFS="paragon" DNSSEC=y DNSCRYPT=n STUBBY=y NANO=y USBHID=y DPSTA=y
+#                  DEBUGFS=y TFAT=y HFS="tuxera" NTFS="tuxera" DNSSEC=y DNSCRYPT=n STUBBY=n NANO=y USBHID=y DPSTA=y
+endif
 
 export RT-AC56U := IPV6SUPP=y HTTPS=y ARM=y BCM57=y NTFS=y AUTODICT=y BBEXTRAS=y USBEXTRAS=y EBTABLES=y \
                    SAMBA3=y SAMBA36=y MEDIASRV=y MODEM=y MODEMPIN=y BECEEM=y PARENTAL2=y ACCEL_PPTPD=y PRINTER=y \

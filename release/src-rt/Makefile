@@ -319,12 +319,19 @@ else
 	ctools/trx -o image/linux-lzma.trx lzma-loader/loader.gz ctools/vmlinuz-lzma ctools/target.squashfs
 endif
 ifeq ($(BCMWL6A),y)
+ifeq ($(SUBID),TENDA-AC15)
+	# create trx for tenda
+	ctools/trx_asus -i image/linux-lzma.trx -r $(SUBID),$(KERNEL_VER).$(FS_VER),$(SERIALNO),$(EXTENDNO),image/$(SUBID)_$(SERIALNO)_$(SWPJVER)$(EXTENDNO)$(BUILDREV)_SPI.trx
+#      check max_trx size (must be less 0xFA0000 for 16Mb/ SPI flash)
+	@TRXSIZE=`wc -c image/$(SUBID)_$(SERIALNO)_$(SWPJVER)$(EXTENDNO)$(BUILDREV)_SPI.trx | awk '{print $$1}'` ; \
+	    if [ $${TRXSIZE} -ge 16384000 ] ; then \
+		echo -e "\e[31mSIZE ERROR!!! you trx filesize is great than MAX_Size=16.384.000 byte! Please remove some router features from firmware, clear  and make it again\e[0m" ; \
+	    fi
+else
 	ctools/trx_asus -i image/linux-lzma.trx -r $(BUILD_NAME),$(KERNEL_VER).$(FS_VER),$(SERIALNO),$(EXTENDNO),image/$(IMGNAME).trx
+endif
 else
 	ctools/trx_asus -i image/linux-lzma.trx -r $(BUILD_NAME),$(KERNEL_VER).$(FS_VER),image/$(IMGNAME).trx
-ifeq ($(SUB_ID),TENDA_AC15)
-	ctools/trx_asus -i image/linux-lzma.trx -r $(SUB_ID),$(KERNEL_VER).$(FS_VER),image/$(IMGNAME)_idsdl_$(SUB_ID).trx
-endif
 endif
 	@rm -f image/linux-lzma.trx
 endif
@@ -445,6 +452,10 @@ what:
 
 define RouterOptions
 	@( \
+	if [ "$(SUBID)" = "TENDA-AC15" ]; then \
+		sed -i "/RTCONFIG_TENDA/d" $(1); \
+		echo "RTCONFIG_TENDA=y" >> $(1); \
+	fi; \
 	if [ "$(CONFIG_LINUX26)" = "y" ] ; then \
 		if [ "$(SAMBA3)" = "3.6.x" ]; then \
 			sed -i "/RTCONFIG_SAMBA36X/d" $(1); \
@@ -2636,7 +2647,7 @@ define save_src_config
 		echo "export $${var}" >> .config ; \
 		export $${var} ; \
 	done ;
-
+		
 	@echo "";
 endef
 
@@ -2695,7 +2706,7 @@ setprofile:
 		sed -i "/RTCONFIG_WLMODULE_MT7603E_AP/d" router/.config; \
 		echo "RTCONFIG_WLMODULE_MT7603E_AP=y" >> router/.config; \
 	fi
-
+		
 	$(MAKE) -C router oldconfig
 
 cleanlibc:

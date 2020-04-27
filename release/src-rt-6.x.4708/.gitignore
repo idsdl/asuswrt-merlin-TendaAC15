@@ -1,4 +1,17 @@
-image/*
-.config
-
-.gpl_excludes_router
+# wget
+*.a
+*.la
+*.lo
+*.o
+*.so
+*.dll
+*.dylib
+*.exe
+.deps
+.libs
+*.1
+*.pod
+Makefile
+config.log
+config.status
+/image/

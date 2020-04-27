@@ -1114,3 +1114,7 @@ config RTCONFIG_FORCE_AUTO_UPGRADE
 config RTCONFIG_TUXERA_SMBD
 	bool "tuxera smbd"
 	default n
+
+config RTCONFIG_TENDA
+	bool "TENDA SUB_ID"
+	default n

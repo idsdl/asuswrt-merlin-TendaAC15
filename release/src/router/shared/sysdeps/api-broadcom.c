@@ -537,6 +537,10 @@ int check_imagefile(char *fname)
 	     strncmp(get_modelid(MODEL_RTN12), (char *) version.pid, MAX_PID_LEN) == 0)
 		return 1;
 
+	/* TENDA nvram sub_model FW image */
+	if (strncmp(nvram_safe_get("sub_model"), (char *) version.pid, MAX_PID_LEN) == 0)
+		return 1;
+
 	return 0;
 }
 

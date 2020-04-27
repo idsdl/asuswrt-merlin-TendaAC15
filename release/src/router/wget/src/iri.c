@@ -1,5 +1,5 @@
 /* IRI related functions.
-   Copyright (C) 2008, 2009, 2010, 2011, 2015 Free Software Foundation,
+   Copyright (C) 2008-2011, 2015, 2018-2019 Free Software Foundation,
    Inc.
 
 This file is part of GNU Wget.
@@ -96,9 +96,9 @@ find_locale (void)
 	const char *encoding = nl_langinfo(CODESET);
 
 	if (!encoding || !*encoding)
-		return "ASCII";
+		return xstrdup("ASCII");
 
-   return encoding;
+   return xstrdup(encoding);
 }
 
 /* Basic check of an encoding name. */
@@ -152,8 +152,11 @@ do_conversion (const char *tocode, const char *fromcode, char const *in_org, siz
   *out = s = xmalloc (outlen + 1);
   done = 0;
 
+  DEBUGP (("iconv %s -> %s\n", tocode, fromcode));
+
   for (;;)
     {
+      DEBUGP (("iconv outlen=%d inlen=%d\n", outlen, inlen));
       if (iconv (cd, (ICONV_CONST char **) &in, &inlen, out, &outlen) != (size_t)(-1) &&
           iconv (cd, NULL, NULL, out, &outlen) != (size_t)(-1))
         {
@@ -188,11 +191,14 @@ do_conversion (const char *tocode, const char *fromcode, char const *in_org, siz
         }
       else if (errno == E2BIG) /* Output buffer full */
         {
+          logprintf (LOG_VERBOSE,
+                    _("Reallocate output buffer len=%d outlen=%d inlen=%d\n"), len, outlen, inlen);
           tooshort++;
           done = len;
-          len = outlen = done + inlen * 2;
-          s = xrealloc (s, outlen + 1);
-          *out = s + done;
+          len = done + inlen * 2;
+          s = xrealloc (s, len + 1);
+          *out = s + done - outlen;
+          outlen += inlen * 2;
         }
       else /* Weird, we got an unspecified error */
         {

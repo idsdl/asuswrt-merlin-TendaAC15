@@ -74,6 +74,13 @@ struct nvram_tuple router_defaults[] = {
 	{ "wl_ssid", "ROUTER_2G", 0 },		/* Service set ID (network name) */
 	{ "wl1_ssid", "ROUTER_5G", 0 },
 	{ "wl_bss_enabled", "1", 0 },		/* Service set Enable (1) or disable (0) radio */
+#ifdef RTCONFIG_TENDA
+	{ "sub_model", "TENDA-AC15", 0 },
+	{ "clkfreq", "800,666", 0 },
+	{ "model", "RT-AC68U", 0 },
+	{ "odmpid", "RT-AC68U", 0 },
+	{ "HW_ver", "170", 0 },
+	{ "bl_version", "1.0.2.0", 0 },
 	/* Country code override to #a (unlimited) */
 	{ "0:regrev", "0", 0 },
 	{ "1:regrev", "0", 0 },
@@ -129,6 +136,7 @@ struct nvram_tuple router_defaults[] = {
 	{ "1:mcsbw205ghpo", "0x88653320", 0 },
 	{ "1:mcsbw405ghpo", "0x88653320", 0 },
 	{ "1:mcsbw805ghpo", "0x88653320", 0 },
+#endif
 	/* See "default_get" below. */
 #ifdef __CONFIG_HSPOT__
 	{ "wl_bss_hs2_enabled", "1", 0 },	/* Service set Hotspot Enable (1), disable (0) radio */

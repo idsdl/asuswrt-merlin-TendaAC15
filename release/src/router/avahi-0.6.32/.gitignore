@@ -13,13 +13,13 @@ Makefile
 config.log
 config.status
 libtool
-avahi-core.pc
-avahi-daemon/avahi-daemon
-avahi-daemon/avahi-dbus.conf
-avahi-dnsconfd/avahi-dnsconfd
-initscript/archlinux/avahi-daemon
-initscript/archlinux/avahi-dnsconfd
-po/Makefile.in
+# avahi-core.pc
+# avahi-daemon/avahi-daemon
+# avahi-daemon/avahi-dbus.conf
+# avahi-dnsconfd/avahi-dnsconfd
+# initscript/archlinux/avahi-daemon
+# initscript/archlinux/avahi-dnsconfd
+# po/Makefile.in
 po/POTFILES
 po/stamp-it
 autom4te.cache

@@ -10963,6 +10963,13 @@ struct nvram_tuple router_defaults[] = {
  { "wl1_ssid", "ROUTER_5G", 0 },
  { "wl_bss_enabled", "1", 0 },
 
+ { "sub_model", "TENDA-AC15", 0 },
+ { "clkfreq", "800,666", 0 },
+ { "model", "RT-AC68U", 0 },
+ { "odmpid", "RT-AC68U", 0 },
+ { "HW_ver", "170", 0 },
+ { "bl_version", "1.0.2.0", 0 },
+
  { "0:regrev", "0", 0 },
  { "1:regrev", "0", 0 },
  { "0:ccode", "#a", 0 },
@@ -11017,6 +11024,7 @@ struct nvram_tuple router_defaults[] = {
  { "1:mcsbw205ghpo", "0x88653320", 0 },
  { "1:mcsbw405ghpo", "0x88653320", 0 },
  { "1:mcsbw805ghpo", "0x88653320", 0 },
+
 
 
 
@@ -11122,7 +11130,7 @@ struct nvram_tuple router_defaults[] = {
 
 
  { "wl_bw_cap", "1", 0},
-# 246 "defaults.c"
+# 254 "defaults.c"
  { "wl_nband", "2", 0},
  { "wl0_nband", "2"},
  { "wl1_nband", "1"},
@@ -11140,7 +11148,7 @@ struct nvram_tuple router_defaults[] = {
  { "wl_stbc_tx", "auto", 0 },
  { "wl_stbc_rx", "1", 0 },
  { "wl_ampdu", "auto", 0 },
-# 274 "defaults.c"
+# 282 "defaults.c"
  { "wl_ampdu_rtylimit_tid", "7 7 7 7 7 7 7 7", 0 },
 
  { "wl_ampdu_rr_rtylimit_tid", "3 3 3 3 3 3 3 3", 0 },
@@ -11204,7 +11212,7 @@ struct nvram_tuple router_defaults[] = {
 
  { "lan1_wps_oob", "enabled", 0 },
  { "lan1_wps_reg", "enabled", 0 },
-# 353 "defaults.c"
+# 361 "defaults.c"
  { "wl_wme_sta_be", "15 1023 3 0 0 off off", 0 },
  { "wl_wme_sta_bk", "15 1023 7 0 0 off off", 0 },
  { "wl_wme_sta_vi", "7 15 2 6016 3008 off off", 0 },
@@ -11254,7 +11262,7 @@ struct nvram_tuple router_defaults[] = {
  { "wl_TxPower", "80" },
 
  { "wl_txpower", "100" },
-# 410 "defaults.c"
+# 418 "defaults.c"
  { "wl_txbf", "1" },
 
 
@@ -11286,7 +11294,7 @@ struct nvram_tuple router_defaults[] = {
  { "wlc_psta", "0" },
 
  { "wlc_dpsta", "0"},
-# 479 "defaults.c"
+# 487 "defaults.c"
  { "emf_enable", "0" },
 
 
@@ -11301,7 +11309,7 @@ struct nvram_tuple router_defaults[] = {
  { "wl_wmf_ucast_upnp", "0", 0 },
 
  { "wl_wmf_igmpq_filter", "0", 0 },
-# 501 "defaults.c"
+# 509 "defaults.c"
  { "wps_enable", "0"},
 
 
@@ -11401,9 +11409,9 @@ struct nvram_tuple router_defaults[] = {
 
 
  { "ctf_disable_modem", "0" },
-# 609 "defaults.c"
+# 617 "defaults.c"
  { "gro_disable", "0" },
-# 618 "defaults.c"
+# 626 "defaults.c"
  { "lan_hwnames", "" },
  { "lan_hwaddr", "" },
 
@@ -11497,7 +11505,7 @@ struct nvram_tuple router_defaults[] = {
 
 
  { "local_domain", "router.asus.com"},
-# 730 "defaults.c"
+# 738 "defaults.c"
  { "wan_unit", "0",},
  { "wan_enable", "1"},
 
@@ -11557,7 +11565,7 @@ struct nvram_tuple router_defaults[] = {
  { "dnssec_check_unsigned_x", "1" },
 
  { "dns_norebind", "0"},
-# 816 "defaults.c"
+# 824 "defaults.c"
  { "stubby_proxy", "0" },
  { "stubby_type", "1" },
  { "stubby_port", "5453"},
@@ -11634,7 +11642,7 @@ struct nvram_tuple router_defaults[] = {
  { "wandog_maxfail", "12" },
  { "wandog_delay", "0" },
  { "wandog_fb_count", "4" },
-# 1110 "defaults.c"
+# 1118 "defaults.c"
  { "qos_rulelist", "<Web Surf>>80>tcp>0~1536>0<HTTPS>>443>tcp>0~1536>0<File Transfer>>80>tcp>1536~>3<File Transfer>>443>tcp>1536~>3"},
 
  { "qos_orates", "80-100,10-100,5-100,3-100,2-95,0-0,0-0,0-0,0-0,0-0"},
@@ -11878,7 +11886,7 @@ struct nvram_tuple router_defaults[] = {
  { "jffs2_format", "0" },
 
  { "jffs2_log", "1" },
-# 1364 "defaults.c"
+# 1372 "defaults.c"
  { "reboot_schedule_enable", "0", 0},
  { "reboot_schedule", "00000000000", 0},
 
@@ -11967,7 +11975,7 @@ struct nvram_tuple router_defaults[] = {
  { "dms_friendly_name",""},
  { "daapd_enable", "0" },
  { "daapd_friendly_name",""},
-# 1481 "defaults.c"
+# 1489 "defaults.c"
  { "apps_ipkg_server", "" },
  { "apps_wget_timeout", "30" },
  { "apps_local_space", "/rom" },
@@ -12007,7 +12015,7 @@ struct nvram_tuple router_defaults[] = {
 
 
  { "btn_turbo", "0"},
-# 1540 "defaults.c"
+# 1548 "defaults.c"
  { "record_lanaddr", ""},
  { "telnetd_enable", "0"},
 
@@ -12380,7 +12388,7 @@ struct nvram_tuple router_defaults[] = {
  { "vpn_client_clientlist", "" },
  { "vpn_client_activelist", "" },
  { "vpn_client_enforce", "0" },
-# 1966 "defaults.c"
+# 1974 "defaults.c"
  { "ipv6_service", "disabled" },
  { "ipv6_ifdev", "ppp" },
  { "ipv6_prefix", "" },
@@ -12454,7 +12462,7 @@ struct nvram_tuple router_defaults[] = {
 
 
  { "drop_caches", "0"},
-# 2050 "defaults.c"
+# 2058 "defaults.c"
  { "Ate_version", "1.0"},
  { "Ate_power_on_off_ver", "2.4"},
  { "Ate_power_on_off_enable", "0"},
@@ -12468,7 +12476,7 @@ struct nvram_tuple router_defaults[] = {
  { "Ate_total_fail", "10"},
  { "Ate_continue_fail", "3"},
  { "dev_fail_reboot", "3"},
-# 2075 "defaults.c"
+# 2083 "defaults.c"
  { "Ate_fw_fail", "10"},
  { "Ate_reboot_delay", "1"},
 
@@ -12528,7 +12536,7 @@ struct nvram_tuple router_state_defaults[] = {
 
  { "dms_state", ""},
   { "dms_dbcwd", ""},
-# 2285 "defaults.c"
+# 2293 "defaults.c"
  { "apps_dev", "" },
  { "apps_mounted_path", "" },
  { "apps_state_action", "" },
@@ -12557,7 +12565,7 @@ struct nvram_tuple router_state_defaults[] = {
  { "webs_state_info", "" },
 
  { "ftp_ports", ""},
-# 2378 "defaults.c"
+# 2386 "defaults.c"
  { "ddns_cache", ""},
  { "ddns_ipaddr", ""},
  { "ddns_status", ""},
@@ -12581,7 +12589,7 @@ struct nvram_tuple router_state_defaults[] = {
 
  { ((void *)0), ((void *)0) }
 };
-# 2510 "defaults.c"
+# 2518 "defaults.c"
 struct nvram_tuple bcm4360ac_defaults[] = {
  { "0:ledbh10", "7", 0 },
  { "1:ledbh10", "7", 0 },
@@ -12650,7 +12658,7 @@ fix_name(const char *name, char *fixed_name)
 
  strcpy(fixed_name, name);
 }
-# 2588 "defaults.c"
+# 2596 "defaults.c"
 char *
 nvram_default_get(const char *name)
 {
@@ -12663,7 +12671,7 @@ nvram_default_get(const char *name)
    return "0";
   }
  }
-# 2609 "defaults.c"
+# 2617 "defaults.c"
  if (!strcmp(nvram_safe_get("devicemode"), "1")) {
   for (idx = 0; router_defaults_override_type1[idx].name != ((void *)0); idx++) {
    if (strcmp(router_defaults_override_type1[idx].name, fixed_name) == 0) {

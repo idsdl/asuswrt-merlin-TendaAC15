@@ -2,34 +2,37 @@
 # general
 #
 
-.*.cmd
+#.*.cmd
 *~
 
 #
 # asuswrt
 #
 
-.config
-.config.old
-config_
-config_current
-arm-uclibc
-mipsel-uclibc
-config.log
-config.status
-kernel_header
-config_rt-*
+# .config
+#.config.old
+#config_
+#config_current
+#arm-uclibc
+#mipsel-uclibc
+#config.log
+#config.status
+#kernel_header
+#config_rt-*
+
+/*.bak
+*.bak
 
 #
 # asuswrt test
 #
 
-libfoo_xref.txt
-target.info
-Makefile.2011-11-10
-Makefile.org
-Makefile.orig
-Makefile_20111026
-stamp-h1
-extendno.conf
+# libfoo_xref.txt
+# target.info
+# Makefile.2011-11-10
+# Makefile.org
+# Makefile.orig
+# Makefile_20111026
+# stamp-h1
+# extendno.conf
 
