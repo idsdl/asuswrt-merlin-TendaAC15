@@ -10986,8 +10986,8 @@ struct nvram_tuple router_defaults[] = {
  { "1:maxp5ga0", "114,114,114,114", 0 },
  { "1:maxp5ga1", "114,114,114,114", 0 },
  { "1:maxp5ga2", "114,114,114,114", 0 },
- { "wl_TxPower", "200", 0 },
- { "wl0_TxPower", "200", 0 },
+ { "wl_TxPower", "100", 0 },
+ { "wl0_TxPower", "100", 0 },
  { "wl1_TxPower", "200", 0 },
 
  { "0:pdgain2g", "4", 0 },
@@ -11855,9 +11855,9 @@ struct nvram_tuple router_defaults[] = {
  { "wsdd_enable", "1"},
 
 
-
-
-
+ { "nfsd_enable", "0"},
+ { "nfsd_enable_v2", "0"},
+ { "nfsd_exportlist", ""},
 
 
  { "log_ipaddr", ""},

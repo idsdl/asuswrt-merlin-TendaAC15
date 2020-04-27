@@ -322,6 +322,9 @@ ifeq ($(BCMWL6A),y)
 	ctools/trx_asus -i image/linux-lzma.trx -r $(BUILD_NAME),$(KERNEL_VER).$(FS_VER),$(SERIALNO),$(EXTENDNO),image/$(IMGNAME).trx
 else
 	ctools/trx_asus -i image/linux-lzma.trx -r $(BUILD_NAME),$(KERNEL_VER).$(FS_VER),image/$(IMGNAME).trx
+ifeq ($(SUB_ID),TENDA_AC15)
+	ctools/trx_asus -i image/linux-lzma.trx -r $(SUB_ID),$(KERNEL_VER).$(FS_VER),image/$(IMGNAME)_idsdl_$(SUB_ID).trx
+endif
 endif
 	@rm -f image/linux-lzma.trx
 endif

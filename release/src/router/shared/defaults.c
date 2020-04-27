@@ -98,8 +98,8 @@ struct nvram_tuple router_defaults[] = {
 	{ "1:maxp5ga0", "114,114,114,114", 0 },
 	{ "1:maxp5ga1", "114,114,114,114", 0 },
 	{ "1:maxp5ga2", "114,114,114,114", 0 },
-	{ "wl_TxPower", "200", 0 },
-	{ "wl0_TxPower", "200", 0 },
+	{ "wl_TxPower", "100", 0 },
+	{ "wl0_TxPower", "100", 0 },
 	{ "wl1_TxPower", "200", 0 },
 	/* new 2Ghz TX calibration settings for Tenda ac15 */
 	{ "0:pdgain2g", "4", 0 },
