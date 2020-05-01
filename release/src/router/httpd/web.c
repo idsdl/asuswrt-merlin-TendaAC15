@@ -316,7 +316,7 @@ void sys_script(char *name)
 
      char scmd[64];
 
-     sprintf(scmd, "/tmp/%s", name);
+     snprintf(scmd, sizeof(scmd), "/tmp/%s", name);
      //printf("run %s %d %s\n", name, strlen(name), scmd);	// tmp test
 
      //handle special scirpt first
@@ -870,6 +870,7 @@ ej_nvram_char_to_ascii(int eid, webs_t wp, int argc, char_t **argv)
 		buf = (char *)malloc(ret);
 		if (buf == NULL) {
 			csprintf("No memory.\n");
+			free(str);
 			return 0;
 		}
 	}
@@ -1298,10 +1299,9 @@ static void do_html_post_and_get(char *url, FILE *stream, int len, char *boundar
 
 	if (query && strlen(query) > 0){
 		if (strlen(post_buf) > 0)
-			sprintf(post_buf_backup, "?%s&%s", post_buf, query);
+			snprintf(post_buf_backup, sizeof(post_buf_backup), "?%s&%s", post_buf, query);
 		else
-			sprintf(post_buf_backup, "?%s", query);
-
+			snprintf(post_buf_backup, sizeof(post_buf_backup), "?%s", query);
 		sprintf(post_buf, "%s", post_buf_backup+1);
 	}
 	else if (strlen(post_buf) > 0)
@@ -5397,7 +5397,7 @@ wps_finish:
 	{
 		action_para = websGetVar(wp, "module_prefix","");
 		if(action_para) {
-			sprintf(command, "restore %s", action_para);
+			snprintf(command, sizeof(command), "restore %s", action_para);
 			notify_rc(command);
 		}
 		websRedirect(wp, current_url);
@@ -6718,9 +6718,6 @@ static char no_cache_IE7[] =
 ;
 // 2010.09 James. }
 
-;
-// 2010.09 James. }
-
 static char no_cache[] =
 "Cache-Control: no-cache\r\n"
 "Pragma: no-cache\r\n"
@@ -6733,7 +6730,7 @@ static char syslog_txt[] =
 ;
 
 static char cache_object[] =
-"Cache-Control: max-age=600"
+"Cache-Control: max-age=3600"
 ;
 
 static void

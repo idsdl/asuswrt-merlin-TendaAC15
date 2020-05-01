@@ -998,13 +998,14 @@ ej_wl_status(int eid, webs_t wp, int argc, char_t **argv, int unit)
 
 // RSSI
 		memcpy(&scb_val.ea, &auth->ea[i], ETHER_ADDR_LEN);
-		if (wl_ioctl(name, WLC_GET_RSSI, &scb_val, sizeof(scb_val_t)))
+		if (wl_ioctl(name_vif, WLC_GET_RSSI, &scb_val, sizeof(scb_val_t)))
 			ret += websWrite(wp, "%-8s", "");
 		else
 			ret += websWrite(wp, " %3ddBm ", scb_val.val);
 
-		sta_info_t *sta = wl_sta_info(name, &auth->ea[i]);
-		if (sta && (sta->flags & WL_STA_SCBSTATS))
+//		sta_info_t *sta = wl_sta_info(name, &auth->ea[i]);
+//		if (sta && (sta->flags & WL_STA_SCBSTATS))
+		if (sta->flags & WL_STA_SCBSTATS)
 		{
 // Rate
 			if ((int)sta->rx_rate > 0)
@@ -1128,13 +1129,14 @@ ej_wl_status(int eid, webs_t wp, int argc, char_t **argv, int unit)
 
 // RSSI
 				memcpy(&scb_val.ea, &auth->ea[ii], ETHER_ADDR_LEN);
-				if (wl_ioctl(name, WLC_GET_RSSI, &scb_val, sizeof(scb_val_t)))
+				if (wl_ioctl(name_vif, WLC_GET_RSSI, &scb_val, sizeof(scb_val_t)))
 					ret += websWrite(wp, "%-8s", "");
 				else
 					ret += websWrite(wp, " %3ddBm ", scb_val.val);
 
-				sta_info_t *sta = wl_sta_info(name, &auth->ea[ii]);
-				if (sta && (sta->flags & WL_STA_SCBSTATS))
+//				sta_info_t *sta = wl_sta_info(name, &auth->ea[ii]);
+//				if (sta && (sta->flags & WL_STA_SCBSTATS))
+				if (sta->flags & WL_STA_SCBSTATS)
 				{
 // Rate
 					if ((int)sta->rx_rate > 0)

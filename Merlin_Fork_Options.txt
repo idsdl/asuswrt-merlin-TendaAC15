@@ -1,5 +1,5 @@
 
-IDSDL Fork for Tenda ac15 router (use rt-ac68u profile) 
+Fork for Tenda ac15 router (use rt-ac68u profile) 
 --------------------------------------------------------------------------------------------------------------
 Add SPI flash support for Tenda ac15 router (AC68 profile) /26-Apr-2020/
         Can be set in gui:      No
