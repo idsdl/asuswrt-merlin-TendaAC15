@@ -299,7 +299,7 @@ PKGADD_VENDOR = curl.haxx.se
 PKGCONFIG = no
 RANDOM_FILE = 
 RANLIB = arm-brcm-linux-uclibcgnueabi-ranlib
-REQUIRE_LIB_DEPS = no
+REQUIRE_LIB_DEPS = yes
 SED = /usr/bin/sed
 SET_MAKE = 
 SHELL = /bin/sh
@@ -380,7 +380,6 @@ pdfdir = ${docdir}
 prefix = /usr
 program_transform_name = s,x,x,
 psdir = ${docdir}
-runstatedir = ${localstatedir}/run
 sbindir = ${exec_prefix}/sbin
 sharedstatedir = ${prefix}/com
 srcdir = .
@@ -432,9 +431,9 @@ $(srcdir)/Makefile.in: # $(srcdir)/Makefile.am  $(am__configure_deps)
 	      exit 1;; \
 	  esac; \
 	done; \
-	echo ' cd $(top_srcdir) && $(AUTOMAKE) --foreign include/curl/Makefile'; \
+	echo ' cd $(top_srcdir) && $(AUTOMAKE) --gnu include/curl/Makefile'; \
 	$(am__cd) $(top_srcdir) && \
-	  $(AUTOMAKE) --foreign include/curl/Makefile
+	  $(AUTOMAKE) --gnu include/curl/Makefile
 Makefile: $(srcdir)/Makefile.in $(top_builddir)/config.status
 	@case '$?' in \
 	  *config.status*) \

@@ -180,6 +180,7 @@ obj-y += etc
 obj-y += ntpclient
 obj-y += zlib # for libxml2, curl
 obj-y += curl # include for all builds
+obj-y += openssl # for curl
 
 ifneq ($(RTCONFIG_4M_SFP),y)
 obj-y += rstats
@@ -1193,7 +1194,7 @@ endif
 #OPENSSL_CIPHERS:=enable-aes enable-tls1 enable-tlsext
 
 openssl/Makefile:
-	cd openssl && \
+	cd openssl && CFLAGS="-Os -g $(EXTRACFLAGS)" \
 	./Configure $(HOSTCONFIG) -DOPENSSL_NO_BUF_FREELISTS --prefix=/usr --openssldir=/etc/ssl --cross-compile-prefix=' ' \
 	-ffunction-sections -fdata-sections -Wl,--gc-sections \
 	shared $(OPENSSL_CIPHERS) no-ssl2 no-err
@@ -1222,18 +1223,18 @@ openssl-install:
 	[ ! -f openssl/Makefile ] || $(STRIP) $(INSTALLDIR)/openssl/usr/sbin/openssl
 	[ ! -f openssl/Makefile ] || chmod 0500 $(INSTALLDIR)/openssl/usr/sbin/openssl
 
-ifeq ($(RTCONFIG_WEBDAV),y)
+#ifeq ($(RTCONFIG_WEBDAV),y)
 	[ ! -f openssl/Makefile ] || install -D openssl/libssl.so.1.0.0 $(INSTALLDIR)/openssl/usr/lib/libssl.so.1.0.0
 	[ ! -f openssl/Makefile ] || $(STRIP) $(INSTALLDIR)/openssl/usr/lib/libssl.so.1.0.0
-#	[ ! -f openssl/Makefile ] || cd $(INSTALLDIR)/openssl/usr/lib && rm -f libssl.so && ln -sf libssl.so.1.0.0 libssl.so
-endif
+##	[ ! -f openssl/Makefile ] || cd $(INSTALLDIR)/openssl/usr/lib && rm -f libssl.so && ln -sf libssl.so.1.0.0 libssl.so
+#endif
 	[ ! -f openssl/Makefile ] || install -D -m 0500 httpd/gencert.sh $(INSTALLDIR)/openssl/usr/sbin/gencert.sh
 
 openssl-stage:
 	$(MAKE) -C openssl install_sw INSTALL_PREFIX=$(STAGEDIR)
 
 openssl-1.1/Makefile:
-	cd $(TOP)/openssl-1.1 && \
+	cd $(TOP)/openssl-1.1 && CFLAGS="-Os -g $(EXTRACFLAGS)" \
 	./Configure $(HOSTCONFIG) --prefix=/usr --openssldir=/etc/ssl --cross-compile-prefix=' ' --api=1.0.0 \
 	-O2 -ffunction-sections -fdata-sections -Wl,--gc-sections \
 	shared no-err no-async $(if $(RTCONFIG_BCMARM),,no-threads) $(OPENSSL_CIPHERS) \
@@ -3188,7 +3189,7 @@ webdav_client$(BCMEX)-clean:
 curl: curl/Makefile
 	@$(MAKE) -C $@ $(PARALLEL_BUILD)
 
-curl/Makefile: curl/configure
+curl/Makefile: curl/configure openssl
 	@cd curl && CC=$(CC) \
 	CFLAGS="-Os -Wall -ffunction-sections -fdata-sections" \
 	./$(CONFIGURE) --prefix=/usr --bindir=/usr/sbin --libdir=/usr/lib \

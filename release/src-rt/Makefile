@@ -910,6 +910,8 @@ define RouterOptions
 			if [ "$(BECEEM)" = "y" ]; then \
 				sed -i "/RTCONFIG_USB_BECEEM/d" $(1); \
 				echo "RTCONFIG_USB_BECEEM=y" >>$(1); \
+			else \
+				echo "# RTCONFIG_USB_BECEEM is not set" >>$(1); \
 			fi; \
 			if [ "$(GOBI)" = "y" ]; then \
 				sed -i "/RTCONFIG_INTERNAL_GOBI/d" $(1); \

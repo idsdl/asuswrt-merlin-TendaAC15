@@ -15,6 +15,12 @@ install:
 	cp ../www $(INSTALLDIR)/. -rf
 	# INSTALL MODEL DEPENDENT files
 	cp ../www/sysdep/$(BUILD_NAME)/www $(INSTALLDIR)/. -rfL || true
+# For TENDA_AC15 small flash size (use micro oui database) 
+ifeq ($(RTCONFIG_TENDA), y)
+	mv -f $(INSTALLDIR)/www/oiuDB_clear.js $(INSTALLDIR)/www/ouiDB.js
+else
+	rm -rf $(INSTALLDIR)/www/oiuDB_clear.js
+endif
 ifeq ($(RTN14U),y)
 	### patch file
 	./model_patch $(INSTALLDIR)/www ../www/sysdep/$(BUILD_NAME)_patch/www || true

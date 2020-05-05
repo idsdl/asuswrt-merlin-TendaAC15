@@ -221,10 +221,10 @@ am__objects_7 = ../lib/curl-strtoofft.$(OBJEXT) \
 am__objects_8 = $(am__objects_6) $(am__objects_7) $(am__objects_3)
 am_curl_OBJECTS = $(am__objects_8)
 curl_OBJECTS = $(am_curl_OBJECTS)
-curl_DEPENDENCIES =  \
-	$(top_builddir)/lib/libcurl.la
 #curl_DEPENDENCIES =  \
 #	$(top_builddir)/lib/libcurl.la
+curl_DEPENDENCIES =  \
+	$(top_builddir)/lib/libcurl.la
 curl_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) \
 	$(LIBTOOLFLAGS) --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) \
 	$(curl_LDFLAGS) $(LDFLAGS) -o $@
@@ -533,7 +533,7 @@ PKGADD_VENDOR = curl.haxx.se
 PKGCONFIG = no
 RANDOM_FILE = 
 RANLIB = arm-brcm-linux-uclibcgnueabi-ranlib
-REQUIRE_LIB_DEPS = no
+REQUIRE_LIB_DEPS = yes
 SED = /usr/bin/sed
 SET_MAKE = 
 SHELL = /bin/sh
@@ -614,7 +614,6 @@ pdfdir = ${docdir}
 prefix = /usr
 program_transform_name = s,x,x,
 psdir = ${docdir}
-runstatedir = ${localstatedir}/run
 sbindir = ${exec_prefix}/sbin
 sharedstatedir = ${prefix}/com
 srcdir = .
@@ -772,8 +771,8 @@ CURL_FILES = $(CURL_CFILES) $(CURLX_CFILES) $(CURL_HFILES)
 
 # CURL_FILES comes from Makefile.inc
 curl_SOURCES = $(CURL_FILES)
-curl_LDADD = $(top_builddir)/lib/libcurl.la    -lz -lssl -lcrypto -ldl
-#curl_LDADD = $(top_builddir)/lib/libcurl.la  -lssl -lcrypto -lz -lssl -lcrypto -ldl
+#curl_LDADD = $(top_builddir)/lib/libcurl.la    -lz -lssl -lcrypto -ldl
+curl_LDADD = $(top_builddir)/lib/libcurl.la  -lssl -lcrypto -lz -lssl -lcrypto -ldl
 curl_LDFLAGS = 
 curl_CPPFLAGS = $(AM_CPPFLAGS) $(LIBMETALINK_CPPFLAGS)
 
