@@ -3,12 +3,14 @@
 *.so
 .libs
 config.h
+config.log
 include/iconv.h
 include/iconv.h.inst
 lib/charset.alias
 lib/libcharset.*
 lib/localcharset.h
 lib/stamp-h2
+libcharset/config.log
 libcharset/include/libcharset.h
 libcharset/include/localcharset.h
 libcharset/include/localcharset.h.inst

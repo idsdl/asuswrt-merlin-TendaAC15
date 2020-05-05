@@ -18,6 +18,7 @@ bin/
 config.h
 config.m4
 config.make
+config.log
 desdata
 ecc-192-modp.asm
 ecc-192.h
@@ -62,5 +63,5 @@ tools/sexp-conv
 twofishdata
 nettle.html
 nettle.info
-autom4te.cache
+/autom4te.cache
 
