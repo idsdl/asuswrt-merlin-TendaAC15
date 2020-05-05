@@ -2449,7 +2449,7 @@ configure:22914: $? = 0
 configure:22914: result: yes
 configure:22914: checking for OpenSSL_version
 configure:22914: arm-brcm-linux-uclibcgnueabi-gcc -o conftest -Os -Wall -ffunction-sections -fdata-sections -Werror-implicit-function-declaration -Wno-system-headers  -I/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include -I/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include/openssl  -L/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl -L/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/lib conftest.c -lssl -lcrypto -lz -lssl -lcrypto -ldl >&5
-/tmp/ccOIo12d.o: In function `main':
+/tmp/cc26ZDFS.o: In function `main':
 conftest.c:(.text.main+0x4): undefined reference to `OpenSSL_version'
 collect2: ld returned 1 exit status
 configure:22914: $? = 1
@@ -2695,7 +2695,7 @@ configure:23046: $? = 0
 configure:23108: result: 1.0.2 - 0x1000215fL
 configure:23117: checking for OpenSSL library version
 configure:23147: arm-brcm-linux-uclibcgnueabi-gcc -o conftest -Os -Wall -ffunction-sections -fdata-sections -Werror-implicit-function-declaration -Wno-system-headers  -I/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include -I/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include/openssl  -L/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl -L/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/lib conftest.c -lssl -lcrypto -lz -lssl -lcrypto -ldl >&5
-/tmp/cce4EJqu.o: In function `main':
+/tmp/ccGP4ze4.o: In function `main':
 conftest.c:(.text.main+0x4): undefined reference to `ERR_clear_last_mark'
 collect2: ld returned 1 exit status
 configure:23147: $? = 1
@@ -2781,7 +2781,7 @@ configure: failed program was:
 | }
 | 
 configure:23221: arm-brcm-linux-uclibcgnueabi-gcc -o conftest -Os -Wall -ffunction-sections -fdata-sections -Werror-implicit-function-declaration -Wno-system-headers  -I/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include -I/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include/openssl  -L/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl -L/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/lib conftest.c -lssl -lcrypto -lz -lssl -lcrypto -ldl >&5
-/tmp/ccYXLtry.o: In function `main':
+/tmp/ccQQPQNc.o: In function `main':
 conftest.c:(.text.main+0x4): undefined reference to `SSL_CTX_set_not_resumable_session_callback'
 collect2: ld returned 1 exit status
 configure:23221: $? = 1
@@ -2883,7 +2883,7 @@ configure:25582: checking whether to use builtin CA store of SSL library
 configure:25596: result: no
 configure:25621: checking for library containing psl_builtin
 configure:25649: arm-brcm-linux-uclibcgnueabi-gcc -o conftest -Os -Wall -ffunction-sections -fdata-sections -Werror-implicit-function-declaration -Wno-system-headers  -I/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include -I/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include/openssl  -L/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl -L/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/lib conftest.c -lssl -lcrypto -lz -lssl -lcrypto -ldl >&5
-/tmp/cciNisaP.o: In function `main':
+/tmp/ccRjubkm.o: In function `main':
 conftest.c:(.text.main+0x4): undefined reference to `psl_builtin'
 collect2: ld returned 1 exit status
 configure:25649: $? = 1
@@ -13251,7 +13251,7 @@ configure:32804: $? = 0
 configure:32804: result: yes
 configure:32823: checking if freeifaddrs can be linked
 configure:32852: arm-brcm-linux-uclibcgnueabi-gcc -o conftest -Os -Wall -ffunction-sections -fdata-sections -Werror-implicit-function-declaration -Wno-system-headers  -I/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include -I/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include/openssl  -L/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl -L/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/lib conftest.c -lssl -lcrypto -lz -lssl -lcrypto -ldl >&5
-/tmp/ccQ9RNVv.o: In function `main':
+/tmp/cci3Uzfb.o: In function `main':
 conftest.c:(.text.main+0x4): undefined reference to `freeifaddrs'
 collect2: ld returned 1 exit status
 configure:32852: $? = 1
@@ -14982,7 +14982,7 @@ configure:35335: checking if if_nametoindex might be used
 configure:35341: result: yes
 configure:35363: checking if getifaddrs can be linked
 configure:35392: arm-brcm-linux-uclibcgnueabi-gcc -o conftest -Os -Wall -ffunction-sections -fdata-sections -Werror-implicit-function-declaration -Wno-system-headers  -I/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include -I/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include/openssl  -L/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl -L/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/lib conftest.c -lssl -lcrypto -lz -lssl -lcrypto -ldl >&5
-/tmp/ccytpjIT.o: In function `main':
+/tmp/cco0vvqh.o: In function `main':
 conftest.c:(.text.main+0x4): undefined reference to `getifaddrs'
 collect2: ld returned 1 exit status
 configure:35392: $? = 1
@@ -16295,7 +16295,7 @@ configure:37252: checking if ioctlsocket might be used
 configure:37342: result: no
 configure:37354: checking if IoctlSocket can be linked
 configure:37383: arm-brcm-linux-uclibcgnueabi-gcc -o conftest -Os -Wall -ffunction-sections -fdata-sections -Werror-implicit-function-declaration -Wno-system-headers  -I/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include -I/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include/openssl  -L/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl -L/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/lib conftest.c -lssl -lcrypto -lz -lssl -lcrypto -ldl >&5
-/tmp/ccmOQJL9.o: In function `main':
+/tmp/ccqIB3pQ.o: In function `main':
 conftest.c:(.text.main+0x4): undefined reference to `IoctlSocket'
 collect2: ld returned 1 exit status
 configure:37383: $? = 1
@@ -16923,7 +16923,7 @@ configure:38897: checking for setjmp.h
 configure:38897: result: yes
 configure:38917: checking if sigsetjmp can be linked
 configure:38946: arm-brcm-linux-uclibcgnueabi-gcc -o conftest -Os -Wall -ffunction-sections -fdata-sections -Werror-implicit-function-declaration -Wno-system-headers  -I/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include -I/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include/openssl  -L/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl -L/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/lib conftest.c -lssl -lcrypto -lz -lssl -lcrypto -ldl >&5
-/tmp/ccYfyYai.o: In function `main':
+/tmp/ccsRoXAT.o: In function `main':
 conftest.c:(.text.main+0x4): undefined reference to `sigsetjmp'
 collect2: ld returned 1 exit status
 configure:38946: $? = 1
@@ -17245,7 +17245,7 @@ configure:39528: checking if strcasecmp might be used
 configure:39534: result: yes
 configure:39555: checking if strcmpi can be linked
 configure:39584: arm-brcm-linux-uclibcgnueabi-gcc -o conftest -Os -Wall -ffunction-sections -fdata-sections -Werror-implicit-function-declaration -Wno-system-headers  -I/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include -I/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include/openssl  -L/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl -L/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/lib conftest.c -lssl -lcrypto -lz -lssl -lcrypto -ldl >&5
-/tmp/ccEKbQEZ.o: In function `main':
+/tmp/cckQ43HB.o: In function `main':
 conftest.c:(.text.main+0x4): undefined reference to `strcmpi'
 collect2: ld returned 1 exit status
 configure:39584: $? = 1
@@ -18350,7 +18350,7 @@ configure:40212: checking if strerror_r might be used
 configure:40218: result: yes
 configure:40275: checking if stricmp can be linked
 configure:40304: arm-brcm-linux-uclibcgnueabi-gcc -o conftest -Os -Wall -ffunction-sections -fdata-sections -Werror-implicit-function-declaration -Wno-system-headers  -I/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include -I/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include/openssl  -L/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl -L/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/lib conftest.c -lssl -lcrypto -lz -lssl -lcrypto -ldl >&5
-/tmp/ccSC1ATD.o: In function `main':
+/tmp/ccOaJrig.o: In function `main':
 conftest.c:(.text.main+0x4): undefined reference to `stricmp'
 collect2: ld returned 1 exit status
 configure:40304: $? = 1
@@ -18642,7 +18642,7 @@ configure:40546: checking if strncasecmp might be used
 configure:40552: result: yes
 configure:40573: checking if strncmpi can be linked
 configure:40602: arm-brcm-linux-uclibcgnueabi-gcc -o conftest -Os -Wall -ffunction-sections -fdata-sections -Werror-implicit-function-declaration -Wno-system-headers  -I/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include -I/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include/openssl  -L/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl -L/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/lib conftest.c -lssl -lcrypto -lz -lssl -lcrypto -ldl >&5
-/tmp/ccuw666T.o: In function `main':
+/tmp/ccwGPHVd.o: In function `main':
 conftest.c:(.text.main+0x4): undefined reference to `strncmpi'
 collect2: ld returned 1 exit status
 configure:40602: $? = 1
@@ -18915,7 +18915,7 @@ configure:40695: checking if strncmpi might be used
 configure:40710: result: no
 configure:40722: checking if strnicmp can be linked
 configure:40751: arm-brcm-linux-uclibcgnueabi-gcc -o conftest -Os -Wall -ffunction-sections -fdata-sections -Werror-implicit-function-declaration -Wno-system-headers  -I/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include -I/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include/openssl  -L/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl -L/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/lib conftest.c -lssl -lcrypto -lz -lssl -lcrypto -ldl >&5
-/tmp/ccQXnwp2.o: In function `main':
+/tmp/ccWHm7Kh.o: In function `main':
 conftest.c:(.text.main+0x4): undefined reference to `strnicmp'
 collect2: ld returned 1 exit status
 configure:40751: $? = 1
@@ -19271,7 +19271,7 @@ configure:41537: $? = 0
 configure:41537: result: yes
 configure:41537: checking for getpass_r
 configure:41537: arm-brcm-linux-uclibcgnueabi-gcc -o conftest -Os -Wall -ffunction-sections -fdata-sections -Werror-implicit-function-declaration -Wno-system-headers  -I/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include -I/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include/openssl  -L/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl -L/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/lib conftest.c -lssl -lcrypto -lz -lssl -lcrypto -ldl >&5
-/tmp/ccu35PSJ.o: In function `main':
+/tmp/ccEcbmhm.o: In function `main':
 conftest.c:(.text.main+0x4): undefined reference to `getpass_r'
 collect2: ld returned 1 exit status
 configure:41537: $? = 1
@@ -19840,7 +19840,7 @@ configure:41537: $? = 0
 configure:41537: result: yes
 configure:41537: checking for mach_absolute_time
 configure:41537: arm-brcm-linux-uclibcgnueabi-gcc -o conftest -Os -Wall -ffunction-sections -fdata-sections -Werror-implicit-function-declaration -Wno-system-headers  -I/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include -I/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include/openssl  -L/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl -L/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/lib conftest.c -lssl -lcrypto -lz -lssl -lcrypto -ldl >&5
-/tmp/ccw1lh2u.o: In function `main':
+/tmp/ccEHCIH0.o: In function `main':
 conftest.c:(.text.main+0x4): undefined reference to `mach_absolute_time'
 collect2: ld returned 1 exit status
 configure:41537: $? = 1
@@ -20405,7 +20405,7 @@ configure:41537: $? = 0
 configure:41537: result: yes
 configure:41537: checking for setmode
 configure:41537: arm-brcm-linux-uclibcgnueabi-gcc -o conftest -Os -Wall -ffunction-sections -fdata-sections -Werror-implicit-function-declaration -Wno-system-headers  -I/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include -I/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include/openssl  -L/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl -L/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/lib conftest.c -lssl -lcrypto -lz -lssl -lcrypto -ldl >&5
-/tmp/cc4fcFjM.o: In function `main':
+/tmp/ccODBUAm.o: In function `main':
 conftest.c:(.text.main+0x4): undefined reference to `setmode'
 collect2: ld returned 1 exit status
 configure:41537: $? = 1
@@ -20974,7 +20974,7 @@ configure:41537: $? = 0
 configure:41537: result: yes
 configure:41537: checking for utime
 configure:41537: arm-brcm-linux-uclibcgnueabi-gcc -o conftest -Os -Wall -ffunction-sections -fdata-sections -Werror-implicit-function-declaration -Wno-system-headers  -I/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include -I/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include/openssl  -L/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl -L/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/lib conftest.c -lssl -lcrypto -lz -lssl -lcrypto -ldl >&5
-/tmp/cc6lI997.o: In function `main':
+/tmp/ccUGl1Yk.o: In function `main':
 conftest.c:(.text.main+0x4): warning: the use of OBSOLESCENT `utime' is discouraged, use `utimes'
 configure:41537: $? = 0
 configure:41537: result: yes
@@ -21008,7 +21008,7 @@ configure:42234: checking for pthread.h
 configure:42234: result: yes
 configure:42241: checking for pthread_create
 configure:42241: arm-brcm-linux-uclibcgnueabi-gcc -o conftest -Os -Wall -ffunction-sections -fdata-sections -Werror-implicit-function-declaration -Wno-system-headers  -I/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include -I/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include/openssl  -L/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl -L/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/lib conftest.c -lssl -lcrypto -lz -lssl -lcrypto -ldl >&5
-/tmp/ccmhG1pu.o: In function `main':
+/tmp/ccyYTddI.o: In function `main':
 conftest.c:(.text.main+0x4): undefined reference to `pthread_create'
 collect2: ld returned 1 exit status
 configure:42241: $? = 1

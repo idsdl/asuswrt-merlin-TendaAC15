@@ -37,6 +37,7 @@ PATH: /home/id/.local/bin
 PATH: /home/id/bin
 PATH: /home/id/.local/bin
 PATH: /home/id/bin
+PATH: /usr/share/Modules/bin
 PATH: /usr/local/bin
 PATH: /usr/bin
 PATH: /usr/local/sbin
@@ -44,6 +45,7 @@ PATH: /usr/sbin
 PATH: /opt/brcm/hndtools-mipsel-linux/bin
 PATH: /opt/brcm/hndtools-mipsel-uclibc/bin
 PATH: /opt/brcm-arm/bin
+PATH: /opt/tools
 
 
 ## ----------- ##

@@ -454,7 +454,6 @@ config.status:1078: creating lib/Makefile
 config.status:1078: creating include/localcharset.h
 config.status:1078: creating include/localcharset.h.inst
 config.status:1078: creating config.h
-config.status:1253: config.h is unchanged
 config.status:1267: executing libtool commands
 
 ## ---------------- ##

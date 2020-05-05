@@ -8623,9 +8623,7 @@ config.status:1913: creating tests/Makefile
 config.status:1913: creating include/iconv.h
 config.status:1913: creating include/iconv.h.inst
 config.status:1913: creating config.h
-config.status:2094: config.h is unchanged
 config.status:1913: creating lib/config.h
-config.status:2094: lib/config.h is unchanged
 config.status:2142: executing depfiles commands
 config.status:2142: executing libtool commands
 config.status:2142: executing po-directories commands

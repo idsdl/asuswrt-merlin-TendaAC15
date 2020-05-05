@@ -85,7 +85,7 @@ CC="arm-brcm-linux-uclibcgnueabi-gcc"
 with_gcc=yes
 
 # An ERE matcher.
-EGREP="grep -E"
+EGREP="/usr/bin/grep -E"
 
 # The linker used to build libraries.
 LD="arm-brcm-linux-uclibcgnueabi-ld"
@@ -6783,7 +6783,7 @@ CC="arm-brcm-linux-uclibcgnueabi-g++"
 with_gcc=yes
 
 # An ERE matcher.
-EGREP="grep -E"
+EGREP="/usr/bin/grep -E"
 
 # The linker used to build libraries.
 LD="arm-brcm-linux-uclibcgnueabi-ld"

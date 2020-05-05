@@ -13,16 +13,16 @@ I use "Centos9 4.18.0-147.el8.x86_64"
 dnf install git gitk
 dnf install git-tools 
 
- cd ~
- git clone https://github.com/...../asuswrt-merlin-TendaAC15.git asuswrt-merlin
- cd ~/asuswrt-merlin
- git-restore-mtime
- cd ~/asuswrt-merlin/release/src-rt-6.x.4708
- ./clean_Tenda.sh
- ./build_Tenda_ac15.sh
+cd ~
+git clone https://github.com/...../asuswrt-merlin-TendaAC15.git asuswrt-merlin
+cd ~/asuswrt-merlin
+git-restore-mtime
+cd ~/asuswrt-merlin/release/src-rt-6.x.4708
+./clean_Tenda.sh
+./build_Tenda_ac15.sh
 
 You can see new TENDA_AC15_xxxxx.trx image at:
- cd ~/asuswrt-merlin/release/src-rt-6.x.4708/image
+cd ~/asuswrt-merlin/release/src-rt-6.x.4708/image
 
 P.S. Please check before router upgrade! Max filesize of TENDA_AC15_xxxxx.trx for 16Mb.SPI flash must be less 16384000 bytes (0xFA000) !!!
 

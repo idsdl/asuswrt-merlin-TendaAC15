@@ -317,8 +317,9 @@ am__DIST_COMMON = $(srcdir)/Makefile.in \
 	$(top_srcdir)/tests/certs/interca.conf.in \
 	$(top_srcdir)/tests/certs/rootca.conf.in ABOUT-NLS AUTHORS \
 	COPYING ChangeLog INSTALL NEWS README build-aux/config.guess \
-	build-aux/config.rpath build-aux/config.sub \
-	build-aux/install-sh build-aux/missing
+	build-aux/config.rpath build-aux/config.sub build-aux/depcomp \
+	build-aux/install-sh build-aux/mdate-sh build-aux/missing \
+	build-aux/texinfo.tex
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
 distdir = $(PACKAGE)-$(VERSION)
 top_distdir = $(distdir)
@@ -730,9 +731,6 @@ GNULIB_WRITE = @GNULIB_WRITE@
 GNULIB__EXIT = @GNULIB__EXIT@
 GNUTLS_CFLAGS = @GNUTLS_CFLAGS@
 GNUTLS_LIBS = @GNUTLS_LIBS@
-GPGME_CFLAGS = @GPGME_CFLAGS@
-GPGME_CONFIG = @GPGME_CONFIG@
-GPGME_LIBS = @GPGME_LIBS@
 GREP = @GREP@
 HAVE_ACCEPT4 = @HAVE_ACCEPT4@
 HAVE_ALLOCA_H = @HAVE_ALLOCA_H@
