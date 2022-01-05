@@ -44,7 +44,7 @@ available_tags=" CXX"
 
 # ### BEGIN LIBTOOL CONFIG
 
-# Libtool was configured on host Centos9:
+# Libtool was configured on host VM_Centos9:
 
 # Shell to use when invoking shell scripts.
 SHELL="/bin/sh"
@@ -6742,7 +6742,7 @@ build_old_libs=`case $build_libtool_libs in yes) $echo no;; *) $echo yes;; esac`
 # End:
 # ### BEGIN LIBTOOL TAG CONFIG: CXX
 
-# Libtool was configured on host Centos9:
+# Libtool was configured on host VM_Centos9:
 
 # Shell to use when invoking shell scripts.
 SHELL="/bin/sh"

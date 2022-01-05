@@ -28,14 +28,14 @@ top_srcdir = ..
 top_builddir = ..
 
 
-prefix = /home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/arm-uclibc/install/avahi-0.6.32/usr
+prefix = /home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/arm-uclibc/install/avahi-0.6.32/usr
 exec_prefix = ${prefix}
 datadir = ${datarootdir}
 datarootdir = ${prefix}/share
 libdir = ${exec_prefix}/lib
 localedir = ${datarootdir}/locale
 subdir = po
-install_sh = ${SHELL} /home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/avahi-0.6.32/install-sh
+install_sh = ${SHELL} /home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/avahi-0.6.32/install-sh
 # Automake >= 1.8 provides $(MKDIR_P).
 # Until it can be supposed, use the safe fallback:
 mkdir_p = $(install_sh) -d

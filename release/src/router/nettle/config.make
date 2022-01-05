@@ -5,9 +5,9 @@ CXX = arm-brcm-linux-uclibcgnueabi-g++
 CFLAGS = -O2 -Wall -DLINUX26 -DCONFIG_BCMWL5 -DDEBUG_NOISY -DDEBUG_RCTEST -pipe -DBCMWPA2 -DBCMARM -fno-strict-aliasing -marm -DRTCONFIG_NVRAM_64K -DLINUX_KERNEL_VERSION=132644  -fPIC -ffunction-sections -fdata-sections -ggdb3 -Wno-pointer-sign -Wall -W   -Wmissing-prototypes -Wmissing-declarations -Wstrict-prototypes   -Wpointer-arith -Wbad-function-cast -Wnested-externs
 CXXFLAGS = -g -O2
 CCPIC = -fpic
-CPPFLAGS = -I/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/gmp
+CPPFLAGS = -I/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/gmp
 DEFS = -DHAVE_CONFIG_H
-LDFLAGS = -L/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/gmp/.libs -ffunction-sections -fdata-sections -Wl,--gc-sections -fPIC
+LDFLAGS = -L/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/gmp/.libs -ffunction-sections -fdata-sections -Wl,--gc-sections -fPIC
 LIBS = 
 LIBOBJS = 
 EMULATOR = 
@@ -57,7 +57,7 @@ MAKEINFO = makeinfo
 RANLIB = arm-brcm-linux-uclibcgnueabi-ranlib
 LN_S = ln -s
 
-prefix	=	/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/nettle
+prefix	=	/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/nettle
 exec_prefix =	${prefix}
 datarootdir =	${prefix}/share
 bindir =	${exec_prefix}/bin

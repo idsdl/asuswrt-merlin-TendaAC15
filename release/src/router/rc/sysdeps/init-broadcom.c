@@ -2356,7 +2356,7 @@ int set_wltxpower()
 								commit_needed++;
 							}
 						}
-						else if (txpower < 70)
+						else if (txpower < 60)
 						{
 							if (!nvram_match(strcat_r(prefix2, "maxp2ga0", tmp2), "82"))
 							{
@@ -2376,7 +2376,7 @@ int set_wltxpower()
 								commit_needed++;
 							}
 						}
-						else if (txpower < 80)
+						else if (txpower < 70)
 						{
 							if (!nvram_match(strcat_r(prefix2, "maxp2ga0", tmp2), "94"))
 							{
@@ -2396,7 +2396,7 @@ int set_wltxpower()
 								commit_needed++;
 							}
 						}
-						else if (txpower == 80)
+						else if (txpower < 80)
 						{
 							if (!nvram_match(strcat_r(prefix2, "maxp2ga0", tmp2), "106"))
 							{
@@ -2416,13 +2416,33 @@ int set_wltxpower()
 								commit_needed++;
 							}
 						}
+						else if (txpower == 80)
+						{
+							if (!nvram_match(strcat_r(prefix2, "maxp2ga0", tmp2), "114"))
+							{
+								nvram_set(strcat_r(prefix2, "maxp2ga0", tmp2),			"114");
+								nvram_set(strcat_r(prefix2, "maxp2ga1", tmp2),			"114");
+								nvram_set(strcat_r(prefix2, "maxp2ga2", tmp2),			"114");
+								nvram_set(strcat_r(prefix2, "cckbw202gpo", tmp2),		"0");
+								nvram_set(strcat_r(prefix2, "cckbw20ul2gpo", tmp2),		"0");
+								nvram_set(strcat_r(prefix2, "mcsbw202gpo", tmp2),		"0x88653320");
+								nvram_set(strcat_r(prefix2, "mcsbw402gpo", tmp2),		"0x88653320");
+								nvram_set(strcat_r(prefix2, "dot11agofdmhrbw202gpo", tmp2),	"0x6533");
+								nvram_set(strcat_r(prefix2, "ofdmlrbw202gpo", tmp2),		"0");
+								nvram_set(strcat_r(prefix2, "sb20in40hrpo", tmp2),		"0");
+								nvram_set(strcat_r(prefix2, "sb20in40lrpo", tmp2),		"0");
+								nvram_set(strcat_r(prefix2, "dot11agduphrpo", tmp2),		"0");
+								nvram_set(strcat_r(prefix2, "dot11agduplrpo", tmp2),		"0");
+								commit_needed++;
+							}
+						}
 						else
 						{
 							if (!nvram_match(strcat_r(prefix2, "mcsbw202gpo", tmp2), "0x65320000"))
 							{
-								nvram_set(strcat_r(prefix2, "maxp2ga0", tmp2),			"106");
-								nvram_set(strcat_r(prefix2, "maxp2ga1", tmp2),			"106");
-								nvram_set(strcat_r(prefix2, "maxp2ga2", tmp2),			"106");
+								nvram_set(strcat_r(prefix2, "maxp2ga0", tmp2),			"114");
+								nvram_set(strcat_r(prefix2, "maxp2ga1", tmp2),			"114");
+								nvram_set(strcat_r(prefix2, "maxp2ga2", tmp2),			"114");
 								nvram_set(strcat_r(prefix2, "cckbw202gpo", tmp2),		"0");
 								nvram_set(strcat_r(prefix2, "cckbw20ul2gpo", tmp2),		"0");
 								nvram_set(strcat_r(prefix2, "mcsbw202gpo", tmp2),		"0x65320000");
@@ -2483,7 +2503,7 @@ int set_wltxpower()
 								commit_needed++;
 							}
 						}
-						else if (txpower < 70)
+						else if (txpower < 60)
 						{
 							if (!nvram_match(strcat_r(prefix2, "maxp5ga0", tmp2), "82,82,82,82"))
 							{
@@ -2505,7 +2525,7 @@ int set_wltxpower()
 								commit_needed++;
 							}
 						}
-						else if (txpower < 80)
+						else if (txpower < 70)
 						{
 							if (!nvram_match(strcat_r(prefix2, "maxp5ga0", tmp2), "94,94,94,94"))
 							{
@@ -2527,7 +2547,7 @@ int set_wltxpower()
 								commit_needed++;
 							}
 						}
-						else if (txpower == 80)
+						else if (txpower < 80)
 						{
 							if (!nvram_match(strcat_r(prefix2, "maxp5ga0", tmp2), "106,106,106,106"))
 							{
@@ -2549,13 +2569,35 @@ int set_wltxpower()
 								commit_needed++;
 							}
 						}
+						else if (txpower == 80)
+						{
+							if (!nvram_match(strcat_r(prefix2, "maxp5ga0", tmp2), "114,114,114,114"))
+							{
+								nvram_set(strcat_r(prefix2, "maxp5ga0", tmp2),		"114,114,114,114");
+								nvram_set(strcat_r(prefix2, "maxp5ga1", tmp2),		"114,114,114,114");
+								nvram_set(strcat_r(prefix2, "maxp5ga2", tmp2),		"114,114,114,114");
+								nvram_set(strcat_r(prefix2, "mcsbw205glpo", tmp2),	"0xCAA86422");
+								nvram_set(strcat_r(prefix2, "mcsbw405glpo", tmp2),	"0xCAA86422");
+								nvram_set(strcat_r(prefix2, "mcsbw805glpo", tmp2),	"0xCAA86422");
+								nvram_set(strcat_r(prefix2, "mcsbw1605glpo", tmp2),	"0");
+								nvram_set(strcat_r(prefix2, "mcsbw205gmpo", tmp2),	"0xCAA86422");
+								nvram_set(strcat_r(prefix2, "mcsbw405gmpo", tmp2),	"0xCAA86422");
+								nvram_set(strcat_r(prefix2, "mcsbw805gmpo", tmp2),	"0xCAA86422");
+								nvram_set(strcat_r(prefix2, "mcsbw1605gmpo", tmp2),	"0");
+								nvram_set(strcat_r(prefix2, "mcsbw205ghpo", tmp2),	"0xCAA86422");
+								nvram_set(strcat_r(prefix2, "mcsbw405ghpo", tmp2),	"0xCAA86422");
+								nvram_set(strcat_r(prefix2, "mcsbw805ghpo", tmp2),	"0xCAA86422");
+								nvram_set(strcat_r(prefix2, "mcsbw1605ghpo", tmp2),	"0");
+								commit_needed++;
+							}
+						}						
 						else
 						{
 							if (!nvram_match(strcat_r(prefix2, "mcsbw205glpo", tmp2), "0xA8664222"))
 							{
-								nvram_set(strcat_r(prefix2, "maxp5ga0", tmp2),		"106,106,106,106");
-								nvram_set(strcat_r(prefix2, "maxp5ga1", tmp2),		"106,106,106,106");
-								nvram_set(strcat_r(prefix2, "maxp5ga2", tmp2),		"106,106,106,106");
+								nvram_set(strcat_r(prefix2, "maxp5ga0", tmp2),		"114,114,114,114");
+								nvram_set(strcat_r(prefix2, "maxp5ga1", tmp2),		"114,114,114,114");
+								nvram_set(strcat_r(prefix2, "maxp5ga2", tmp2),		"114,114,114,114");
 								nvram_set(strcat_r(prefix2, "mcsbw205glpo", tmp2),	"0xA8664222");
 								nvram_set(strcat_r(prefix2, "mcsbw405glpo", tmp2),	"0xA8664222");
 								nvram_set(strcat_r(prefix2, "mcsbw805glpo", tmp2),	"0xA8664222");

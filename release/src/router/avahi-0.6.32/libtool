@@ -1,6 +1,6 @@
 #! /bin/sh
 # Generated automatically by config.status (avahi) 0.6.32
-# Libtool was configured on host Centos9:
+# Libtool was configured on host VM_Centos9:
 # NOTE: Changes made to this file will be lost: look at ltmain.sh.
 
 # Provide generalized library-building support services.
@@ -165,7 +165,7 @@ lock_old_archive_extraction=no
 LTCC="arm-brcm-linux-uclibcgnueabi-gcc -std=gnu99"
 
 # LTCC compiler flags.
-LTCFLAGS="-I/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/expat-2.2.0/lib -I/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/shared -I/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include -Wall -W -Wextra -pedantic -pipe -Wformat -Wold-style-definition -Wdeclaration-after-statement -Wfloat-equal -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wredundant-decls -Wmissing-noreturn -Wshadow -Wendif-labels -Wpointer-arith -Wbad-function-cast -Wcast-qual -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wno-cast-qual -fno-strict-aliasing"
+LTCFLAGS="-I/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/expat-2.2.0/lib -I/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/shared -I/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include -Wall -W -Wextra -pedantic -pipe -Wformat -Wold-style-definition -Wdeclaration-after-statement -Wfloat-equal -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wredundant-decls -Wmissing-noreturn -Wshadow -Wendif-labels -Wpointer-arith -Wbad-function-cast -Wcast-qual -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wno-cast-qual -fno-strict-aliasing"
 
 # Take the output of nm and produce a listing of raw symbols and C names.
 global_symbol_pipe="sed -n -e 's/^.*[	 ]\\([ABCDGIRSTW][ABCDGIRSTW]*\\)[	 ][	 ]*\\([_A-Za-z][_A-Za-z0-9]*\\)\$/\\1 \\2 \\2/p' | sed '/ __gnu_lto/d'"

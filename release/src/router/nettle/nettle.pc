@@ -1,4 +1,4 @@
-prefix=/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/nettle
+prefix=/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/nettle
 exec_prefix=${prefix}
 libdir=${exec_prefix}/lib
 includedir=${prefix}/include

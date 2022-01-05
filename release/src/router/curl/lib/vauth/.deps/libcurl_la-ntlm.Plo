@@ -95,45 +95,45 @@ vauth/libcurl_la-ntlm.lo: vauth/ntlm.c ../lib/curl_setup.h \
  ../lib/wildcard.h ../lib/multihandle.h ../lib/conncache.h \
  ../lib/socketpair.h ../lib/quic.h ../lib/non-ascii.h ../lib/sendf.h \
  ../lib/curl_base64.h ../lib/curl_ntlm_core.h \
- /home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include/openssl/ssl.h \
- /home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include/openssl/e_os2.h \
- /home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include/openssl/opensslconf.h \
- /home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include/openssl/comp.h \
- /home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include/openssl/crypto.h \
- /home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include/openssl/stack.h \
- /home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include/openssl/safestack.h \
- /home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include/openssl/opensslv.h \
- /home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include/openssl/ossl_typ.h \
- /home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include/openssl/symhacks.h \
- /home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include/openssl/bio.h \
- /home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include/openssl/x509.h \
- /home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include/openssl/buffer.h \
- /home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include/openssl/evp.h \
- /home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include/openssl/objects.h \
- /home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include/openssl/obj_mac.h \
- /home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include/openssl/asn1.h \
- /home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include/openssl/bn.h \
- /home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include/openssl/ec.h \
- /home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include/openssl/ecdsa.h \
- /home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include/openssl/ecdh.h \
- /home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include/openssl/rsa.h \
- /home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include/openssl/dsa.h \
- /home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include/openssl/dh.h \
- /home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include/openssl/sha.h \
- /home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include/openssl/x509_vfy.h \
- /home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include/openssl/lhash.h \
- /home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include/openssl/pkcs7.h \
- /home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include/openssl/pem.h \
- /home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include/openssl/pem2.h \
- /home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include/openssl/hmac.h \
- /home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include/openssl/kssl.h \
- /home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include/openssl/ssl2.h \
- /home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include/openssl/ssl3.h \
- /home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include/openssl/tls1.h \
- /home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include/openssl/dtls1.h \
- /home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include/openssl/pqueue.h \
- /home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include/openssl/ssl23.h \
- /home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include/openssl/srtp.h \
+ /home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/openssl/include/openssl/ssl.h \
+ /home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/openssl/include/openssl/e_os2.h \
+ /home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/openssl/include/openssl/opensslconf.h \
+ /home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/openssl/include/openssl/comp.h \
+ /home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/openssl/include/openssl/crypto.h \
+ /home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/openssl/include/openssl/stack.h \
+ /home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/openssl/include/openssl/safestack.h \
+ /home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/openssl/include/openssl/opensslv.h \
+ /home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/openssl/include/openssl/ossl_typ.h \
+ /home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/openssl/include/openssl/symhacks.h \
+ /home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/openssl/include/openssl/bio.h \
+ /home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/openssl/include/openssl/x509.h \
+ /home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/openssl/include/openssl/buffer.h \
+ /home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/openssl/include/openssl/evp.h \
+ /home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/openssl/include/openssl/objects.h \
+ /home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/openssl/include/openssl/obj_mac.h \
+ /home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/openssl/include/openssl/asn1.h \
+ /home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/openssl/include/openssl/bn.h \
+ /home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/openssl/include/openssl/ec.h \
+ /home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/openssl/include/openssl/ecdsa.h \
+ /home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/openssl/include/openssl/ecdh.h \
+ /home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/openssl/include/openssl/rsa.h \
+ /home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/openssl/include/openssl/dsa.h \
+ /home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/openssl/include/openssl/dh.h \
+ /home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/openssl/include/openssl/sha.h \
+ /home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/openssl/include/openssl/x509_vfy.h \
+ /home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/openssl/include/openssl/lhash.h \
+ /home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/openssl/include/openssl/pkcs7.h \
+ /home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/openssl/include/openssl/pem.h \
+ /home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/openssl/include/openssl/pem2.h \
+ /home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/openssl/include/openssl/hmac.h \
+ /home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/openssl/include/openssl/kssl.h \
+ /home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/openssl/include/openssl/ssl2.h \
+ /home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/openssl/include/openssl/ssl3.h \
+ /home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/openssl/include/openssl/tls1.h \
+ /home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/openssl/include/openssl/dtls1.h \
+ /home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/openssl/include/openssl/pqueue.h \
+ /home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/openssl/include/openssl/ssl23.h \
+ /home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/openssl/include/openssl/srtp.h \
  ../lib/curl_gethostname.h ../lib/curl_multibyte.h ../lib/curl_md5.h \
  ../lib/curl_hmac.h ../lib/warnless.h ../lib/rand.h ../lib/vtls/vtls.h \
  ../lib/vtls/openssl.h ../lib/vtls/gtls.h ../lib/vtls/nssg.h \
@@ -395,83 +395,83 @@ vauth/libcurl_la-ntlm.lo: vauth/ntlm.c ../lib/curl_setup.h \
 
 ../lib/curl_ntlm_core.h:
 
-/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include/openssl/ssl.h:
+/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/openssl/include/openssl/ssl.h:
 
-/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include/openssl/e_os2.h:
+/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/openssl/include/openssl/e_os2.h:
 
-/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include/openssl/opensslconf.h:
+/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/openssl/include/openssl/opensslconf.h:
 
-/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include/openssl/comp.h:
+/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/openssl/include/openssl/comp.h:
 
-/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include/openssl/crypto.h:
+/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/openssl/include/openssl/crypto.h:
 
-/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include/openssl/stack.h:
+/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/openssl/include/openssl/stack.h:
 
-/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include/openssl/safestack.h:
+/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/openssl/include/openssl/safestack.h:
 
-/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include/openssl/opensslv.h:
+/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/openssl/include/openssl/opensslv.h:
 
-/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include/openssl/ossl_typ.h:
+/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/openssl/include/openssl/ossl_typ.h:
 
-/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include/openssl/symhacks.h:
+/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/openssl/include/openssl/symhacks.h:
 
-/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include/openssl/bio.h:
+/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/openssl/include/openssl/bio.h:
 
-/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include/openssl/x509.h:
+/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/openssl/include/openssl/x509.h:
 
-/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include/openssl/buffer.h:
+/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/openssl/include/openssl/buffer.h:
 
-/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include/openssl/evp.h:
+/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/openssl/include/openssl/evp.h:
 
-/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include/openssl/objects.h:
+/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/openssl/include/openssl/objects.h:
 
-/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include/openssl/obj_mac.h:
+/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/openssl/include/openssl/obj_mac.h:
 
-/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include/openssl/asn1.h:
+/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/openssl/include/openssl/asn1.h:
 
-/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include/openssl/bn.h:
+/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/openssl/include/openssl/bn.h:
 
-/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include/openssl/ec.h:
+/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/openssl/include/openssl/ec.h:
 
-/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include/openssl/ecdsa.h:
+/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/openssl/include/openssl/ecdsa.h:
 
-/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include/openssl/ecdh.h:
+/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/openssl/include/openssl/ecdh.h:
 
-/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include/openssl/rsa.h:
+/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/openssl/include/openssl/rsa.h:
 
-/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include/openssl/dsa.h:
+/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/openssl/include/openssl/dsa.h:
 
-/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include/openssl/dh.h:
+/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/openssl/include/openssl/dh.h:
 
-/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include/openssl/sha.h:
+/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/openssl/include/openssl/sha.h:
 
-/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include/openssl/x509_vfy.h:
+/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/openssl/include/openssl/x509_vfy.h:
 
-/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include/openssl/lhash.h:
+/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/openssl/include/openssl/lhash.h:
 
-/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include/openssl/pkcs7.h:
+/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/openssl/include/openssl/pkcs7.h:
 
-/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include/openssl/pem.h:
+/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/openssl/include/openssl/pem.h:
 
-/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include/openssl/pem2.h:
+/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/openssl/include/openssl/pem2.h:
 
-/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include/openssl/hmac.h:
+/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/openssl/include/openssl/hmac.h:
 
-/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include/openssl/kssl.h:
+/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/openssl/include/openssl/kssl.h:
 
-/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include/openssl/ssl2.h:
+/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/openssl/include/openssl/ssl2.h:
 
-/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include/openssl/ssl3.h:
+/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/openssl/include/openssl/ssl3.h:
 
-/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include/openssl/tls1.h:
+/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/openssl/include/openssl/tls1.h:
 
-/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include/openssl/dtls1.h:
+/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/openssl/include/openssl/dtls1.h:
 
-/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include/openssl/pqueue.h:
+/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/openssl/include/openssl/pqueue.h:
 
-/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include/openssl/ssl23.h:
+/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/openssl/include/openssl/ssl23.h:
 
-/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include/openssl/srtp.h:
+/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/openssl/include/openssl/srtp.h:
 
 ../lib/curl_gethostname.h:
 

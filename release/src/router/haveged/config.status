@@ -437,7 +437,7 @@ Copyright (C) 2012 Free Software Foundation, Inc.
 This config.status script is free software; the Free Software Foundation
 gives unlimited permission to copy, distribute and modify it."
 
-ac_pwd='/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/haveged'
+ac_pwd='/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/haveged'
 srcdir='.'
 INSTALL='/usr/bin/install -c'
 MKDIR_P='/usr/bin/mkdir -p'
@@ -904,12 +904,12 @@ S["mkdir_p"]="$(MKDIR_P)"
 S["MKDIR_P"]="/usr/bin/mkdir -p"
 S["INSTALL_STRIP_PROGRAM"]="$(install_sh) -c -s"
 S["STRIP"]="arm-brcm-linux-uclibcgnueabi-strip"
-S["install_sh"]="${SHELL} /home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/haveged/config/install-sh"
-S["MAKEINFO"]="${SHELL} /home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/haveged/config/missing makeinfo"
-S["AUTOHEADER"]="${SHELL} /home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/haveged/config/missing autoheader"
-S["AUTOMAKE"]="${SHELL} /home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/haveged/config/missing automake-1.16"
-S["AUTOCONF"]="${SHELL} /home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/haveged/config/missing autoconf"
-S["ACLOCAL"]="${SHELL} /home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/haveged/config/missing aclocal-1.16"
+S["install_sh"]="${SHELL} /home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/haveged/config/install-sh"
+S["MAKEINFO"]="${SHELL} /home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/haveged/config/missing makeinfo"
+S["AUTOHEADER"]="${SHELL} /home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/haveged/config/missing autoheader"
+S["AUTOMAKE"]="${SHELL} /home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/haveged/config/missing automake-1.16"
+S["AUTOCONF"]="${SHELL} /home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/haveged/config/missing autoconf"
+S["ACLOCAL"]="${SHELL} /home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/haveged/config/missing aclocal-1.16"
 S["VERSION"]="1.9.1"
 S["PACKAGE"]="haveged"
 S["CYGPATH_W"]="echo"

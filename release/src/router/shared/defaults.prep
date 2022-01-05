@@ -4,10 +4,10 @@
 # 1 "defaults.c"
 
 
-# 1 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/epivers.h" 1
+# 1 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/epivers.h" 1
 # 4 "defaults.c" 2
-# 1 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/typedefs.h" 1
-# 216 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/typedefs.h"
+# 1 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/typedefs.h" 1
+# 216 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/typedefs.h"
 # 1 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/toolchains/hndtools-arm-linux-2.6.36-uclibc-4.5.3/bin/../arm-brcm-linux-uclibcgnueabi/sysroot/usr/include/sys/types.h" 1 3 4
 # 27 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/toolchains/hndtools-arm-linux-2.6.36-uclibc-4.5.3/bin/../arm-brcm-linux-uclibcgnueabi/sysroot/usr/include/sys/types.h" 3 4
 # 1 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/toolchains/hndtools-arm-linux-2.6.36-uclibc-4.5.3/bin/../arm-brcm-linux-uclibcgnueabi/sysroot/usr/include/features.h" 1 3 4
@@ -520,8 +520,8 @@ typedef __fsfilcnt_t fsfilcnt_t;
 
 
 
-# 217 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/typedefs.h" 2
-# 268 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/typedefs.h"
+# 217 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/typedefs.h" 2
+# 268 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/typedefs.h"
 typedef unsigned char bool;
 
 
@@ -529,7 +529,7 @@ typedef unsigned char bool;
 
 
 typedef unsigned char uchar;
-# 292 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/typedefs.h"
+# 292 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/typedefs.h"
 typedef unsigned char uint8;
 
 
@@ -573,25 +573,25 @@ typedef float float32;
 
 
 typedef double float64;
-# 348 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/typedefs.h"
+# 348 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/typedefs.h"
 typedef float64 float_t;
-# 438 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/typedefs.h"
-# 1 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/bcmdefs.h" 1
-# 222 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/bcmdefs.h"
+# 438 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/typedefs.h"
+# 1 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/bcmdefs.h" 1
+# 222 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/bcmdefs.h"
 typedef unsigned long dmaaddr_t;
-# 233 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/bcmdefs.h"
+# 233 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/bcmdefs.h"
 typedef struct {
  dmaaddr_t addr;
  uint32 length;
 } hnddma_seg_t;
-# 255 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/bcmdefs.h"
+# 255 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/bcmdefs.h"
 typedef struct {
  void *oshdmah;
  uint origsize;
  uint nsegs;
  hnddma_seg_t segs[8];
 } hnddma_seg_map_t;
-# 439 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/typedefs.h" 2
+# 439 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/typedefs.h" 2
 # 5 "defaults.c" 2
 # 1 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/toolchains/hndtools-arm-linux-2.6.36-uclibc-4.5.3/bin/../arm-brcm-linux-uclibcgnueabi/sysroot/usr/include/string.h" 1 3 4
 # 28 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/toolchains/hndtools-arm-linux-2.6.36-uclibc-4.5.3/bin/../arm-brcm-linux-uclibcgnueabi/sysroot/usr/include/string.h" 3 4
@@ -862,8 +862,8 @@ extern int _tolower(int __c) __attribute__ ((__nothrow__));
 # 357 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/toolchains/hndtools-arm-linux-2.6.36-uclibc-4.5.3/bin/../arm-brcm-linux-uclibcgnueabi/sysroot/usr/include/ctype.h" 3 4
 
 # 7 "defaults.c" 2
-# 1 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/bcmnvram.h" 1
-# 29 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/bcmnvram.h"
+# 1 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/bcmnvram.h" 1
+# 29 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/bcmnvram.h"
 struct nvram_header {
  uint32 magic;
  uint32 len;
@@ -898,7 +898,7 @@ extern void nvram_restore_var(char *prefix, char *name);
 
 extern int nvram_init(void *sih);
 extern int nvram_deinit(void *sih);
-# 75 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/bcmnvram.h"
+# 75 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/bcmnvram.h"
 extern int nvram_append(void *si, char *vars, uint varsz);
 
 extern void nvram_get_global_vars(char **varlst, uint *varsz);
@@ -940,25 +940,25 @@ nvram_safe_get(const char *name)
  char *p = nvram_get(name);
  return p ? p : "";
 }
-# 124 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/bcmnvram.h"
+# 124 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/bcmnvram.h"
 static __inline__ int
 nvram_match(const char *name, const char *match)
 {
  const char *value = nvram_get(name);
  return (value && !strcmp(value, match));
 }
-# 138 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/bcmnvram.h"
+# 138 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/bcmnvram.h"
 static __inline__ int
 nvram_invmatch(const char *name, const char *invmatch)
 {
  const char *value = nvram_get(name);
  return (value && strcmp(value, invmatch));
 }
-# 154 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/bcmnvram.h"
+# 154 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/bcmnvram.h"
 extern int nvram_set(const char *name, const char *value);
-# 163 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/bcmnvram.h"
+# 163 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/bcmnvram.h"
 extern int nvram_unset(const char *name);
-# 172 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/bcmnvram.h"
+# 172 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/bcmnvram.h"
 extern int nvram_commit_internal(bool nvram_corrupt);
 
 
@@ -985,13 +985,13 @@ uint8 nvram_calc_crc(struct nvram_header * nvh);
 
 extern int nvram_space;
 # 8 "defaults.c" 2
-# 1 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/wlioctl.h" 1
-# 28 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/wlioctl.h"
-# 1 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/common/include/proto/ethernet.h" 1
-# 29 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/common/include/proto/ethernet.h"
-# 1 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/packed_section_start.h" 1
-# 30 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/common/include/proto/ethernet.h" 2
-# 120 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/common/include/proto/ethernet.h"
+# 1 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/wlioctl.h" 1
+# 28 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/wlioctl.h"
+# 1 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/common/include/proto/ethernet.h" 1
+# 29 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/common/include/proto/ethernet.h"
+# 1 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/packed_section_start.h" 1
+# 30 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/common/include/proto/ethernet.h" 2
+# 120 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/common/include/proto/ethernet.h"
  struct ether_header {
  uint8 ether_dhost[6];
  uint8 ether_shost[6];
@@ -1004,19 +1004,19 @@ extern int nvram_space;
  struct ether_addr {
  uint8 octet[6];
 } __attribute__ ((packed));
-# 180 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/common/include/proto/ethernet.h"
+# 180 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/common/include/proto/ethernet.h"
 static const struct ether_addr ether_bcast = {{255, 255, 255, 255, 255, 255}};
 static const struct ether_addr ether_null = {{0, 0, 0, 0, 0, 0}};
 static const struct ether_addr ether_ipv6_mcast = {{0x33, 0x33, 0x00, 0x00, 0x00, 0x01}};
-# 212 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/common/include/proto/ethernet.h"
-# 1 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/packed_section_end.h" 1
-# 213 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/common/include/proto/ethernet.h" 2
-# 29 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/wlioctl.h" 2
-# 1 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/common/include/proto/bcmeth.h" 1
-# 33 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/common/include/proto/bcmeth.h"
-# 1 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/packed_section_start.h" 1
-# 34 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/common/include/proto/bcmeth.h" 2
-# 92 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/common/include/proto/bcmeth.h"
+# 212 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/common/include/proto/ethernet.h"
+# 1 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/packed_section_end.h" 1
+# 213 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/common/include/proto/ethernet.h" 2
+# 29 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/wlioctl.h" 2
+# 1 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/common/include/proto/bcmeth.h" 1
+# 33 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/common/include/proto/bcmeth.h"
+# 1 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/packed_section_start.h" 1
+# 34 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/common/include/proto/bcmeth.h" 2
+# 92 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/common/include/proto/bcmeth.h"
 typedef struct bcmeth_hdr
 {
  uint16 subtype;
@@ -1029,14 +1029,14 @@ typedef struct bcmeth_hdr
 
 
 
-# 1 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/packed_section_end.h" 1
-# 105 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/common/include/proto/bcmeth.h" 2
-# 30 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/wlioctl.h" 2
-# 1 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/common/include/proto/bcmip.h" 1
-# 29 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/common/include/proto/bcmip.h"
-# 1 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/packed_section_start.h" 1
-# 30 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/common/include/proto/bcmip.h" 2
-# 117 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/common/include/proto/bcmip.h"
+# 1 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/packed_section_end.h" 1
+# 105 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/common/include/proto/bcmeth.h" 2
+# 30 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/wlioctl.h" 2
+# 1 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/common/include/proto/bcmip.h" 1
+# 29 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/common/include/proto/bcmip.h"
+# 1 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/packed_section_start.h" 1
+# 30 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/common/include/proto/bcmip.h" 2
+# 117 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/common/include/proto/bcmip.h"
  struct ipv4_addr {
  uint8 addr[4];
 } __attribute__ ((packed));
@@ -1053,7 +1053,7 @@ typedef struct bcmeth_hdr
  uint8 src_ip[4];
  uint8 dst_ip[4];
 } __attribute__ ((packed));
-# 193 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/common/include/proto/bcmip.h"
+# 193 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/common/include/proto/bcmip.h"
  struct ipv6_exthdr {
  uint8 nexthdr;
  uint8 hdrlen;
@@ -1089,15 +1089,15 @@ ipv6_exthdr_len(uint8 *h, uint8 *proto)
  *proto = eh->nexthdr;
  return len;
 }
-# 242 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/common/include/proto/bcmip.h"
-# 1 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/packed_section_end.h" 1
-# 243 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/common/include/proto/bcmip.h" 2
-# 31 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/wlioctl.h" 2
-# 1 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/common/include/proto/bcmevent.h" 1
-# 39 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/common/include/proto/bcmevent.h"
-# 1 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/packed_section_start.h" 1
-# 40 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/common/include/proto/bcmevent.h" 2
-# 54 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/common/include/proto/bcmevent.h"
+# 242 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/common/include/proto/bcmip.h"
+# 1 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/packed_section_end.h" 1
+# 243 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/common/include/proto/bcmip.h" 2
+# 31 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/wlioctl.h" 2
+# 1 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/common/include/proto/bcmevent.h" 1
+# 39 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/common/include/proto/bcmevent.h"
+# 1 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/packed_section_start.h" 1
+# 40 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/common/include/proto/bcmevent.h" 2
+# 54 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/common/include/proto/bcmevent.h"
 typedef struct
 {
  uint16 version;
@@ -1134,7 +1134,7 @@ typedef struct bcm_event {
  wl_event_msg_t event;
 
 } __attribute__ ((packed)) bcm_event_t;
-# 230 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/common/include/proto/bcmevent.h"
+# 230 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/common/include/proto/bcmevent.h"
 typedef struct {
  uint event;
  const char *name;
@@ -1142,7 +1142,7 @@ typedef struct {
 
 extern const bcmevent_name_t bcmevent_names[];
 extern const int bcmevent_names_size;
-# 314 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/common/include/proto/bcmevent.h"
+# 314 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/common/include/proto/bcmevent.h"
 typedef struct wl_event_rx_frame_data {
  uint16 version;
  uint16 channel;
@@ -1161,13 +1161,13 @@ typedef struct wl_event_data_if {
  uint8 bssidx;
  uint8 role;
 } wl_event_data_if_t;
-# 346 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/common/include/proto/bcmevent.h"
+# 346 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/common/include/proto/bcmevent.h"
 typedef struct wl_event_data_rssi {
  int32 rssi;
  int32 snr;
  int32 noise;
 } wl_event_data_rssi_t;
-# 372 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/common/include/proto/bcmevent.h"
+# 372 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/common/include/proto/bcmevent.h"
 typedef struct wl_event_gas {
  uint16 channel;
  uint8 dialog_token;
@@ -1237,16 +1237,16 @@ typedef struct wl_psta_primary_intf_event {
 } wl_psta_primary_intf_event_t;
 
 
-# 1 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/packed_section_end.h" 1
-# 442 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/common/include/proto/bcmevent.h" 2
-# 32 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/wlioctl.h" 2
-# 1 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/common/include/proto/802.11.h" 1
-# 32 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/common/include/proto/802.11.h"
-# 1 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/common/include/proto/wpa.h" 1
-# 29 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/common/include/proto/wpa.h"
-# 1 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/packed_section_start.h" 1
-# 30 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/common/include/proto/wpa.h" 2
-# 51 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/common/include/proto/wpa.h"
+# 1 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/packed_section_end.h" 1
+# 442 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/common/include/proto/bcmevent.h" 2
+# 32 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/wlioctl.h" 2
+# 1 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/common/include/proto/802.11.h" 1
+# 32 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/common/include/proto/802.11.h"
+# 1 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/common/include/proto/wpa.h" 1
+# 29 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/common/include/proto/wpa.h"
+# 1 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/packed_section_start.h" 1
+# 30 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/common/include/proto/wpa.h" 2
+# 51 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/common/include/proto/wpa.h"
 typedef struct
 {
  uint8 tag;
@@ -1300,15 +1300,15 @@ typedef struct
  } __attribute__ ((packed)) count;
  wpa_pmkid_t list[1];
 } __attribute__ ((packed)) wpa_pmkid_list_t;
-# 167 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/common/include/proto/wpa.h"
-# 1 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/packed_section_end.h" 1
-# 168 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/common/include/proto/wpa.h" 2
-# 33 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/common/include/proto/802.11.h" 2
+# 167 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/common/include/proto/wpa.h"
+# 1 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/packed_section_end.h" 1
+# 168 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/common/include/proto/wpa.h" 2
+# 33 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/common/include/proto/802.11.h" 2
 
 
-# 1 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/packed_section_start.h" 1
-# 36 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/common/include/proto/802.11.h" 2
-# 91 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/common/include/proto/802.11.h"
+# 1 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/packed_section_start.h" 1
+# 36 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/common/include/proto/802.11.h" 2
+# 91 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/common/include/proto/802.11.h"
  struct dot11_llc_snap_header {
  uint8 dsap;
  uint8 ssap;
@@ -1318,7 +1318,7 @@ typedef struct
 
  uint16 type;
 } __attribute__ ((packed));
-# 110 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/common/include/proto/802.11.h"
+# 110 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/common/include/proto/802.11.h"
  struct dot11_header {
  uint16 fc;
  uint16 durid;
@@ -1390,7 +1390,7 @@ typedef struct dot11_action_wifi_vendor_specific dot11_action_wifi_vendor_specif
  uint8 data[1];
 } __attribute__ ((packed));
 typedef struct dot11_action_vs_frmhdr dot11_action_vs_frmhdr_t;
-# 202 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/common/include/proto/802.11.h"
+# 202 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/common/include/proto/802.11.h"
  struct dot11_ctl_header {
  uint16 fc;
  uint16 durid;
@@ -1551,7 +1551,7 @@ typedef struct dot11_extch dot11_extch_ie_t;
  uint8 extch;
 } __attribute__ ((packed));
 typedef struct dot11_brcm_extch dot11_brcm_extch_ie_t;
-# 371 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/common/include/proto/802.11.h"
+# 371 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/common/include/proto/802.11.h"
  struct dot11_action_frmhdr {
  uint8 category;
  uint8 action;
@@ -1670,12 +1670,12 @@ typedef struct dot11_obss_chanlist dot11_obss_chanlist_t;
  uint8 cap[1];
 } __attribute__ ((packed));
 typedef struct dot11_extcap_ie dot11_extcap_ie_t;
-# 511 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/common/include/proto/802.11.h"
+# 511 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/common/include/proto/802.11.h"
  struct dot11_extcap {
  uint8 extcap[8];
 } __attribute__ ((packed));
 typedef struct dot11_extcap dot11_extcap_t;
-# 558 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/common/include/proto/802.11.h"
+# 558 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/common/include/proto/802.11.h"
  struct dot11_meas_req {
  uint8 id;
  uint8 len;
@@ -1746,9 +1746,9 @@ typedef struct chan_map_tuple chan_map_tuple_t;
  chan_map_tuple_t map[1];
 } __attribute__ ((packed));
 typedef struct dot11_ibss_dfs dot11_ibss_dfs_t;
-# 646 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/common/include/proto/802.11.h"
+# 646 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/common/include/proto/802.11.h"
 typedef uint8 ac_bitmap_t;
-# 655 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/common/include/proto/802.11.h"
+# 655 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/common/include/proto/802.11.h"
  struct wme_ie {
  uint8 oui[3];
  uint8 type;
@@ -1777,7 +1777,7 @@ typedef struct edcf_acparam edcf_acparam_t;
  edcf_acparam_t acparam[4];
 } __attribute__ ((packed));
 typedef struct wme_param_ie wme_param_ie_t;
-# 759 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/common/include/proto/802.11.h"
+# 759 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/common/include/proto/802.11.h"
  struct edca_param_ie {
  uint8 qosinfo;
  uint8 rsvd;
@@ -1800,7 +1800,7 @@ typedef struct qos_cap_ie qos_cap_ie_t;
  uint16 aac;
 } __attribute__ ((packed));
 typedef struct dot11_qbss_load_ie dot11_qbss_load_ie_t;
-# 793 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/common/include/proto/802.11.h"
+# 793 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/common/include/proto/802.11.h"
  struct dot11_management_notification {
  uint8 category;
  uint8 action;
@@ -1816,12 +1816,12 @@ typedef struct dot11_qbss_load_ie dot11_qbss_load_ie_t;
  uint32 ti_val;
 } __attribute__ ((packed));
 typedef struct ti_ie ti_ie_t;
-# 1423 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/common/include/proto/802.11.h"
+# 1423 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/common/include/proto/802.11.h"
  struct dot11_oper_mode_notif_ie {
  uint8 mode;
 } __attribute__ ((packed));
 typedef struct dot11_oper_mode_notif_ie dot11_oper_mode_notif_ie_t;
-# 1549 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/common/include/proto/802.11.h"
+# 1549 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/common/include/proto/802.11.h"
  struct dot11_dls_req {
  uint8 category;
  uint8 action;
@@ -1872,7 +1872,7 @@ typedef struct dot11_bsstrans_query dot11_bsstrans_query_t;
 
 } __attribute__ ((packed));
 typedef struct dot11_bsstrans_req dot11_bsstrans_req_t;
-# 1609 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/common/include/proto/802.11.h"
+# 1609 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/common/include/proto/802.11.h"
  struct dot11_bsstrans_resp {
  uint8 category;
  uint8 action;
@@ -1882,7 +1882,7 @@ typedef struct dot11_bsstrans_req dot11_bsstrans_req_t;
  uint8 data[1];
 } __attribute__ ((packed));
 typedef struct dot11_bsstrans_resp dot11_bsstrans_resp_t;
-# 1633 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/common/include/proto/802.11.h"
+# 1633 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/common/include/proto/802.11.h"
  struct dot11_bss_max_idle_period_ie {
  uint8 id;
  uint8 len;
@@ -1923,7 +1923,7 @@ typedef struct dot11_timbc_req dot11_timbc_req_t;
  uint16 low_rate;
 } __attribute__ ((packed));
 typedef struct dot11_timbc_resp_ie dot11_timbc_resp_ie_t;
-# 1683 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/common/include/proto/802.11.h"
+# 1683 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/common/include/proto/802.11.h"
  struct dot11_timbc_resp {
  uint8 category;
  uint8 action;
@@ -1966,7 +1966,7 @@ typedef struct dot11_timbc dot11_timbc_t;
  uint8 data[1];
 } __attribute__ ((packed));
 typedef struct dot11_tclas_fc_hdr dot11_tclas_fc_hdr_t;
-# 1744 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/common/include/proto/802.11.h"
+# 1744 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/common/include/proto/802.11.h"
  struct dot11_tclas_fc_0_eth {
  uint8 type;
  uint8 mask;
@@ -2077,7 +2077,7 @@ typedef struct dot11_tclas_ie dot11_tclas_ie_t;
  uint8 process;
 } __attribute__ ((packed));
 typedef struct dot11_tclas_proc_ie dot11_tclas_proc_ie_t;
-# 1865 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/common/include/proto/802.11.h"
+# 1865 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/common/include/proto/802.11.h"
  struct dot11_tfs_req_ie {
  uint8 id;
  uint8 len;
@@ -2086,7 +2086,7 @@ typedef struct dot11_tclas_proc_ie dot11_tclas_proc_ie_t;
  uint8 data[1];
 } __attribute__ ((packed));
 typedef struct dot11_tfs_req_ie dot11_tfs_req_ie_t;
-# 1884 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/common/include/proto/802.11.h"
+# 1884 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/common/include/proto/802.11.h"
  struct dot11_tfs_se {
  uint8 sub_id;
  uint8 len;
@@ -2103,7 +2103,7 @@ typedef struct dot11_tfs_se dot11_tfs_se_t;
  uint8 data[1];
 } __attribute__ ((packed));
 typedef struct dot11_tfs_resp_ie dot11_tfs_resp_ie_t;
-# 1908 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/common/include/proto/802.11.h"
+# 1908 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/common/include/proto/802.11.h"
  struct dot11_tfs_status_se {
  uint8 sub_id;
  uint8 len;
@@ -2111,7 +2111,7 @@ typedef struct dot11_tfs_resp_ie dot11_tfs_resp_ie_t;
  uint8 data[1];
 } __attribute__ ((packed));
 typedef struct dot11_tfs_status_se dot11_tfs_status_se_t;
-# 1945 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/common/include/proto/802.11.h"
+# 1945 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/common/include/proto/802.11.h"
  struct dot11_tfs_req {
  uint8 category;
  uint8 action;
@@ -2206,7 +2206,7 @@ typedef struct dot11_wnm_sleep_subelem_igtk dot11_wnm_sleep_subelem_igtk_t;
  uint16 interval;
 } __attribute__ ((packed));
 typedef struct dot11_wnm_sleep_ie dot11_wnm_sleep_ie_t;
-# 2053 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/common/include/proto/802.11.h"
+# 2053 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/common/include/proto/802.11.h"
  struct dot11_dms_req {
  uint8 category;
  uint8 action;
@@ -2267,7 +2267,7 @@ typedef struct dot11_dms_req_desc dot11_dms_req_desc_t;
  uint8 data[1];
 } __attribute__ ((packed));
 typedef struct dot11_dms_resp_st dot11_dms_resp_st_t;
-# 2122 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/common/include/proto/802.11.h"
+# 2122 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/common/include/proto/802.11.h"
  struct dot11_fms_req {
  uint8 category;
  uint8 action;
@@ -2295,7 +2295,7 @@ typedef struct dot11_fms_resp dot11_fms_resp_t;
  uint8 data[1];
 } __attribute__ ((packed));
 typedef struct dot11_fms_desc dot11_fms_desc_t;
-# 2158 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/common/include/proto/802.11.h"
+# 2158 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/common/include/proto/802.11.h"
  struct dot11_fms_req_ie {
  uint8 id;
  uint8 len;
@@ -2340,7 +2340,7 @@ typedef struct dot11_fms_se dot11_fms_se_t;
  uint8 data[1];
 } __attribute__ ((packed));
 typedef struct dot11_fms_resp_ie dot11_fms_resp_ie_t;
-# 2210 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/common/include/proto/802.11.h"
+# 2210 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/common/include/proto/802.11.h"
  struct dot11_fms_status_se {
  uint8 sub_id;
  uint8 len;
@@ -2385,7 +2385,7 @@ typedef struct dot11_addba_req dot11_addba_req_t;
  uint16 timeout;
 } __attribute__ ((packed));
 typedef struct dot11_addba_resp dot11_addba_resp_t;
-# 2262 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/common/include/proto/802.11.h"
+# 2262 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/common/include/proto/802.11.h"
  struct dot11_delba {
  uint8 category;
  uint8 action;
@@ -2393,7 +2393,7 @@ typedef struct dot11_addba_resp dot11_addba_resp_t;
  uint16 reason;
 } __attribute__ ((packed));
 typedef struct dot11_delba dot11_delba_t;
-# 2278 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/common/include/proto/802.11.h"
+# 2278 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/common/include/proto/802.11.h"
  struct dot11_ft_req {
  uint8 category;
  uint8 action;
@@ -2425,12 +2425,12 @@ typedef struct dot11_ft_res dot11_ft_res_t;
  uint16 status;
 } __attribute__ ((packed));
 typedef struct dot11_rde_ie dot11_rde_ie_t;
-# 2320 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/common/include/proto/802.11.h"
+# 2320 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/common/include/proto/802.11.h"
  struct dot11_rrm_cap_ie {
  uint8 cap[5];
 } __attribute__ ((packed));
 typedef struct dot11_rrm_cap_ie dot11_rrm_cap_ie_t;
-# 2356 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/common/include/proto/802.11.h"
+# 2356 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/common/include/proto/802.11.h"
  struct do11_ap_chrep {
  uint8 id;
  uint8 len;
@@ -2438,7 +2438,7 @@ typedef struct dot11_rrm_cap_ie dot11_rrm_cap_ie_t;
  uint8 chanlist[1];
 } __attribute__ ((packed));
 typedef struct do11_ap_chrep dot11_ap_chrep_t;
-# 2373 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/common/include/proto/802.11.h"
+# 2373 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/common/include/proto/802.11.h"
  struct dot11_rm_action {
  uint8 category;
  uint8 action;
@@ -2466,7 +2466,7 @@ typedef struct dot11_rmreq dot11_rmreq_t;
  uint8 type;
 } __attribute__ ((packed));
 typedef struct dot11_rm_ie dot11_rm_ie_t;
-# 2414 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/common/include/proto/802.11.h"
+# 2414 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/common/include/proto/802.11.h"
  struct dot11_rmreq_bcn {
  uint8 id;
  uint8 len;
@@ -2496,7 +2496,7 @@ typedef struct dot11_rmreq_bcn dot11_rmreq_bcn_t;
  uint32 parent_tsf;
 } __attribute__ ((packed));
 typedef struct dot11_rmrep_bcn dot11_rmrep_bcn_t;
-# 2469 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/common/include/proto/802.11.h"
+# 2469 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/common/include/proto/802.11.h"
  struct dot11_rmreq_chanload {
  uint8 id;
  uint8 len;
@@ -2672,7 +2672,7 @@ typedef struct dot11_rmrep_tx_stream dot11_rmrep_tx_stream_t;
  uint16 pause_time;
 } __attribute__ ((packed));
 typedef struct dot11_rmreq_pause_time dot11_rmreq_pause_time_t;
-# 2654 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/common/include/proto/802.11.h"
+# 2654 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/common/include/proto/802.11.h"
  struct dot11_ngbr_bsstrans_pref_se {
  uint8 sub_id;
  uint8 len;
@@ -2689,7 +2689,7 @@ typedef struct dot11_ngbr_bsstrans_pref_se dot11_ngbr_bsstrans_pref_se_t;
  uint16 duration;
 } __attribute__ ((packed));
 typedef struct dot11_ngbr_bss_term_dur_se dot11_ngbr_bss_term_dur_se_t;
-# 2688 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/common/include/proto/802.11.h"
+# 2688 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/common/include/proto/802.11.h"
  struct dot11_neighbor_rep_ie {
  uint8 id;
  uint8 len;
@@ -2701,7 +2701,7 @@ typedef struct dot11_ngbr_bss_term_dur_se dot11_ngbr_bss_term_dur_se_t;
  uint8 data[1];
 } __attribute__ ((packed));
 typedef struct dot11_neighbor_rep_ie dot11_neighbor_rep_ie_t;
-# 2710 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/common/include/proto/802.11.h"
+# 2710 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/common/include/proto/802.11.h"
  struct dot11_lmreq {
  uint8 category;
  uint8 action;
@@ -2723,9 +2723,9 @@ typedef struct dot11_lmreq dot11_lmreq_t;
  uint8 rsni;
 } __attribute__ ((packed));
 typedef struct dot11_lmrep dot11_lmrep_t;
-# 2805 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/common/include/proto/802.11.h"
+# 2805 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/common/include/proto/802.11.h"
 typedef int vht_group_id_t;
-# 2860 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/common/include/proto/802.11.h"
+# 2860 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/common/include/proto/802.11.h"
 typedef struct d11cnt {
  uint32 txfrag;
  uint32 txmulti;
@@ -2742,7 +2742,7 @@ typedef struct d11cnt {
  uint32 txfrmsnt;
  uint32 rxundec;
 } d11cnt_t;
-# 2921 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/common/include/proto/802.11.h"
+# 2921 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/common/include/proto/802.11.h"
  struct brcm_prop_ie_s {
  uint8 id;
  uint8 len;
@@ -2751,7 +2751,7 @@ typedef struct d11cnt {
  uint16 cap;
 } __attribute__ ((packed));
 typedef struct brcm_prop_ie_s brcm_prop_ie_t;
-# 2944 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/common/include/proto/802.11.h"
+# 2944 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/common/include/proto/802.11.h"
  struct brcm_ie {
  uint8 id;
  uint8 len;
@@ -2763,7 +2763,7 @@ typedef struct brcm_prop_ie_s brcm_prop_ie_t;
  uint16 amsdu_mtu_pref;
 } __attribute__ ((packed));
 typedef struct brcm_ie brcm_ie_t;
-# 2973 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/common/include/proto/802.11.h"
+# 2973 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/common/include/proto/802.11.h"
  struct vndr_ie {
  uchar id;
  uchar len;
@@ -2771,7 +2771,7 @@ typedef struct brcm_ie brcm_ie_t;
  uchar data [1];
 } __attribute__ ((packed));
 typedef struct vndr_ie vndr_ie_t;
-# 2988 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/common/include/proto/802.11.h"
+# 2988 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/common/include/proto/802.11.h"
  struct member_of_brcm_prop_ie {
  uchar id;
  uchar len;
@@ -2795,7 +2795,7 @@ typedef struct member_of_brcm_prop_ie member_of_brcm_prop_ie_t;
  uint8 updtmo;
 } __attribute__ ((packed));
 typedef struct relmcast_brcm_prop_ie relmcast_brcm_prop_ie_t;
-# 3019 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/common/include/proto/802.11.h"
+# 3019 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/common/include/proto/802.11.h"
  struct ht_cap_ie {
  uint16 cap;
  uint8 params;
@@ -2823,7 +2823,7 @@ typedef struct dot11_ht_cap_ie dot11_ht_cap_ie_t;
  ht_cap_ie_t cap_ie;
 } __attribute__ ((packed));
 typedef struct ht_prop_cap_ie ht_prop_cap_ie_t;
-# 3155 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/common/include/proto/802.11.h"
+# 3155 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/common/include/proto/802.11.h"
  struct ht_add_ie {
  uint8 ctl_ch;
  uint8 byte1;
@@ -2843,7 +2843,7 @@ typedef struct ht_add_ie ht_add_ie_t;
  ht_add_ie_t add_ie;
 } __attribute__ ((packed));
 typedef struct ht_prop_add_ie ht_prop_add_ie_t;
-# 3224 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/common/include/proto/802.11.h"
+# 3224 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/common/include/proto/802.11.h"
  struct obss_params {
  uint16 passive_dwell;
  uint16 active_dwell;
@@ -2861,7 +2861,7 @@ typedef struct obss_params obss_params_t;
  obss_params_t obss_params;
 } __attribute__ ((packed));
 typedef struct dot11_obss_ie dot11_obss_ie_t;
-# 3280 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/common/include/proto/802.11.h"
+# 3280 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/common/include/proto/802.11.h"
  struct vht_cap_ie {
  uint32 vht_cap_info;
 
@@ -2871,7 +2871,7 @@ typedef struct dot11_obss_ie dot11_obss_ie_t;
  uint16 tx_max_rate;
 } __attribute__ ((packed));
 typedef struct vht_cap_ie vht_cap_ie_t;
-# 3362 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/common/include/proto/802.11.h"
+# 3362 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/common/include/proto/802.11.h"
 typedef enum vht_cap_chan_width {
  VHT_CAP_CHAN_WIDTH_SUPPORT_MANDATORY = 0x00,
  VHT_CAP_CHAN_WIDTH_SUPPORT_160 = 0x04,
@@ -2884,7 +2884,7 @@ typedef enum vht_cap_max_mpdu_len {
  VHT_CAP_MPDU_MAX_8K = 0x01,
  VHT_CAP_MPDU_MAX_11K = 0x02
 } vht_cap_max_mpdu_len_t;
-# 3385 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/common/include/proto/802.11.h"
+# 3385 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/common/include/proto/802.11.h"
  struct vht_op_ie {
  uint8 chan_width;
  uint8 chan1;
@@ -2902,14 +2902,14 @@ typedef enum vht_op_chan_width {
  VHT_OP_CHAN_WIDTH_160 = 2,
  VHT_OP_CHAN_WIDTH_80_80 = 3
 } vht_op_chan_width_t;
-# 3422 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/common/include/proto/802.11.h"
+# 3422 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/common/include/proto/802.11.h"
  struct vht_features_ie_hdr {
  uint8 oui[3];
  uint8 type;
  uint8 rate_mask;
 } __attribute__ ((packed));
 typedef struct vht_features_ie_hdr vht_features_ie_hdr_t;
-# 3530 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/common/include/proto/802.11.h"
+# 3530 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/common/include/proto/802.11.h"
  struct dot11_mdid_ie {
  uint8 id;
  uint8 len;
@@ -2964,7 +2964,7 @@ typedef struct dot11_gtk_ie dot11_gtk_ie_t;
  uint8 mic[8];
 } __attribute__ ((packed));
 typedef struct mmic_ie mmic_ie_t;
-# 3601 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/common/include/proto/802.11.h"
+# 3601 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/common/include/proto/802.11.h"
  struct link_id_ie {
  uint8 id;
  uint8 len;
@@ -3015,7 +3015,7 @@ typedef struct pti_control_ie pti_control_ie_t;
  uint8 status;
 } __attribute__ ((packed));
 typedef struct pu_buffer_status_ie pu_buffer_status_ie_t;
-# 3799 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/common/include/proto/802.11.h"
+# 3799 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/common/include/proto/802.11.h"
  struct hs20_ie {
  uint8 oui[3];
  uint8 type;
@@ -3025,38 +3025,38 @@ typedef struct hs20_ie hs20_ie_t;
 
 
 
-# 1 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/packed_section_end.h" 1
-# 3809 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/common/include/proto/802.11.h" 2
-# 33 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/wlioctl.h" 2
-# 1 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/shared/bcmwifi/include/bcmwifi_channels.h" 1
-# 28 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/shared/bcmwifi/include/bcmwifi_channels.h"
+# 1 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/packed_section_end.h" 1
+# 3809 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/common/include/proto/802.11.h" 2
+# 33 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/wlioctl.h" 2
+# 1 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/shared/bcmwifi/include/bcmwifi_channels.h" 1
+# 28 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/shared/bcmwifi/include/bcmwifi_channels.h"
 typedef uint16 chanspec_t;
-# 348 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/shared/bcmwifi/include/bcmwifi_channels.h"
+# 348 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/shared/bcmwifi/include/bcmwifi_channels.h"
 extern char * wf_chspec_ntoa(chanspec_t chspec, char *buf);
-# 357 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/shared/bcmwifi/include/bcmwifi_channels.h"
+# 357 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/shared/bcmwifi/include/bcmwifi_channels.h"
 extern chanspec_t wf_chspec_aton(const char *a);
-# 370 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/shared/bcmwifi/include/bcmwifi_channels.h"
+# 370 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/shared/bcmwifi/include/bcmwifi_channels.h"
 extern bool wf_chspec_malformed(chanspec_t chanspec);
-# 379 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/shared/bcmwifi/include/bcmwifi_channels.h"
+# 379 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/shared/bcmwifi/include/bcmwifi_channels.h"
 extern bool wf_chspec_valid(chanspec_t chanspec);
-# 392 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/shared/bcmwifi/include/bcmwifi_channels.h"
+# 392 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/shared/bcmwifi/include/bcmwifi_channels.h"
 extern uint8 wf_chspec_ctlchan(chanspec_t chspec);
-# 405 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/shared/bcmwifi/include/bcmwifi_channels.h"
+# 405 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/shared/bcmwifi/include/bcmwifi_channels.h"
 extern chanspec_t wf_chspec_ctlchspec(chanspec_t chspec);
-# 414 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/shared/bcmwifi/include/bcmwifi_channels.h"
+# 414 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/shared/bcmwifi/include/bcmwifi_channels.h"
 extern chanspec_t wf_chspec_primary40_chspec(chanspec_t chspec);
-# 443 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/shared/bcmwifi/include/bcmwifi_channels.h"
+# 443 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/shared/bcmwifi/include/bcmwifi_channels.h"
 extern int wf_mhz2channel(uint freq, uint start_factor);
-# 471 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/shared/bcmwifi/include/bcmwifi_channels.h"
+# 471 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/shared/bcmwifi/include/bcmwifi_channels.h"
 extern int wf_channel2mhz(uint channel, uint start_factor);
-# 482 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/shared/bcmwifi/include/bcmwifi_channels.h"
+# 482 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/shared/bcmwifi/include/bcmwifi_channels.h"
 extern uint16 wf_channel2chspec(uint ctl_ch, uint bw);
 
 extern uint wf_channel2freq(uint channel);
 extern uint wf_freq2channel(uint freq);
-# 34 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/wlioctl.h" 2
-# 1 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/shared/bcmwifi/include/bcmwifi_rates.h" 1
-# 39 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/shared/bcmwifi/include/bcmwifi_rates.h"
+# 34 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/wlioctl.h" 2
+# 1 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/shared/bcmwifi/include/bcmwifi_rates.h" 1
+# 39 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/shared/bcmwifi/include/bcmwifi_rates.h"
 typedef enum wl_tx_bw {
  WL_TX_BW_20,
  WL_TX_BW_40,
@@ -3137,7 +3137,7 @@ typedef enum clm_rates {
  WL_RATE_1X1_VHT7SS1 = 19,
  WL_RATE_1X1_VHT8SS1 = 20,
  WL_RATE_1X1_VHT9SS1 = 21,
-# 127 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/shared/bcmwifi/include/bcmwifi_rates.h"
+# 127 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/shared/bcmwifi/include/bcmwifi_rates.h"
  WL_RATE_1X2_DSSS_1 = 22,
  WL_RATE_1X2_DSSS_2 = 23,
  WL_RATE_1X2_DSSS_5_5 = 24,
@@ -3314,7 +3314,7 @@ typedef enum clm_rates {
  WL_RATE_3X3_VHT7SS3 = 113,
  WL_RATE_3X3_VHT8SS3 = 114,
  WL_RATE_3X3_VHT9SS3 = 115,
-# 312 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/shared/bcmwifi/include/bcmwifi_rates.h"
+# 312 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/shared/bcmwifi/include/bcmwifi_rates.h"
  WL_RATE_1X2_TXBF_OFDM_6 = 116,
  WL_RATE_1X2_TXBF_OFDM_9 = 117,
  WL_RATE_1X2_TXBF_OFDM_12 = 118,
@@ -3363,7 +3363,7 @@ typedef enum clm_rates {
  WL_RATE_2X2_TXBF_VHT5SS2 = 139,
  WL_RATE_2X2_TXBF_VHT6SS2 = 140,
  WL_RATE_2X2_TXBF_VHT7SS2 = 141,
-# 369 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/shared/bcmwifi/include/bcmwifi_rates.h"
+# 369 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/shared/bcmwifi/include/bcmwifi_rates.h"
  WL_RATE_1X3_TXBF_OFDM_6 = 142,
  WL_RATE_1X3_TXBF_OFDM_9 = 143,
  WL_RATE_1X3_TXBF_OFDM_12 = 144,
@@ -3435,11 +3435,11 @@ typedef enum clm_rates {
  WL_RATE_3X3_TXBF_VHT6SS3 = 176,
  WL_RATE_3X3_TXBF_VHT7SS3 = 177
 } clm_rates_t;
-# 35 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/wlioctl.h" 2
+# 35 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/wlioctl.h" 2
 
 
-# 1 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/bcm_mpool_pub.h" 1
-# 70 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/bcm_mpool_pub.h"
+# 1 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/bcm_mpool_pub.h" 1
+# 70 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/bcm_mpool_pub.h"
 struct osl_info;
 
 
@@ -3460,7 +3460,7 @@ typedef struct bcm_mpm_mgr *bcm_mpm_mgr_h;
 
 struct bcm_mp_pool;
 typedef struct bcm_mp_pool *bcm_mp_pool_h;
-# 103 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/bcm_mpool_pub.h"
+# 103 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/bcm_mpool_pub.h"
 typedef struct bcm_mp_stats {
  char name[8];
  unsigned int objsz;
@@ -3469,11 +3469,11 @@ typedef struct bcm_mp_stats {
  uint16 high_water;
  uint16 failed_alloc;
 } bcm_mp_stats_t;
-# 133 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/bcm_mpool_pub.h"
+# 133 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/bcm_mpool_pub.h"
 int bcm_mpm_init(struct osl_info *osh, int max_pools, bcm_mpm_mgr_h *mgrp);
-# 146 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/bcm_mpool_pub.h"
+# 146 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/bcm_mpool_pub.h"
 int bcm_mpm_deinit(bcm_mpm_mgr_h *mgrp);
-# 172 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/bcm_mpool_pub.h"
+# 172 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/bcm_mpool_pub.h"
 int bcm_mpm_create_prealloc_pool(bcm_mpm_mgr_h mgr,
                                  unsigned int obj_sz,
                                  int nobj,
@@ -3481,38 +3481,38 @@ int bcm_mpm_create_prealloc_pool(bcm_mpm_mgr_h mgr,
                                  unsigned int memsize,
                                  const char poolname[8],
                                  bcm_mp_pool_h *newp);
-# 194 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/bcm_mpool_pub.h"
+# 194 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/bcm_mpool_pub.h"
 int bcm_mpm_delete_prealloc_pool(bcm_mpm_mgr_h mgr, bcm_mp_pool_h *poolp);
-# 215 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/bcm_mpool_pub.h"
+# 215 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/bcm_mpool_pub.h"
 int bcm_mpm_create_heap_pool(bcm_mpm_mgr_h mgr, unsigned int obj_sz,
                              const char poolname[8],
                              bcm_mp_pool_h *newp);
-# 233 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/bcm_mpool_pub.h"
+# 233 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/bcm_mpool_pub.h"
 int bcm_mpm_delete_heap_pool(bcm_mpm_mgr_h mgr, bcm_mp_pool_h *poolp);
-# 250 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/bcm_mpool_pub.h"
+# 250 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/bcm_mpool_pub.h"
 int bcm_mpm_stats(bcm_mpm_mgr_h mgr, bcm_mp_stats_t *stats, int *nentries);
-# 265 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/bcm_mpool_pub.h"
+# 265 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/bcm_mpool_pub.h"
 int bcm_mpm_dump(bcm_mpm_mgr_h mgr, struct bcmstrbuf *b);
-# 287 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/bcm_mpool_pub.h"
+# 287 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/bcm_mpool_pub.h"
 int bcm_mpm_get_obj_size(bcm_mpm_mgr_h mgr, unsigned int obj_sz, unsigned int *padded_obj_sz);
-# 309 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/bcm_mpool_pub.h"
+# 309 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/bcm_mpool_pub.h"
 void* bcm_mp_alloc(bcm_mp_pool_h pool);
-# 323 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/bcm_mpool_pub.h"
+# 323 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/bcm_mpool_pub.h"
 int bcm_mp_free(bcm_mp_pool_h pool, void *objp);
-# 337 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/bcm_mpool_pub.h"
+# 337 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/bcm_mpool_pub.h"
 int bcm_mp_stats(bcm_mp_pool_h pool, bcm_mp_stats_t *stats);
-# 352 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/bcm_mpool_pub.h"
+# 352 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/bcm_mpool_pub.h"
 int bcm_mp_dump(bcm_mp_pool_h pool, struct bcmstrbuf *b);
-# 38 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/wlioctl.h" 2
-# 1 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/bcmcdc.h" 1
-# 27 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/bcmcdc.h"
+# 38 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/wlioctl.h" 2
+# 1 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/bcmcdc.h" 1
+# 27 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/bcmcdc.h"
 typedef struct cdc_ioctl {
  uint32 cmd;
  uint32 len;
  uint32 flags;
  uint32 status;
 } cdc_ioctl_t;
-# 111 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/bcmcdc.h"
+# 111 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/bcmcdc.h"
 struct bdc_header {
  uint8 flags;
  uint8 priority;
@@ -3521,8 +3521,8 @@ struct bdc_header {
 
 
 };
-# 39 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/wlioctl.h" 2
-# 54 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/wlioctl.h"
+# 39 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/wlioctl.h" 2
+# 54 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/wlioctl.h"
 typedef struct remote_ioctl {
  cdc_ioctl_t msg;
  uint data_len;
@@ -3530,7 +3530,7 @@ typedef struct remote_ioctl {
  char intf_name[16];
 
 } rem_ioctl_t;
-# 69 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/wlioctl.h"
+# 69 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/wlioctl.h"
 typedef struct wl_action_frame {
  struct ether_addr da;
  uint16 len;
@@ -3568,8 +3568,8 @@ typedef struct wl_sa_query {
 
 
 
-# 1 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/packed_section_start.h" 1
-# 107 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/wlioctl.h" 2
+# 1 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/packed_section_start.h" 1
+# 107 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/wlioctl.h" 2
 
 
 
@@ -3599,7 +3599,7 @@ typedef struct wl_bss_info_107 {
  uint32 ie_length;
 
 } wl_bss_info_107_t;
-# 147 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/wlioctl.h"
+# 147 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/wlioctl.h"
 typedef struct wl_bss_info_108 {
  uint32 version;
  uint32 length;
@@ -3633,7 +3633,7 @@ typedef struct wl_bss_info_108 {
 
 
 } wl_bss_info_108_t;
-# 189 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/wlioctl.h"
+# 189 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/wlioctl.h"
 typedef struct wl_bss_info {
  uint32 version;
  uint32 length;
@@ -3671,7 +3671,7 @@ typedef struct wl_bss_info {
 
 
 } wl_bss_info_t;
-# 241 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/wlioctl.h"
+# 241 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/wlioctl.h"
 typedef struct wl_bsscfg {
  uint32 wsec;
  uint32 WPA_auth;
@@ -3688,7 +3688,7 @@ typedef struct wl_bss_config {
  uint32 beacon_period;
  uint32 chanspec;
 } wl_bss_config_t;
-# 269 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/wlioctl.h"
+# 269 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/wlioctl.h"
 enum {
  DL_TYPE_UCODE = 1,
  DL_TYPE_CLM = 2
@@ -3776,7 +3776,7 @@ typedef struct wl_extdscan_params {
  int32 channel_num;
  chan_scandata_t channel_list[1];
 } wl_extdscan_params_t;
-# 372 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/wlioctl.h"
+# 372 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/wlioctl.h"
 typedef struct wl_scan_params {
  wlc_ssid_t ssid;
  struct ether_addr bssid;
@@ -3795,10 +3795,10 @@ typedef struct wl_scan_params {
 
 
  int32 channel_num;
-# 403 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/wlioctl.h"
+# 403 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/wlioctl.h"
  uint16 channel_list[1];
 } wl_scan_params_t;
-# 420 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/wlioctl.h"
+# 420 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/wlioctl.h"
 typedef struct wl_iscan_params {
  uint32 version;
  uint16 action;
@@ -3816,7 +3816,7 @@ typedef struct wl_scan_results {
  uint32 count;
  wl_bss_info_t bss_info[1];
 } wl_scan_results_t;
-# 468 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/wlioctl.h"
+# 468 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/wlioctl.h"
 typedef struct wl_escan_params {
  uint32 version;
  uint16 action;
@@ -3841,7 +3841,7 @@ typedef struct wl_iscan_results {
  uint32 status;
  wl_scan_results_t results;
 } wl_iscan_results_t;
-# 530 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/wlioctl.h"
+# 530 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/wlioctl.h"
 typedef struct scanol_params {
  uint32 version;
  uint32 flags;
@@ -3967,12 +3967,12 @@ typedef struct wl_extjoin_params {
 
 
 } wl_extjoin_params_t;
-# 744 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/wlioctl.h"
+# 744 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/wlioctl.h"
 typedef struct {
  uint8 ant_config[4];
  uint8 num_antcfg;
 } wlc_antselcfg_t;
-# 773 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/wlioctl.h"
+# 773 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/wlioctl.h"
 typedef struct {
  uint32 duration;
  uint32 congest_ibss;
@@ -3987,7 +3987,7 @@ typedef struct {
  uint8 num_secs;
  cca_congest_t secs[1];
 } cca_congest_channel_req_t;
-# 807 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/wlioctl.h"
+# 807 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/wlioctl.h"
 enum interference_source {
  ITFR_NONE = 0,
  ITFR_PHONE,
@@ -4007,7 +4007,7 @@ typedef struct {
  uint32 source;
  uint32 timestamp;
 } interference_source_rep_t;
-# 838 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/wlioctl.h"
+# 838 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/wlioctl.h"
 typedef struct wl_country {
  char country_abbrev[4];
 
@@ -4038,7 +4038,7 @@ typedef struct wl_country_list {
  uint32 count;
  char country_abbrev[1];
 } wl_country_list_t;
-# 880 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/wlioctl.h"
+# 880 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/wlioctl.h"
 typedef struct wl_rm_req_elt {
  int8 type;
  int8 flags;
@@ -4082,7 +4082,7 @@ typedef struct wl_rm_rep {
  uint32 len;
  wl_rm_rep_elt_t rep[1];
 } wl_rm_rep_t;
-# 978 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/wlioctl.h"
+# 978 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/wlioctl.h"
 typedef struct wl_wsec_key {
  uint32 index;
  uint32 len;
@@ -4102,13 +4102,13 @@ typedef struct wl_wsec_key {
  uint32 pad_5[2];
  struct ether_addr ea;
 } wl_wsec_key_t;
-# 1005 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/wlioctl.h"
+# 1005 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/wlioctl.h"
 typedef struct {
  ushort key_len;
  ushort flags;
  uint8 key[64];
 } wsec_pmk_t;
-# 1048 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/wlioctl.h"
+# 1048 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/wlioctl.h"
 typedef struct _pmkid {
  struct ether_addr BSSID;
  uint8 PMKID[16];
@@ -4175,7 +4175,7 @@ typedef struct {
  uint32 size;
  uint band;
 } rw_reg_t;
-# 1123 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/wlioctl.h"
+# 1123 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/wlioctl.h"
 typedef struct {
  uint16 auto_ctrl;
  uint16 bb;
@@ -4193,7 +4193,7 @@ struct wme_tx_params_s {
 };
 
 typedef struct wme_tx_params_s wme_tx_params_t;
-# 1155 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/wlioctl.h"
+# 1155 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/wlioctl.h"
 typedef struct {
  int ac;
  uint8 val;
@@ -4249,7 +4249,7 @@ typedef struct {
 
 
 } sta_info_t;
-# 1245 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/wlioctl.h"
+# 1245 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/wlioctl.h"
 typedef struct wlc_rateset {
  uint count;
  uint8 rates[16];
@@ -4257,7 +4257,7 @@ typedef struct wlc_rateset {
  uint8 mcs[16];
  uint16 vht_mcsmap;
 } wlc_rateset_t;
-# 1300 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/wlioctl.h"
+# 1300 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/wlioctl.h"
 typedef struct {
  uint32 val;
  struct ether_addr ea;
@@ -4291,7 +4291,7 @@ typedef struct get_pktcnt {
  uint tx_bad_pkt;
  uint rx_ocast_good_pkt;
 } get_pktcnt_t;
-# 1344 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/wlioctl.h"
+# 1344 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/wlioctl.h"
 typedef struct {
  int rssi[3];
  int snr[3];
@@ -4328,7 +4328,7 @@ typedef struct {
  uint32 vht[10][3];
  uint32 tsf_timer[2][2];
 } wl_mac_ratehisto_res_t;
-# 1396 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/wlioctl.h"
+# 1396 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/wlioctl.h"
 typedef struct wl_ioctl {
  uint cmd;
  void *buf;
@@ -4337,7 +4337,7 @@ typedef struct wl_ioctl {
  uint used;
  uint needed;
 } wl_ioctl_t;
-# 1416 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/wlioctl.h"
+# 1416 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/wlioctl.h"
 typedef struct wlc_rev_info {
  uint vendorid;
  uint deviceid;
@@ -4383,7 +4383,7 @@ typedef struct wlc_iov_trx_s {
  uint8 type;
  char name[30];
 } wlc_iov_trx_t;
-# 1922 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/wlioctl.h"
+# 1922 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/wlioctl.h"
 typedef struct wl_pavars2 {
  uint16 ver;
  uint16 len;
@@ -4408,7 +4408,7 @@ typedef struct wl_rpcal {
  uint16 value;
  uint16 update;
 } wl_rpcal_t;
-# 2137 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/wlioctl.h"
+# 2137 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/wlioctl.h"
 typedef struct wl_aci_args {
  int enter_aci_thresh;
  int exit_aci_thresh;
@@ -4435,7 +4435,7 @@ typedef struct wl_aci_args {
  uint16 nphy_noise_assoc_crsidx_incr;
  uint16 nphy_noise_crsidx_decr;
 } wl_aci_args_t;
-# 2173 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/wlioctl.h"
+# 2173 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/wlioctl.h"
 typedef struct wl_samplecollect_args {
 
  uint8 coll_us;
@@ -4461,7 +4461,7 @@ typedef struct wl_samplecollect_args {
  int bitStart;
  uint32 gpioCapMask;
 } wl_samplecollect_args_t;
-# 2208 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/wlioctl.h"
+# 2208 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/wlioctl.h"
 typedef struct wl_sampledata {
  uint16 version;
  uint16 size;
@@ -4521,13 +4521,13 @@ typedef struct {
  uint16 thresh0_80_hi;
  uint16 thresh1_80_hi;
 } wl_radar_thr_t;
-# 2290 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/wlioctl.h"
+# 2290 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/wlioctl.h"
 typedef struct {
  uint32 version;
  uint32 count;
  int8 rssi_ant[4];
 } wl_rssi_ant_t;
-# 2314 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/wlioctl.h"
+# 2314 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/wlioctl.h"
 typedef struct {
  uint state;
  uint duration;
@@ -4598,7 +4598,7 @@ typedef struct {
  uint8 board_limit[45];
  uint8 target[45];
 } tx_power_legacy2_t;
-# 2407 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/wlioctl.h"
+# 2407 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/wlioctl.h"
 typedef struct {
  uint16 ver;
  uint16 len;
@@ -4625,7 +4625,7 @@ typedef struct wl_chanspec_txpwr_max {
  uint32 count;
  chanspec_txpwr_max_t txpwr[1];
 } wl_chanspec_txpwr_max_t;
-# 2452 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/wlioctl.h"
+# 2452 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/wlioctl.h"
 typedef struct tx_inst_power {
  uint8 txpwr_est_Pout[2];
  uint8 txpwr_est_Pout_gofdm;
@@ -4635,7 +4635,7 @@ typedef struct tx_inst_power {
 typedef struct wl_txchain_pwr_offsets {
  int8 offset[4];
 } wl_txchain_pwr_offsets_t;
-# 2691 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/wlioctl.h"
+# 2691 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/wlioctl.h"
 struct tsinfo_arg {
  uint8 octets[3];
 };
@@ -5262,7 +5262,7 @@ typedef struct wake_pkt {
  uint32 wake_pkt_len;
  uchar packet[1];
 } wake_pkt_t;
-# 3363 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/wlioctl.h"
+# 3363 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/wlioctl.h"
 struct ampdu_tid_control {
  uint8 tid;
  uint8 enable;
@@ -5278,13 +5278,13 @@ struct ampdu_retry_tid {
  uint8 tid;
  uint8 retry;
 };
-# 3399 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/wlioctl.h"
+# 3399 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/wlioctl.h"
 typedef struct dpt_iovar {
  struct ether_addr ea;
  uint8 mode;
  uint32 pad;
 } dpt_iovar_t;
-# 3412 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/wlioctl.h"
+# 3412 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/wlioctl.h"
 typedef struct dpt_status {
  uint8 status;
  uint8 fnlen;
@@ -5317,7 +5317,7 @@ struct tslist {
  int count;
  struct tsinfo_arg tsinfo[1];
 };
-# 3480 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/wlioctl.h"
+# 3480 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/wlioctl.h"
 typedef struct tspec_arg {
  uint16 version;
  uint16 length;
@@ -5352,7 +5352,7 @@ typedef struct tspec_per_sta_arg {
 typedef struct wme_max_bandwidth {
  uint32 ac[4];
 } wme_max_bandwidth_t;
-# 3547 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/wlioctl.h"
+# 3547 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/wlioctl.h"
 typedef struct wl_lifetime {
  uint32 ac;
  uint32 lifetime;
@@ -5369,7 +5369,7 @@ typedef struct wl_chan_switch {
  uint8 reg;
  uint8 frame_type;
 } wl_chan_switch_t;
-# 3584 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/wlioctl.h"
+# 3584 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/wlioctl.h"
 enum {
  PFN_LIST_ORDER,
  PFN_RSSI
@@ -5386,7 +5386,7 @@ enum {
  STRICT_ADAPT,
  SLOW_ADAPT
 };
-# 3637 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/wlioctl.h"
+# 3637 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/wlioctl.h"
 typedef struct wl_pfn_subnet_info {
  struct ether_addr BSSID;
  uint8 channel;
@@ -5473,7 +5473,7 @@ typedef struct pfn_olmsg_params_t {
  uint32 auth_type;
  uint8 channels[4];
 } __attribute__ ((packed)) pfn_olmsg_params;
-# 3733 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/wlioctl.h"
+# 3733 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/wlioctl.h"
 typedef struct {
  uint8 transaction_id;
  uint8 protocol;
@@ -5523,7 +5523,7 @@ typedef struct {
  uint16 count;
  struct ether_addr bssid[1];
 } wl_anqpo_ignore_bssid_list_t;
-# 3793 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/wlioctl.h"
+# 3793 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/wlioctl.h"
 struct toe_ol_stats_t {
 
  uint32 tx_summed;
@@ -5554,7 +5554,7 @@ struct toe_ol_stats_t {
  uint32 rx_udp_errinj;
  uint32 rx_icmp_errinj;
 };
-# 3838 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/wlioctl.h"
+# 3838 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/wlioctl.h"
 struct arp_ol_stats_t {
  uint32 host_ip_entries;
  uint32 host_ip_overflow;
@@ -5582,7 +5582,7 @@ struct nd_ol_stats_t {
  uint32 peer_reply_drop;
  uint32 peer_service;
 };
-# 3873 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/wlioctl.h"
+# 3873 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/wlioctl.h"
 typedef struct wl_keep_alive_pkt {
  uint32 period_msec;
  uint16 len_bytes;
@@ -5917,7 +5917,7 @@ typedef struct _awdl_aes_key {
  struct ether_addr awdl_peer;
  uint8 keys[4][16];
 } awdl_aes_key_t;
-# 4220 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/wlioctl.h"
+# 4220 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/wlioctl.h"
 typedef struct pm_wake_packet {
  uint32 status;
  uint32 pattern_id;
@@ -5925,13 +5925,13 @@ typedef struct pm_wake_packet {
  uint32 saved_packet_size;
  uchar packet[128];
 } pm_wake_packet_t;
-# 4239 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/wlioctl.h"
+# 4239 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/wlioctl.h"
 typedef enum wl_pkt_filter_type {
  WL_PKT_FILTER_TYPE_PATTERN_MATCH=0,
  WL_PKT_FILTER_TYPE_MAGIC_PATTERN_MATCH=1,
  WL_PKT_FILTER_TYPE_PATTERN_LIST_MATCH=2
 } wl_pkt_filter_type_t;
-# 4257 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/wlioctl.h"
+# 4257 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/wlioctl.h"
 typedef struct wl_pkt_filter_pattern {
  uint32 offset;
 
@@ -5957,7 +5957,7 @@ typedef struct wl_pkt_filter_pattern_list {
  uint16 totsize;
  wl_pkt_filter_pattern_listel_t patterns[1];
 } wl_pkt_filter_pattern_list_t;
-# 4326 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/wlioctl.h"
+# 4326 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/wlioctl.h"
 typedef struct wl_pkt_filter {
  uint32 id;
  uint32 type;
@@ -5973,7 +5973,7 @@ typedef struct wl_tcp_keep_set {
  uint32 val1;
  uint32 val2;
 } wl_tcp_keep_set_t;
-# 4349 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/wlioctl.h"
+# 4349 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/wlioctl.h"
 typedef struct wl_pkt_filter_enable {
  uint32 id;
  uint32 enable;
@@ -6002,7 +6002,7 @@ typedef struct wl_pkt_filter_ports {
 
  uint16 ports[1];
 } wl_pkt_filter_ports_t;
-# 4386 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/wlioctl.h"
+# 4386 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/wlioctl.h"
 typedef struct _gtkrefresh {
  uchar KCK[16];
  uchar KEK[16];
@@ -6014,7 +6014,7 @@ typedef struct wl_seq_cmd_ioctl {
  uint32 cmd;
  uint32 len;
 } wl_seq_cmd_ioctl_t;
-# 4426 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/wlioctl.h"
+# 4426 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/wlioctl.h"
 typedef struct wl_pkteng {
  uint32 flags;
  uint32 delay;
@@ -6069,7 +6069,7 @@ typedef struct wl_sslpnphy_percal_debug_data {
  uint exit_route;
  int32 volt_winner;
 } wl_sslpnphy_percal_debug_data_t;
-# 4512 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/wlioctl.h"
+# 4512 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/wlioctl.h"
 typedef enum {
  wowl_pattern_type_bitmap = 0,
  wowl_pattern_type_arp,
@@ -6109,7 +6109,7 @@ typedef struct wl_txrate_class {
  uint8 min_rate;
  uint8 max_rate;
 } wl_txrate_class_t;
-# 4583 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/wlioctl.h"
+# 4583 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/wlioctl.h"
 typedef struct wl_obss_scan_arg {
  int16 passive_dwell;
  int16 active_dwell;
@@ -6119,7 +6119,7 @@ typedef struct wl_obss_scan_arg {
  int16 chanwidth_transition_delay;
  int16 activity_threshold;
 } wl_obss_scan_arg_t;
-# 4606 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/wlioctl.h"
+# 4606 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/wlioctl.h"
 typedef struct wl_rssi_event {
  uint32 rate_limit_msec;
 
@@ -6159,7 +6159,7 @@ typedef struct {
  wl_iov_mac_params_t params;
  wl_iov_mac_extra_params_t extra_params;
 } wl_iov_mac_full_params_t;
-# 4691 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/wlioctl.h"
+# 4691 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/wlioctl.h"
 typedef struct {
  uint32 requested; uint32 stored; uint32 saved; uint32 selfsaved; uint32 full_dropped; uint32 dropped; uint32 sacrificed; uint32 busy; uint32 retry; uint32 ps_retry; uint32 suppress; uint32 retry_drop; uint32 max_avail; uint32 max_used; uint32 queue_capacity; uint32 rtsfail; uint32 acked; uint32 txrate_succ; uint32 txrate_main; uint32 throughput; uint32 time_delta;
 } pktq_log_counters_v04_t;
@@ -6196,7 +6196,7 @@ typedef struct {
   pktq_log_format_v05_t v05;
  } pktq_log;
 } wl_iov_pktq_log_t;
-# 4738 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/wlioctl.h"
+# 4738 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/wlioctl.h"
 typedef struct {
 
  uint32 retry;
@@ -6227,7 +6227,7 @@ typedef struct {
 enum {
  SCB_BS_DATA_FLAG_NO_RESET = (1<<0)
 };
-# 4800 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/wlioctl.h"
+# 4800 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/wlioctl.h"
 typedef struct wlc_extlog_cfg {
  int max_number;
  uint16 module;
@@ -6305,7 +6305,7 @@ typedef enum {
  FMTSTR_EXTAP_FAIL_ID = 29,
  FMTSTR_MAX_ID
 } log_fmtstr_id_t;
-# 4903 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/wlioctl.h"
+# 4903 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/wlioctl.h"
 typedef struct nbr_element {
  uint8 id;
  uint8 len;
@@ -6318,13 +6318,13 @@ typedef struct nbr_element {
 } nbr_element_t;
 
 
-# 1 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/packed_section_end.h" 1
-# 4916 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/wlioctl.h" 2
+# 1 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/packed_section_end.h" 1
+# 4916 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/wlioctl.h" 2
 
 
-# 1 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/packed_section_start.h" 1
-# 4919 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/wlioctl.h" 2
-# 4954 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/wlioctl.h"
+# 1 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/packed_section_start.h" 1
+# 4919 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/wlioctl.h" 2
+# 4954 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/wlioctl.h"
 typedef struct {
  uint32 pktflag;
  vndr_ie_t vndr_ie_data;
@@ -6383,7 +6383,7 @@ typedef struct sta_prbreq_wps_ie_list {
  uint32 totLen;
  uint8 ieDataList[1];
 } __attribute__ ((packed)) sta_prbreq_wps_ie_list_t;
-# 5026 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/wlioctl.h"
+# 5026 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/wlioctl.h"
 typedef struct {
  uint32 flags;
  chanspec_t chanspec;
@@ -6427,8 +6427,8 @@ typedef struct {
 
 
 
-# 1 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/packed_section_end.h" 1
-# 5070 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/wlioctl.h" 2
+# 1 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/packed_section_end.h" 1
+# 5070 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/wlioctl.h" 2
 
 
 
@@ -6447,7 +6447,7 @@ typedef struct assertlog_results {
  uint32 num;
  assert_record_t logs[1];
 } assertlog_results_t;
-# 5130 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/wlioctl.h"
+# 5130 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/wlioctl.h"
 typedef struct {
  bool valid;
  uint8 trigger;
@@ -6499,7 +6499,7 @@ typedef struct {
  uint32 scb_activity_time;
  uint32 scb_max_probe;
 } wl_scb_probe_t;
-# 5193 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/wlioctl.h"
+# 5193 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/wlioctl.h"
 typedef struct wl_smfs_elem {
  uint32 count;
  uint16 code;
@@ -6613,7 +6613,7 @@ typedef struct wl_p2p_if {
  uint8 type;
  chanspec_t chspec;
 } wl_p2p_if_t;
-# 5314 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/wlioctl.h"
+# 5314 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/wlioctl.h"
 typedef struct wl_p2p_ifq {
  uint bsscfgidx;
  char ifname[16];
@@ -6643,12 +6643,12 @@ typedef struct wl_p2p_sched {
  uint8 option;
  wl_p2p_sched_desc_t desc[1];
 } wl_p2p_sched_t;
-# 5380 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/wlioctl.h"
+# 5380 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/wlioctl.h"
 typedef struct wl_bcmdcs_data {
  uint reason;
  chanspec_t chspec;
 } wl_bcmdcs_data_t;
-# 5411 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/wlioctl.h"
+# 5411 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/wlioctl.h"
 typedef struct {
  uint32 ipaddr;
  uint32 ipaddr_mask;
@@ -6664,11 +6664,11 @@ typedef struct {
  bool pub_if;
  nat_if_info_t if_info;
 } nat_cfg_t;
-# 5436 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/wlioctl.h"
+# 5436 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/wlioctl.h"
 typedef struct {
  int state;
 } nat_state_t;
-# 5477 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/wlioctl.h"
+# 5477 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/wlioctl.h"
 enum {
  HCIReset = 1,
  HCIReadLocalAMPInfo,
@@ -6726,7 +6726,7 @@ typedef struct {
  uint32 ipaddr_netmask;
  uint32 ipaddr_gateway;
 } nwoe_ifconfig_t;
-# 5555 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/wlioctl.h"
+# 5555 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/wlioctl.h"
 typedef enum trf_mgmt_priority_class {
  trf_mgmt_priority_low = 0,
  trf_mgmt_priority_medium = 1,
@@ -6847,7 +6847,7 @@ typedef struct txdelay_params {
  uint8 period;
  uint8 tune;
 } txdelay_params_t;
-# 5688 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/wlioctl.h"
+# 5688 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/wlioctl.h"
 enum {
  WNM_SERVICE_DMS = 1,
  WNM_SERVICE_FMS = 2,
@@ -7034,7 +7034,7 @@ typedef struct wl_pm2_sleep_ret_ext {
  uint32 tx_bytes_threshold;
  uint32 txrx_bytes_threshold;
 } wl_pm2_sleep_ret_ext_t;
-# 5887 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/wlioctl.h"
+# 5887 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/wlioctl.h"
 typedef struct wl_relmcast_client {
  uint8 flag;
  int16 rssi;
@@ -7046,7 +7046,7 @@ typedef struct wl_relmcast_st {
  uint8 num;
  wl_relmcast_client_t clients[32];
 } wl_relmcast_status_t;
-# 5906 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/wlioctl.h"
+# 5906 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/wlioctl.h"
 typedef struct wl_proxd_iovar {
  uint16 method;
  uint16 mode;
@@ -7104,7 +7104,7 @@ typedef struct wl_proxd_status_iovar {
  int16 hi_rssi;
  int16 low_rssi;
 } wl_proxd_status_iovar_t;
-# 6020 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/wlioctl.h"
+# 6020 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/wlioctl.h"
 typedef struct bcnreq {
  uint8 bcn_mode;
  int dur;
@@ -7207,7 +7207,7 @@ typedef struct wl_taf_sta {
  uint32 rules_enabled;
  uint32 rule_user_val;
 } wl_taf_sta_t;
-# 6135 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/include/wlioctl.h"
+# 6135 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/include/wlioctl.h"
 typedef struct {
  uint32 config;
  uint32 status;
@@ -8632,7 +8632,7 @@ extern ssize_t writev (int __fd, __const struct iovec *__iovec, int __count);
 # 153 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/toolchains/hndtools-arm-linux-2.6.36-uclibc-4.5.3/bin/../arm-brcm-linux-uclibcgnueabi/sysroot/usr/include/bits/posix1_lim.h" 3 4
 # 1 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/toolchains/hndtools-arm-linux-2.6.36-uclibc-4.5.3/bin/../arm-brcm-linux-uclibcgnueabi/sysroot/usr/include/bits/local_lim.h" 1 3 4
 # 39 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/toolchains/hndtools-arm-linux-2.6.36-uclibc-4.5.3/bin/../arm-brcm-linux-uclibcgnueabi/sysroot/usr/include/bits/local_lim.h" 3 4
-# 1 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/linux/linux-2.6/include/linux/limits.h" 1 3 4
+# 1 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/linux/linux-2.6/include/linux/limits.h" 1 3 4
 # 40 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/toolchains/hndtools-arm-linux-2.6.36-uclibc-4.5.3/bin/../arm-brcm-linux-uclibcgnueabi/sysroot/usr/include/bits/local_lim.h" 2 3 4
 # 154 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/toolchains/hndtools-arm-linux-2.6.36-uclibc-4.5.3/bin/../arm-brcm-linux-uclibcgnueabi/sysroot/usr/include/bits/posix1_lim.h" 2 3 4
 # 1 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/toolchains/hndtools-arm-linux-2.6.36-uclibc-4.5.3/bin/../arm-brcm-linux-uclibcgnueabi/sysroot/usr/include/bits/uClibc_local_lim.h" 1 3 4
@@ -9780,7 +9780,7 @@ extern int posix_openpt (int __oflag) ;
 
 # 1 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/toolchains/hndtools-arm-linux-2.6.36-uclibc-4.5.3/bin/../arm-brcm-linux-uclibcgnueabi/sysroot/usr/include/bits/errno.h" 1 3 4
 # 25 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/toolchains/hndtools-arm-linux-2.6.36-uclibc-4.5.3/bin/../arm-brcm-linux-uclibcgnueabi/sysroot/usr/include/bits/errno.h" 3 4
-# 1 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/linux/linux-2.6/include/linux/errno.h" 1 3 4
+# 1 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/linux/linux-2.6/include/linux/errno.h" 1 3 4
 
 
 
@@ -9788,14 +9788,14 @@ extern int posix_openpt (int __oflag) ;
 
 
 
-# 1 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/linux/linux-2.6/include/asm-generic/errno.h" 1 3 4
+# 1 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/linux/linux-2.6/include/asm-generic/errno.h" 1 3 4
 
 
 
-# 1 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/linux/linux-2.6/include/asm-generic/errno-base.h" 1 3 4
-# 5 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/linux/linux-2.6/include/asm-generic/errno.h" 2 3 4
+# 1 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/linux/linux-2.6/include/asm-generic/errno-base.h" 1 3 4
+# 5 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/linux/linux-2.6/include/asm-generic/errno.h" 2 3 4
 # 5 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/toolchains/hndtools-arm-linux-2.6.36-uclibc-4.5.3/bin/../arm-brcm-linux-uclibcgnueabi/sysroot/usr/include/asm/errno.h" 2 3 4
-# 5 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/linux/linux-2.6/include/linux/errno.h" 2 3 4
+# 5 "/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/linux/linux-2.6/include/linux/errno.h" 2 3 4
 # 26 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/toolchains/hndtools-arm-linux-2.6.36-uclibc-4.5.3/bin/../arm-brcm-linux-uclibcgnueabi/sysroot/usr/include/bits/errno.h" 2 3 4
 # 45 "/home/id/asuswrt-merlin/release/src-rt-6.x.4708/toolchains/hndtools-arm-linux-2.6.36-uclibc-4.5.3/bin/../arm-brcm-linux-uclibcgnueabi/sysroot/usr/include/bits/errno.h" 3 4
 extern int *__errno_location (void) __attribute__ ((__nothrow__)) __attribute__ ((__const__));
@@ -10987,12 +10987,12 @@ struct nvram_tuple router_defaults[] = {
  { "wl1_country_rev", "0", 0 },
  { "wl1_reg_mode", "off", 0 },
 
- { "0:maxp2ga0", "114", 0 },
- { "0:maxp2ga1", "114", 0 },
- { "0:maxp2ga2", "114", 0 },
- { "1:maxp5ga0", "114,114,114,114", 0 },
- { "1:maxp5ga1", "114,114,114,114", 0 },
- { "1:maxp5ga2", "114,114,114,114", 0 },
+ { "0:maxp2ga0", "117", 0 },
+ { "0:maxp2ga1", "117", 0 },
+ { "0:maxp2ga2", "117", 0 },
+ { "1:maxp5ga0", "117,117,117,117", 0 },
+ { "1:maxp5ga1", "117,117,117,117", 0 },
+ { "1:maxp5ga2", "117,117,117,117", 0 },
  { "wl_TxPower", "100", 0 },
  { "wl0_TxPower", "100", 0 },
  { "wl1_TxPower", "200", 0 },
@@ -11885,7 +11885,9 @@ struct nvram_tuple router_defaults[] = {
  { "jffs2_exec", "" },
  { "jffs2_format", "0" },
 
- { "jffs2_log", "1" },
+
+
+ { "jffs2_log", "0" },
 # 1372 "defaults.c"
  { "reboot_schedule_enable", "0", 0},
  { "reboot_schedule", "00000000000", 0},

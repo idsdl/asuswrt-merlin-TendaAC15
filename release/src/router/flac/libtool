@@ -1,6 +1,6 @@
 #! /bin/sh
 # Generated automatically by config.status (flac) 1.3.2
-# Libtool was configured on host Centos9:
+# Libtool was configured on host VM_Centos9:
 # NOTE: Changes made to this file will be lost: look at ltmain.sh.
 
 # Provide generalized library-building support services.

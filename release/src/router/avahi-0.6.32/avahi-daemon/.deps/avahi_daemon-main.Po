@@ -99,12 +99,12 @@ avahi_daemon-main.o: main.c ../config.h \
  /home/id/asuswrt-merlin/release/src-rt-6.x.4708/toolchains/hndtools-arm-linux-2.6.36-uclibc-4.5.3/bin/../arm-brcm-linux-uclibcgnueabi/sysroot/usr/include/sys/inotify.h \
  /home/id/asuswrt-merlin/release/src-rt-6.x.4708/toolchains/hndtools-arm-linux-2.6.36-uclibc-4.5.3/bin/../lib/gcc/arm-brcm-linux-uclibcgnueabi/4.5.3/include/stdint.h \
  /home/id/asuswrt-merlin/release/src-rt-6.x.4708/toolchains/hndtools-arm-linux-2.6.36-uclibc-4.5.3/bin/../arm-brcm-linux-uclibcgnueabi/sysroot/usr/include/stdint.h \
- /home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/libdaemon/libdaemon/dfork.h \
- /home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/libdaemon/libdaemon/dsignal.h \
- /home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/libdaemon/libdaemon/dlog.h \
+ /home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/libdaemon/libdaemon/dfork.h \
+ /home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/libdaemon/libdaemon/dsignal.h \
+ /home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/libdaemon/libdaemon/dlog.h \
  /home/id/asuswrt-merlin/release/src-rt-6.x.4708/toolchains/hndtools-arm-linux-2.6.36-uclibc-4.5.3/bin/../arm-brcm-linux-uclibcgnueabi/sysroot/usr/include/syslog.h \
  /home/id/asuswrt-merlin/release/src-rt-6.x.4708/toolchains/hndtools-arm-linux-2.6.36-uclibc-4.5.3/bin/../arm-brcm-linux-uclibcgnueabi/sysroot/usr/include/sys/syslog.h \
- /home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/libdaemon/libdaemon/dpid.h \
+ /home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/libdaemon/libdaemon/dpid.h \
  ../avahi-common/malloc.h ../avahi-common/cdecl.h \
  ../avahi-common/gccmacro.h ../avahi-common/simple-watch.h \
  /home/id/asuswrt-merlin/release/src-rt-6.x.4708/toolchains/hndtools-arm-linux-2.6.36-uclibc-4.5.3/bin/../arm-brcm-linux-uclibcgnueabi/sysroot/usr/include/sys/poll.h \
@@ -321,17 +321,17 @@ avahi_daemon-main.o: main.c ../config.h \
 
 /home/id/asuswrt-merlin/release/src-rt-6.x.4708/toolchains/hndtools-arm-linux-2.6.36-uclibc-4.5.3/bin/../arm-brcm-linux-uclibcgnueabi/sysroot/usr/include/stdint.h:
 
-/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/libdaemon/libdaemon/dfork.h:
+/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/libdaemon/libdaemon/dfork.h:
 
-/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/libdaemon/libdaemon/dsignal.h:
+/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/libdaemon/libdaemon/dsignal.h:
 
-/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/libdaemon/libdaemon/dlog.h:
+/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/libdaemon/libdaemon/dlog.h:
 
 /home/id/asuswrt-merlin/release/src-rt-6.x.4708/toolchains/hndtools-arm-linux-2.6.36-uclibc-4.5.3/bin/../arm-brcm-linux-uclibcgnueabi/sysroot/usr/include/syslog.h:
 
 /home/id/asuswrt-merlin/release/src-rt-6.x.4708/toolchains/hndtools-arm-linux-2.6.36-uclibc-4.5.3/bin/../arm-brcm-linux-uclibcgnueabi/sysroot/usr/include/sys/syslog.h:
 
-/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/libdaemon/libdaemon/dpid.h:
+/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/libdaemon/libdaemon/dpid.h:
 
 ../avahi-common/malloc.h:
 

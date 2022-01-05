@@ -172,7 +172,7 @@ while test $# -gt 0; do
 
     --static-libs)
         if test "Xyes" != "Xno" ; then
-          echo /usr/lib/libcurl.a -L/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl -L/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/lib -lssl -lcrypto -lz -lssl -lcrypto -ldl
+          echo /usr/lib/libcurl.a -L/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/openssl -L/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/openssl/lib -lssl -lcrypto -lz -lssl -lcrypto -ldl
         else
           echo "curl was built with static libraries disabled" >&2
           exit 1
@@ -180,7 +180,7 @@ while test $# -gt 0; do
         ;;
 
     --configure)
-        echo " '--host=arm-linux' '--build=' '--prefix=/usr' '--bindir=/usr/sbin' '--libdir=/usr/lib' '--enable-http' '--with-ssl=/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl' '--enable-ipv6' '--disable-gopher' '--disable-dict' '--disable-telnet' '--disable-proxy' '--disable-manual' '--disable-libcurl-option' '--with-ca-bundle=/rom/ca-bundle.crt' 'LDFLAGS= -L/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl' 'LIBS=-lssl -lcrypto -ldl' 'build_alias=' 'host_alias=arm-linux' 'CC=arm-brcm-linux-uclibcgnueabi-gcc' 'CFLAGS=-Os -Wall -ffunction-sections -fdata-sections'"
+        echo " '--host=arm-linux' '--build=' '--prefix=/usr' '--bindir=/usr/sbin' '--libdir=/usr/lib' '--enable-http' '--with-ssl=/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/openssl' '--enable-ipv6' '--disable-gopher' '--disable-dict' '--disable-telnet' '--disable-proxy' '--disable-manual' '--disable-libcurl-option' '--with-ca-bundle=/rom/ca-bundle.crt' 'LDFLAGS= -L/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/openssl' 'LIBS=-lssl -lcrypto -ldl' 'build_alias=' 'host_alias=arm-linux' 'CC=arm-brcm-linux-uclibcgnueabi-gcc' 'CFLAGS=-Os -Wall -ffunction-sections -fdata-sections'"
         ;;
 
     *)

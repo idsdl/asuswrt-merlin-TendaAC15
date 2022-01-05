@@ -18,6 +18,6 @@ use vars qw(
     $Cpreprocessor
     );
 
-$Cpreprocessor = 'arm-brcm-linux-uclibcgnueabi-gcc -E -I/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include -I/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include/openssl';
+$Cpreprocessor = 'arm-brcm-linux-uclibcgnueabi-gcc -E -I/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/openssl/include -I/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/openssl/include/openssl';
 
 1;

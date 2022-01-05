@@ -75,9 +75,9 @@ libcurl_la-md5.lo: md5.c curl_setup.h curl_config.h \
  /home/id/asuswrt-merlin/release/src-rt-6.x.4708/toolchains/hndtools-arm-linux-2.6.36-uclibc-4.5.3/bin/../arm-brcm-linux-uclibcgnueabi/sysroot/usr/include/bits/confname.h \
  /home/id/asuswrt-merlin/release/src-rt-6.x.4708/toolchains/hndtools-arm-linux-2.6.36-uclibc-4.5.3/bin/../arm-brcm-linux-uclibcgnueabi/sysroot/usr/include/bits/getopt.h \
  curl_ctype.h curl_md5.h curl_hmac.h warnless.h \
- /home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include/openssl/md5.h \
- /home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include/openssl/e_os2.h \
- /home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include/openssl/opensslconf.h \
+ /home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/openssl/include/openssl/md5.h \
+ /home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/openssl/include/openssl/e_os2.h \
+ /home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/openssl/include/openssl/opensslconf.h \
  curl_memory.h memdebug.h
 
 curl_setup.h:
@@ -250,11 +250,11 @@ curl_hmac.h:
 
 warnless.h:
 
-/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include/openssl/md5.h:
+/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/openssl/include/openssl/md5.h:
 
-/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include/openssl/e_os2.h:
+/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/openssl/include/openssl/e_os2.h:
 
-/home/id/asuswrt-merlin/release/src-rt-6.x.4708/router/openssl/include/openssl/opensslconf.h:
+/home/id/asuswrt-merlin-tenda/release/src-rt-6.x.4708/router/openssl/include/openssl/opensslconf.h:
 
 curl_memory.h:
 
