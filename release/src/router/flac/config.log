@@ -1473,7 +1473,7 @@ configure:17760: result: 4
 configure:17770: checking for library containing lround
 configure:17801: arm-brcm-linux-uclibcgnueabi-gcc -std=gnu99 -o conftest -Os -DLINUX26 -DCONFIG_BCMWL5 -DDEBUG_NOISY -DDEBUG_RCTEST -pipe -DBCMWPA2 -DBCMARM -fno-strict-aliasing -marm -DRTCONFIG_NVRAM_64K -DLINUX_KERNEL_VERSION=132644  -fPIC -ffunction-sections -fdata-sections  -fPIC -ffunction-sections -fdata-sections -Wl,--gc-sections conftest.c  >&5
 conftest.c:40:6: warning: conflicting types for built-in function 'lround'
-/tmp/cc62UIkt.o: In function `main':
+/tmp/ccYRuVZb.o: In function `main':
 conftest.c:(.text.main+0x4): undefined reference to `lround'
 collect2: ld returned 1 exit status
 configure:17801: $? = 1
@@ -1875,7 +1875,7 @@ configure:18175: checking for bswap16 intrinsic
 configure:18195: arm-brcm-linux-uclibcgnueabi-gcc -std=gnu99 -o conftest -Os -DLINUX26 -DCONFIG_BCMWL5 -DDEBUG_NOISY -DDEBUG_RCTEST -pipe -DBCMWPA2 -DBCMARM -fno-strict-aliasing -marm -DRTCONFIG_NVRAM_64K -DLINUX_KERNEL_VERSION=132644  -fPIC -ffunction-sections -fdata-sections  -fPIC -ffunction-sections -fdata-sections -Wl,--gc-sections conftest.c -lm  >&5
 conftest.c: In function 'main':
 conftest.c:50:1: warning: implicit declaration of function '__builtin_bswap16'
-/tmp/cc1pMn0V.o: In function `main':
+/tmp/cctCaAjE.o: In function `main':
 conftest.c:(.text.main+0x4): undefined reference to `__builtin_bswap16'
 collect2: ld returned 1 exit status
 configure:18195: $? = 1

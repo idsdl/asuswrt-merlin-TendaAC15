@@ -33,7 +33,7 @@
 # Lite version of RT-AC68U profile for small 16Mb SPI flash rom Tenda ac15 router
 export RT-AC68U := IPV6SUPP=y HTTPS=y ARM=y BCM57=y NTFS=y AUTODICT=y BBEXTRAS=y USBEXTRAS=y EBTABLES=y \
                    SAMBA3=y SAMBA36=y MEDIASRV=y MODEM=y MODEMPIN=y BECEEM=n PARENTAL2=y ACCEL_PPTPD=y PRINTER=y \
-                   WEBDAV=n CLOUDSYNC=n USB="USB" GROdrop=y APP="nolocaldm" BUILD_NAME="RT-AC68U" PROXYSTA=y \
+                   WEBDAV=n CLOUDSYNC=n USB="USB" GRO=y APP="nolocaldm" BUILD_NAME="RT-AC68U" PROXYSTA=y \
                    DNSMQ=y SHP=y NVRAM_64K=y RTAC68U=y BCMWL6=y BCMWL6A=y TUNEK="n" BCM5301X=y DISK_MONITOR=y \
                    BTN_WIFITOG=y TURBO=y BCM4352_5G=y OPTIMIZE_XBOX=y USBEJECT=y ODMPID=y LED_BTN=y \
                    LED_BTN_MODE=y BCMSMP=y XHCI=y USBRESET=n SSH=y JFFS2=y NFS=y OPENVPN=y USER_LOW_RSSI=y \
